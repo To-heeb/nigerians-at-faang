@@ -24,10 +24,10 @@
                     <p><strong>Whatsapp:</strong> <span><a
                                 href="https://wa.link/a7w9dk">https://wa.link/a7w9dk</a></span></p> --}}
                     <div class="social-links d-flex mt-4">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                        <a href="{{ config('app.twitterUrl') }}"><i class="bi bi-twitter-x"></i></a>
+                        <a href="{{ config('app.tiktokUrl') }}"><i class="bi bi-tiktok"></i></a>
+                        <a href="{{ config('app.instagramUrl') }}"><i class="bi bi-instagram"></i></a>
+                        <a href="{{ config('app.linkedInUrl') }}"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
             </div>

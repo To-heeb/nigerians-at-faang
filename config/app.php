@@ -125,15 +125,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Maintenance Mode Driver
+    | Custom Title
     |--------------------------------------------------------------------------
     |
-    | These configuration options determine the driver used to determine and
-    | manage Laravel's "maintenance mode" status. The "cache" driver will
-    | allow maintenance mode to be controlled across multiple machines.
-    |
-    | Supported drivers: "file", "cache"
+    | This value defines a custom title to be displayed on the maintenance
+    | mode page. You can use it to show a clear and friendly message
+    | heading when your application is temporarily down.
     |
     */
+
+    "title" => "FAANG Dreams, Naija Roots",
+    "facebookUrl" => "https://www.facebook.com/p/Ghana-Institute-of-Procurement-and-Supply-GIPS-100077207179819/",
+    "tiktokUrl" => "https://www.tiktok.com/@nigerians-at-faang",
+    "twitterUrl" => "https://x.com/nigerians-at-faang/",
+    "instagramUrl" => "https://instgram.com/nigerians-at-faang",
+    "linkedInUrl" => "https://www.linkedin.com/company/nigerians-faang/",
+    "support_mail" => env('SUPPORT_MAIL', 'arigbabuisiakventures@gmail.com'),
+    "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),
 
 ];

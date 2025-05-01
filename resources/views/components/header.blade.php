@@ -1,5 +1,3 @@
-@props(['services'])
-
 <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center">
 
@@ -22,10 +20,10 @@
         </nav>
 
         <div class="header-social-links">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="{{ config('app.twitterUrl') }}" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="{{ config('app.tiktokUrl') }}" class="tiktok"><i class="bi bi-tiktok"></i></a>
+            <a href="{{ config('app.instagramUrl') }}" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="{{ config('app.linkedInUrl') }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
     </div>
