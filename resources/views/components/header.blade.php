@@ -6,7 +6,7 @@
         <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}" alt="" class="rounded-1">
-            <h1 class="sitename">{{ config('app.name') }}</h1><span>.</span>
+            <h1 class="sitename d-none d-md-inline">{{ config('app.name') }}<span>.</span></h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
