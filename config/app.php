@@ -135,10 +135,10 @@ return [
     */
 
     "title" => "FAANG Dreams, Naija Roots",
-    "facebookUrl" => "https://www.facebook.com/p/Ghana-Institute-of-Procurement-and-Supply-GIPS-100077207179819/",
+    "facebookUrl" => "https://www.facebook.com/p/nigerians-at-faan/",
     "tiktokUrl" => "https://www.tiktok.com/@nigerians-at-faang",
     "twitterUrl" => "https://x.com/nigerians-at-faang/",
-    "instagramUrl" => "https://instgram.com/nigerians-at-faang",
+    "instagramUrl" => "https://instgram.com/nigerians-at-faang/",
     "linkedInUrl" => "https://www.linkedin.com/company/nigerians-faang/",
     "support_mail" => env('SUPPORT_MAIL', 'arigbabuisiakventures@gmail.com'),
     "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),
