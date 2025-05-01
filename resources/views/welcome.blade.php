@@ -33,9 +33,9 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-5.jpg') }}he" alt="">
+                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
                 <div class="container">
-                    <h2>African Brilliance in the Heart of Tech</h2>
+                    <h2>Nigerian Brilliance in the Heart of Tech</h2>
                     <p>Meet the Nigerians shaping innovation at Google, Apple, Meta, Amazon, Netflix & beyond.</p>
                     <a href="{{ route('about') }}" class="btn-get-started">Explore Profiles</a>
                 </div>
@@ -105,13 +105,29 @@
     <!-- /Blog Section -->
 
     <!-- Get Involved Section -->
-    <section id="community" class="community section">
+    <section id="pricing" class="pricing section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Get Involved</h2>
             <p>Let’s Spotlight More Nigerians</p>
         </div>
         <!-- End Section Title -->
+        <div class="container">
+            <div class="row gy-4">
+                <x-get-involved-card name="Submit a Story"
+                    description="Are you a Nigerian making waves in Big Tech? Share your journey and help inspire others who want to walk a similar path."
+                    cta_text="Share Your Story" cta_route="{{ route('blogs.create') }}"
+                    under_text="Your story could be the spark someone needs." />
+                <x-get-involved-card name="Nominate Someone"
+                    description="Know a brilliant Nigerian working at FAANG or other Big Tech? Nominate them to be featured and recognized."
+                    cta_text="Submit Now" cta_route="{{ route('profiles.create') }}"
+                    under_text="We verify all nominations before publishing." />
+                <x-get-involved-card name="Join the Community"
+                    description="Be part of a growing network of Nigerians in tech. Connect, learn, and grow with others like you."
+                    cta_text="Join Us" cta_route="{{ route('profiles.create') }}"
+                    under_text="We’re building something powerful — together." />
+            </div>
+        </div>
     </section>
     <!-- /Get Involved Section -->
 
@@ -133,7 +149,8 @@
                             Accordion Item #1
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <strong>This is the first item's accordion body.</strong> It is shown by default, until the
                             collapse plugin adds the appropriate classes that we use to style each element. These

@@ -20,7 +20,7 @@ Route::prefix('contact')->group(function () {
     Route::post('/send', [ContactUsController::class, 'send'])->name('contact.send');
 });
 Route::resource('/tags',  TagController::class)->only('index', 'show');
-Route::resource('/blogs',  BlogController::class)->only('index', 'show');
+Route::resource('/blogs',  BlogController::class)->only('index', 'show', 'create', 'store');
 Route::resource('/profiles',  ProfileController::class)->only(['index', 'show', 'create', 'store']);
 Route::resource('/companies',  CompanyController::class)->only('index', 'show');
 Route::get('/privacy-policy', PrivacyPolicyController::class)->name('privacy-policy');

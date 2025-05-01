@@ -17,12 +17,12 @@
                 <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="inner-title">Consequatur eius et magnam</h2>
                     <div class="our-story">
-                        <h4>Est 2022</h4>
+                        <h4>Est 2025</h4>
                         <h3>Our Story</h3>
-                        <p>Our journey is defined by teamwork, resilience, and an unwavering focus on quality. From
-                            humble beginnings to where we stand today, we remain grateful for the trust you’ve placed in
-                            us. This is more than our history—it’s the foundation for our future.</p>
-                        <ul>
+                        <p>Nigerians @ FAANG is a platform celebrating the journeys of Nigerians who’ve landed roles in
+                            top tech companies. Whether they started in Lagos, London, or Toronto — their paths inspire
+                            the next generation.</p>
+                        {{-- <ul>
                             <li><i class="bi bi-check-circle"></i> <span>Expertise that delivers – Precision and skill
                                     in every solution we provide</span></li>
                             <li><i class="bi bi-check-circle"></i> <span>Your vision, our mission – Tailored approaches
@@ -30,7 +30,7 @@
                             <li><i class="bi bi-check-circle"></i> <span>Reliable partnership – Consistency you can
                                     trust, results you can count on</span>
                             </li>
-                        </ul>
+                        </ul> --}}
                         <p>Obstacles fuel our progress. We transform setbacks into opportunities, refining our approach
                             with each challenge. Resilience drives us—every hurdle strengthens our expertise and
                             sharpens our solutions.</p>
