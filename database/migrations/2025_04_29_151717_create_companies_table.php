@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('logo');
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
+            $table->string('website');
+            $table->string('information_website');
+            $table->text('logo'); //(slugified name)name_logo
             $table->timestamps();
         });
     }

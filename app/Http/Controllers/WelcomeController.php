@@ -9,10 +9,10 @@ class WelcomeController
 {
     public function __invoke()
     {
-        // 4 random profiles
+        // 4 random profiles, published
         $profiles = Profile::with('company')->get();
 
-        // 3 random blogs
+        // 3 random blogs, published
         $blogs = Blog::all();
 
         return view('welcome', compact('profiles', 'blogs'));
