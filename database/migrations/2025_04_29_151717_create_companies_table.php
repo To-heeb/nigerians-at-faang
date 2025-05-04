@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('website');
             $table->string('information_website');
-            $table->text('logo'); //(slugified name)name_logo
+            $table->text('logo');
+            $table->text('mini-logo');
             $table->timestamps();
         });
     }
