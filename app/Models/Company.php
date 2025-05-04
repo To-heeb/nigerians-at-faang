@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Company extends Model
 {
@@ -22,4 +24,20 @@ class Company extends Model
         'website',
         'information_website'
     ];
+
+    /**
+     * Automatically convert the name to lowercase before saving.
+     */
+    public function setNameAttribute($value)
+    {
+        $this->attributes['slug'] = Str::slug($value);
+    }
+
+    /**
+     * Get the company that owns the profiles.
+     */
+    public function profiles(): HasMany
+    {
+        return $this->hasMany(Profile::class);
+    }
 }

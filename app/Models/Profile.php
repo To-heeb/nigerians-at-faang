@@ -3,8 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Profile extends Model
 {
@@ -32,8 +34,35 @@ class Profile extends Model
         'published_at',
     ];
 
+    /**
+     * Automatically convert the name to lowercase before saving.
+     */
+    public function setNameAttribute($value)
+    {
+        $this->attributes['slug'] = strtolower($value);
+    }
+
+    /**
+     * Get the company that owns the profile.
+     */
     public function company(): BelongsTo
     {
         return $this->belongsTo(Company::class);
+    }
+
+    /**
+     * Get all of the tags for the profile.
+     */
+    public function tags(): MorphToMany
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+
+    /**
+     * Get the profile that owns the blog.
+     */
+    public function blogs(): HasMany
+    {
+        return $this->hasMany(Blog::class);
     }
 }

@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Blog extends Model
 {
@@ -24,4 +27,28 @@ class Blog extends Model
         'is_published',
         'published_at',
     ];
+
+    /**
+     * Automatically convert the name to slug before saving.
+     */
+    public function setNameAttribute($value)
+    {
+        $this->attributes['slug'] = Str::slug($value);
+    }
+
+    /**
+     * Get all of the tags for the blog.
+     */
+    public function tags(): MorphToMany
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+
+    /**
+     *  Get the profile that owns the blog.
+     */
+    public function profile(): BelongsTo
+    {
+        return $this->belongsTo(Profile::class);
+    }
 }
