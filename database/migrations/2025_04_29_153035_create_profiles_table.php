@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->index();
             $table->string('slug')->unique();
             $table->text('image');
             $table->string('job_title');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('website_url')->nullable();
             $table->string('instagram_url')->nullable();
             $table->string('tiktok_url')->nullable();
-            $table->string('short_bio');
+            $table->text('short_bio');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
