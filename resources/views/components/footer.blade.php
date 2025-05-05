@@ -47,7 +47,7 @@
                 <ul>
                     <li><a href="{{ route('companies.index') }}">Companies</a></li>
                     <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
-                    <li><a href="{{ route('terms') }}">Terms of service</a></li>
+                    <li><a href="{{ route('terms') }}">Terms of Use</a></li>
                     <li><a href="{{ route('privacy-policy') }}">Privacy policy</a></li>
                 </ul>
             </div>
