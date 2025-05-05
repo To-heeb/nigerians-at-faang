@@ -2654,7 +2654,7 @@ section,
 .section-home {
     color: var(--default-color);
     background-color: var(--background-color);
-    padding: 30px 0;
+    padding: 10px 0px 10px 0px;
     scroll-margin-top: 100px;
     overflow: clip;
 }
@@ -2676,11 +2676,12 @@ section,
     right: 15px;
     background-color: var(--accent-color);
     color: var(--contrast-color);
-    padding: 4px 15px 6px 15px;
+    padding: 4px 10px 6px 10px;
     margin: 0;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 500;
+    z-index: 2;
 }
 
 .profile-section .featured .cta-btn {
@@ -2688,3 +2689,12 @@ section,
     color: var(--contrast-color);
     border-color: var(--accent-color);
 }
+
+a.white-link:hover,
+a.white-link:visited {
+  color: white !important;
+}
+
+#white-link {
+    color: white !important;
+  }

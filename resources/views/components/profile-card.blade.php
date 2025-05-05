@@ -2,9 +2,12 @@
 
 <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ $delay }}">
     <div class="team-member featured">
-        <p class="popular">Popular</p>
+        {{-- <p class="popular">{{ $profile->company->name }}</p> --}}
+        <p class="popular"><a href="{{ route('companies.show', $profile->company) }}" class="white-link"
+                id="white-link">{{ $profile->company->name }}</a>
+        </p>
         <div class="member-img">
-            <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('assets/img/team/team-1.jpg') }}"
+            <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
                 class="img-fluid" alt="">
             <div class="social">
                 @if ($profile->twitter_url)

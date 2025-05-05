@@ -36,6 +36,15 @@ class Profile extends Model
     ];
 
     /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected $casts = [
+        'published_at' => 'datetime'
+    ];
+
+    /**
      * Automatically convert the name to lowercase before saving.
      */
     public function setNameAttribute($value)
@@ -74,7 +83,7 @@ class Profile extends Model
     protected function latestWithCompany($query, ?int $limit = 4)
     {
         return $query->with('company')
-            ->latest()
+            ->latest('published_at')
             ->take($limit);
     }
 

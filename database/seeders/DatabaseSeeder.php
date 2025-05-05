@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             ProfileSeeder::class,
             TagSeeder::class,
-            // BlogSeeder::class
+            BlogSeeder::class
         ]);
 
         User::factory()->create([

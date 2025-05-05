@@ -13,7 +13,7 @@ class WelcomeController
         $profiles = Profile::published()->latestWithCompany()->get();
 
         // 3 random blogs, published
-        $blogs = Blog::latest()->take(4)->get();
+        $blogs = Blog::published()->latestWithProfile()->get();
 
         return view('welcome', compact('profiles', 'blogs'));
     }

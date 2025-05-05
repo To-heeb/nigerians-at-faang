@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
@@ -29,6 +30,15 @@ class Blog extends Model
     ];
 
     /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected $casts = [
+        'published_at' => 'datetime'
+    ];
+
+    /**
      * Automatically convert the name to slug before saving.
      */
     public function setNameAttribute($value)
@@ -50,5 +60,34 @@ class Blog extends Model
     public function profile(): BelongsTo
     {
         return $this->belongsTo(Profile::class);
+    }
+
+    /**
+     * Scope a query to only include latest profile with company.
+     */
+    #[Scope]
+    protected function latestWithProfile($query, ?int $limit = 3)
+    {
+        return $query->with('profile')
+            ->latest('published_at')
+            ->take($limit);
+    }
+
+    /**
+     * Scope a query to only include published blog
+     */
+    #[Scope]
+    protected function published($query)
+    {
+        return $query->where('is_published', true);
+    }
+
+    /**
+     * Scope a query to only include unpublished blog
+     */
+    #[Scope]
+    protected function unpublished($query)
+    {
+        return $query->where('is_published', false);
     }
 }

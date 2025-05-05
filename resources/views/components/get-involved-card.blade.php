@@ -1,6 +1,6 @@
-@props(['name', 'description', 'cta_text', 'cta_route', 'under_text'])
+@props(['name', 'description', 'cta_text', 'cta_route', 'under_text', 'id'])
 
-<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100" id="{{ $id }}">
     <div class="pricing-item">
         <h3>{{ $name }}</h3>
         <p class="description">
