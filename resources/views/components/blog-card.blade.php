@@ -1,6 +1,6 @@
-@props(['blog'])
+@props(['blog', 'delay'])
 
-<div class="col-lg-4">
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="{{ $delay }}">
     <article class="position-relative h-100">
         <div class="post-img position-relative overflow-hidden">
             <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="" />

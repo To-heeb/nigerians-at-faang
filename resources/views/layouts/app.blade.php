@@ -6,8 +6,8 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <title>{{ config('app.name') }} - {{ config('app.title') }}</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="{{ config('app.description') }}">
+    <meta name="keywords" content="{{ config('app.keywords') }}">
 
     @include('layouts/sections/styles')
 </head>

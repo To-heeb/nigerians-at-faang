@@ -205,6 +205,11 @@ class CompanySeeder extends Seeder
                 "website" => "https://www.adobe.com/",
                 "information_website" => "https://www.adobe.com/about-adobe.html",
             ],
+            [
+                'name' => "Goldman Sachs",
+                "website" => "https://www.goldmansachs.com/",
+                "information_website" => "https://www.goldmansachs.com/what-we-do/our-businesses",
+            ],
         ];
 
         $companies = array_map(fn($company) => [
@@ -212,8 +217,8 @@ class CompanySeeder extends Seeder
             'slug'  => Str::slug($company['name']),
             "website" => $company['website'],
             "information_website" => $company['information_website'],
-            'logo' => Str::slug($company['name']) . "-logo",
-            'mini-logo' => Str::slug($company['name']) . "-mini-logo",
+            'logo' => Str::slug($company['name']) . "-logo.svg",
+            'mini_logo' => Str::slug($company['name']) . "-mini-logo.svg",
             'created_at' => now(),
             'updated_at' => now()
         ], $companies);

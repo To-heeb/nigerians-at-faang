@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -64,5 +65,34 @@ class Profile extends Model
     public function blogs(): HasMany
     {
         return $this->hasMany(Blog::class);
+    }
+
+    /**
+     * Scope a query to only include latest profile with company.
+     */
+    #[Scope]
+    protected function latestWithCompany($query, ?int $limit = 4)
+    {
+        return $query->with('company')
+            ->latest()
+            ->take($limit);
+    }
+
+    /**
+     * Scope a query to only include published profile
+     */
+    #[Scope]
+    protected function published($query)
+    {
+        return $query->where('is_published', true);
+    }
+
+    /**
+     * Scope a query to only include  unpublished profile
+     */
+    #[Scope]
+    protected function unpublished($query)
+    {
+        return $query->where('is_published', false);
     }
 }

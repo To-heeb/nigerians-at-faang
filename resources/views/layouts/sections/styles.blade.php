@@ -1,7 +1,7 @@
 <!-- Favicons -->
 {{-- <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon"> --}}
-<link href="{{ asset('assets/img/android-chrome-512x512.png') }}" rel="icon">
-<link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+<link href="{{ asset('assets/img/favicon/android-chrome-512x512.png') }}" rel="icon">
+<link href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}" rel="apple-touch-icon">
 {{-- <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
 
 <!-- Fonts -->

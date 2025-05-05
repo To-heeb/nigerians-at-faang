@@ -9,7 +9,7 @@
                 <div class="container">
                     <h2>Nigerians @ FAANG</h2>
                     <p>A tribute to every Nigerian rewriting the global tech story—one line of code at a time.</p>
-                    <a href="{{ route('about') }}" class="btn-get-started">Explore Profiles</a>
+                    <a href="{{ route('profiles.index') }}" class="btn-get-started">Explore Profiles</a>
                 </div>
             </div><!-- End Carousel Item -->
 
@@ -18,7 +18,7 @@
                 <div class="container">
                     <h2>Spotlighting Nigerian Excellence in Big Tech</h2>
                     <p>Real stories from Nigerians who’ve made it to FAANG and beyond.</p>
-                    <a href="{{ route('about') }}" class="btn-get-started">Submit a profile</a>
+                    <a href="{{ route('profiles.create') }}" class="btn-get-started">Submit a profile</a>
                 </div>
             </div><!-- End Carousel Item -->
 
@@ -28,7 +28,7 @@
                     <h2>Nigerians Breaking Barriers in Big Tech</h2>
                     <p>Discover career journeys, interview tips, and actionable advice from Nigerians at Google, Meta,
                         Amazon, and more.</p>
-                    <a href="{{ route('about') }}" class="btn-get-started">Explore Profiles</a>
+                    <a href="{{ route('profiles.index') }}" class="btn-get-started">Explore Profiles</a>
                 </div>
             </div><!-- End Carousel Item -->
 
@@ -37,7 +37,7 @@
                 <div class="container">
                     <h2>Nigerian Brilliance in the Heart of Tech</h2>
                     <p>Meet the Nigerians shaping innovation at Google, Apple, Meta, Amazon, Netflix & beyond.</p>
-                    <a href="{{ route('about') }}" class="btn-get-started">Explore Profiles</a>
+                    <a href="{{ route('profiles.index') }}" class="btn-get-started">Explore Profiles</a>
                 </div>
             </div><!-- End Carousel Item -->
 
@@ -57,7 +57,7 @@
 
 
     <!-- Profile Section -->
-    <section id="team" class="team section">
+    <section id="team" class="team section-home profile-section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Profile</h2>
@@ -68,19 +68,19 @@
         <div class="container">
             <div class="row gy-4">
                 @foreach ($profiles as $profile)
-                    <x-profile-card :profile="$profile" />
+                    <x-profile-card :profile="$profile" :delay="$loop->index * 100" />
                 @endforeach
             </div>
         </div>
 
         <div class="container section-title" data-aos="fade-up">
-            <a href="{{ route('profiles.index') }}" class="btn btn-sm btn-outline-success">View All Profiles</a>
+            <a href="{{ route('profiles.index') }}" class="btn btn-sm btn-outline-success mt-4">View All Profiles</a>
         </div>
     </section>
     <!-- /Profile Section -->
 
     <!-- Blog Section -->
-    <section id="blog-posts" class="blog-posts section">
+    <section id="blog-posts" class="blog-posts section-home">
         <div class="container">
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
@@ -92,20 +92,20 @@
             <div class="container">
                 <div class="row gy-4">
                     @foreach ($blogs as $blog)
-                        <x-blog-card :blog="$blog" />
+                        <x-blog-card :blog="$blog" :delay="$loop->index * 100" />
                     @endforeach
                 </div>
             </div>
 
             <div class="container section-title" data-aos="fade-up">
-                <a href="{{ route('blogs.index') }}" class="btn btn-sm btn-outline-success">View Blog</a>
+                <a href="{{ route('blogs.index') }}" class="btn btn-sm btn-outline-success mt-4">View Blogs</a>
             </div>
         </div>
     </section>
     <!-- /Blog Section -->
 
     <!-- Get Involved Section -->
-    <section id="pricing" class="pricing section">
+    <section id="pricing" class="pricing section-home">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Get Involved</h2>
@@ -132,7 +132,7 @@
     <!-- /Get Involved Section -->
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq section">
+    <section id="faq" class="faq section-home">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>FAQ</h2>

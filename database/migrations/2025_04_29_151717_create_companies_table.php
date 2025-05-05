@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('website');
             $table->string('information_website');
             $table->text('logo');
-            $table->text('mini-logo');
+            $table->text('mini_logo');
             $table->timestamps();
         });
     }
