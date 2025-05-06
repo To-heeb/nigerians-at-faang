@@ -85,7 +85,7 @@
                 <p>
                     If you have any questions or concerns about these Terms, please reach out to us at:
                     <br>
-                    📧 Email: <a href="mailto:contact@nigeriansatfaang.com">contact@nigeriansatfaang.com</a>
+                    📧 Email: <a href="mailto:{{ config('app.contact_mail') }}">{{ config('app.contact_mail') }}</a>
                     <br>
                     🌐 Website: <a href="https://nigeriansatfaang.com">https://nigeriansatfaang.com</a>
                 </p>

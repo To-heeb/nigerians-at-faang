@@ -134,6 +134,7 @@ return [
     |
     */
 
+    "address" => "Nigeria",
     "title" => "FAANG Dreams, Naija Roots",
     "facebookUrl" => "https://www.facebook.com/p/nigerians-at-faan/",
     "tiktokUrl" => "https://www.tiktok.com/@nigerians-at-faang",
@@ -142,7 +143,8 @@ return [
     "keywords" => "",
     "instagramUrl" => "https://instgram.com/nigerians-at-faang/",
     "linkedInUrl" => "https://www.linkedin.com/company/nigerians-faang/",
-    "support_mail" => env('SUPPORT_MAIL', 'arigbabuisiakventures@gmail.com'),
+    "contact_mail" => env('CONTACT_MAIL', 'contact@nigeriansatfaang.com'),
+    "privacy_mail" => env('PRIVACY_MAIL', 'contact@nigeriansatfaang.com'),
     "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),
 
 ];

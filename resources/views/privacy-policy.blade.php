@@ -91,7 +91,7 @@
                     If you have questions or concerns about this policy or your data, please reach out:If you have
                     questions or concerns about this policy or your data, please reach out:
                     <br>
-                    📧 Email: <a href="mailto:privacy@nigeriansfaang.com">privacy@nigeriansfaang.com</a>
+                    📧 Email: <a href="mailto:{{ config('app.privacy_mail') }}">{{ config('app.privacy_mail') }}</a>
                     <br>
                     🌐 Website: <a href="https://nigeriansatfaang.com">https://nigeriansatfaang.com</a>
                 </p>
