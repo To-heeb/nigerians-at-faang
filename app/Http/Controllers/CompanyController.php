@@ -13,7 +13,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::all();
+
+        return view('companies.index', compact('companies'));
     }
 
     /**
@@ -21,6 +23,8 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        //
+        // TODO(toheeb): pass the profiles related to this company
+
+        return view('companies.show', compact('company'));
     }
 }

@@ -13,7 +13,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        return view('profiles.index');
     }
 
     /**
@@ -37,6 +37,6 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        //
+        return view('profiles.show', compact('profile'));
     }
 }

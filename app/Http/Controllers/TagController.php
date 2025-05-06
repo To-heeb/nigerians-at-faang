@@ -13,7 +13,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        return view('tags.index');
     }
 
     /**
@@ -21,6 +21,6 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view('tags.show', compact('tag'));
     }
 }
