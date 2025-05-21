@@ -45,6 +45,14 @@ class Profile extends Model
     ];
 
     /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
+    /**
      * Automatically convert the name to lowercase before saving.
      */
     public function setNameAttribute($value)

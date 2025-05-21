@@ -21,9 +21,20 @@ class Company extends Model
         'name',
         'slug',
         'logo',
+        'mini_logo',
+        'linkedin_url',
+        'twitter_url',
         'website',
         'information_website'
     ];
+
+    /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
     /**
      * Automatically convert the name to lowercase before saving.

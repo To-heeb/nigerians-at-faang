@@ -2063,6 +2063,11 @@ section,
     color: var(--contrast-color);
 }
 
+.blog-pagination li a.disabled{
+    background: white;
+    color: var(--contrast-color);
+}
+
 /*--------------------------------------------------------------
 # Blog Details Section
 --------------------------------------------------------------*/
@@ -2428,6 +2433,28 @@ section,
     box-shadow: none;
     font-size: 14px;
     border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.search-container input[type="search"]{
+    color: var(--default-color);
+    background-color: var(--surface-color);
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 14px;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.search-container input[type="search"]:focus {
+  border-color: var(--accent-color);
+}
+
+.search-container input[type="search"]::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.search-container input[type="search"] {
+  height: 48px;
+  padding: 10px 15px;
 }
 
 .contact .php-email-form input[type="text"]:focus,

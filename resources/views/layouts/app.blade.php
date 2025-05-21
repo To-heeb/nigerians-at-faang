@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>{{ config('app.name') }} - {{ config('app.title') }}</title>
+    <title>{{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}
+    </title>
     <meta name="description" content="{{ config('app.description') }}">
     <meta name="keywords" content="{{ config('app.keywords') }}">
 

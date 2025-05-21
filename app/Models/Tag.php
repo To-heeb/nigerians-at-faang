@@ -24,6 +24,14 @@ class Tag extends Model
     ];
 
     /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
+    /**
      * Automatically convert the name to slug before saving.
      */
     public function setNameAttribute($value)
