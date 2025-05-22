@@ -414,6 +414,7 @@ class CompanySeeder extends Seeder
                 "linkedin_url" => "https://www.linkedin.com/company/wayfair",
                 "twitter_url" => "https://twitter.com/Wayfair",
                 "youtube_url" => "https://www.youtube.com/channel/UCygNJ1TutAAtYlmu0gUMLBA"
+
             ],
         ];
 
