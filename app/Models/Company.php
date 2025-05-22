@@ -21,10 +21,11 @@ class Company extends Model
         'name',
         'slug',
         'logo',
+        'website',
         'mini_logo',
         'linkedin_url',
         'twitter_url',
-        'website',
+        'youtube_url',
         'information_website'
     ];
 

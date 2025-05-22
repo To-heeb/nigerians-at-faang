@@ -17,8 +17,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('website');
             $table->string('information_website');
-            $table->string('linkedin_url');
-            $table->string('twitter_url');
+            $table->string('linkedin_url')->nullable();
+            $table->string('twitter_url')->nullable();
+            $table->string('youtube_url')->nullable();
             $table->text('logo');
             $table->text('mini_logo');
             $table->timestamps();
