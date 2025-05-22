@@ -8,7 +8,7 @@
         </p>
         <div class="member-img">
             <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
-                class="img-fluid" alt="">
+                class="img-fluid" width="248px" height="248px" alt="{{ $profile->image }}'s image">
             <div class="social">
                 @if ($profile->twitter_url)
                     <a href="{{ $profile->twitter_url }}" target="__blank"><i class="bi bi-twitter-x"></i></a>

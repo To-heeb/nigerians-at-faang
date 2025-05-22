@@ -1,4 +1,6 @@
-<x-app-layout title="Companies">
+<x-app-layout>
+    @section('title', 'Companies')
+
     <!-- Page Title -->
     <x-header-banner page="Companies" />
     <!-- End Page Title -->
