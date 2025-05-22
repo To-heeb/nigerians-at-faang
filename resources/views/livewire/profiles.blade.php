@@ -19,16 +19,17 @@
              <div class="spinner-border text-success" style="width: 1.5rem; height: 1.5rem;" role="status">
                  <span class="visually-hidden">Loading...</span>
              </div>
-             <!-- Animated text -->
+             <!-- Dynamic search text -->
              <span class="fw-semibold text-muted">
-                 Discovering talent at
-                 <span class="text-success" x-text="$wire.search || 'companies'"></span> ...
+                 Finding
+                 <span class="text-success"
+                     x-text="$wire.search ? 'matches for ' + $wire.search  : 'profiles by name, job title or company'">
+                 </span> ...
              </span>
          </div>
-         <!-- Optional progress bar -->
+         <!-- Progress bar -->
          <div class="progress mt-2" style="height: 3px; width: 120px; margin: 0 auto;">
-             <div class="progress-bar progress-bar-striped progress-bar-animated text-bg-success" style="width: 100%">
-             </div>
+             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 100%"></div>
          </div>
      </div>
 

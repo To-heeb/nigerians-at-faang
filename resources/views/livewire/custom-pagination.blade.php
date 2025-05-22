@@ -2,7 +2,6 @@
     <section id="blog-pagination" class="blog-pagination section">
         <div class="container">
             <div class="d-flex justify-content-center">
-                {{-- list-unstyled d-flex align-items-center gap-1 mb-0 --}}
                 <ul>
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
