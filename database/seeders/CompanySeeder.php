@@ -415,6 +415,30 @@ class CompanySeeder extends Seeder
                 "twitter_url" => "https://twitter.com/Wayfair",
                 "youtube_url" => "https://www.youtube.com/channel/UCygNJ1TutAAtYlmu0gUMLBA"
             ],
+            [
+                'name' => "Ikea",
+                "website" => "https://www.ikea.com/",
+                "information_website" => "https://www.ikea.com/global/en/our-business/",
+                "linkedin_url" => "https://www.linkedin.com/company/ikea/",
+                "twitter_url" => "https://x.com/ikea",
+                "youtube_url" => "https://www.youtube.com/user/IKEA"
+            ],
+            [
+                'name' => "Akamai",
+                "website" => "https://www.akamai.com/",
+                "information_website" => "https://www.akamai.com/company",
+                "linkedin_url" => "https://www.linkedin.com/company/akamai-technologies",
+                "twitter_url" => "https://twitter.com/Akamai",
+                "youtube_url" => "https://www.youtube.com/user/akamaitechnologies"
+            ],
+            [
+                'name' => "Walmart",
+                "website" => "https://www.walmart.com/",
+                "information_website" => "https://corporate.walmart.com/",
+                "linkedin_url" => "https://www.linkedin.com/company/walmart",
+                "twitter_url" => "https://x.com/walmartinc",
+                "youtube_url" => "https://www.youtube.com/walmart"
+            ],
         ];
 
         $companies = array_map(fn($company) => [

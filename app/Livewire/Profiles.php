@@ -36,14 +36,21 @@ class Profiles extends Component
     public function render()
     {
         $searchTerm = trim($this->search ?? '');
-        $profiles = Profile::query()->when(!empty($searchTerm), function ($query) use ($searchTerm) {
-            // info("Search term", [$searchTerm]);
-            return $query->where('name', 'like', '%' . $searchTerm . '%')
-                ->orWhere('job_title', 'like', '%' . $searchTerm  . '%')
-                ->orWhereHas('company', function ($q) use ($searchTerm) {
-                    $q->where('name', 'like', '%' . $searchTerm . '%');
-                });
-        })->paginate($this->perPage);
+        $profiles = Profile::query()
+            ->publiclyVisible()
+            ->inRandomOrder(now()->format('Ymd')) //Time-Based Rotation algo  now()->format('Ymd')
+            // ->orderByRaw('(views_count + (DATEDIFF(NOW(), created_at) * -1)) DESC') //Algorithmic Rotation algo
+            // ->orderBy('created_at', 'desc') //  Recently Added First
+            // ->orderBy('last_featured_at', 'asc') // Oldest featured first - Priority Queue System
+            // ->orderBy('views_count', 'asc') // // Less viewed get priority
+            ->when(!empty($searchTerm), function ($query) use ($searchTerm) {
+                // info("Search term", [$searchTerm]);
+                return $query->where('name', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('job_title', 'like', '%' . $searchTerm  . '%')
+                    ->orWhereHas('company', function ($q) use ($searchTerm) {
+                        $q->where('name', 'like', '%' . $searchTerm . '%');
+                    });
+            })->paginate($this->perPage);
 
         return view('livewire.profiles', compact('profiles'));
     }

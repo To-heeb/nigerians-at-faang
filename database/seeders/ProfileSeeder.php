@@ -28,6 +28,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Gbonjubola Adelokun is a trailblazing Senior Software Engineer at Netflix, with a career spanning Banking, Fintech, and Entertainment sectors. She is recognized for breaking barriers as the first female software engineer at Flutterwave (Africa’s leading fintech) and the first Nigerian relocated from Nigeria to Adyen (a global payments giant). Known for her adaptability and technical leadership, she now excels in solution architecture and partner engineering at Netflix while actively mentoring aspiring engineers and sharing industry insights.",
                 'is_published' => true,
+                'is_approved' => true,
                 // https://www.youtube.com/watch?v=FbT0hYSkNVQ
                 // https://www.youtube.com/watch?v=ieiaaezQ3nA
             ],
@@ -44,6 +45,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Oluwanifemi Odeyinde",
@@ -58,6 +60,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Oluwanifemi Odeyinde is a seasoned Human Resources (HR) professional currently serving as the Employee Relations & HR Compliance Manager at Amazon. With over nine years of experience in HR, she has worked across diverse industries, including Fast-Moving Consumer Goods (FMCG), pharmaceuticals, and shipping, holding roles at multinational corporations like Johnson & Johnson, Procter & Gamble, and Hapag-Lloyd AG",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Felix Ekwueme",
@@ -72,6 +75,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Felix Ekwueme is a Nigerian-American technologist, entrepreneur, and U.S. Army Reserve officer, currently serving as a Principal Technical Product Manager at Amazon, where he leads initiatives in supply chain optimization and customer experience innovation. With a career spanning software engineering, product management, and military service, he is recognized for his advocacy for diversity in tech and his work in emerging markets. He is also the founder of Tell Em', a social media platform designed to bridge digital and in-person interactions",
                 'is_published' => true,
+                'is_approved' => true,
                 // https://disruptnews.substack.com/p/felix-ekwueme-the-future-role-of-11c
             ],
             [
@@ -87,6 +91,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Ijeoma Uhuegbulem",
@@ -101,6 +106,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Ijeoma Uhuegbulem is a Nigerian-born data and supply chain professional currently working as a Senior Supply Chain Analyst at Amazon in Luxembourg, Germany. With a background in law and a pivot to technology, she combines legal acumen with data science expertise to optimize supply chain operations. She holds an MSc in Digital Marketing & Data Science from emlyon business school (France) and has worked in roles spanning law, blockchain, and banking before transitioning to tech",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Emmanuel Uche",
@@ -115,6 +121,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Piriye Anga",
@@ -129,6 +136,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Piriye Anga is a Nigerian international lawyer and Corporate Counsel at Amazon, known for her work in human rights advocacy and corporate law. She has also served as a board member of Ara Africa, a grassroots initiative combating blood cancers and sickle cell anemia in Africa. Her career highlights include securing a client’s life sentence commutation through U.S. presidential intervention and working with prestigious law firms like Aluko & Oyebode and Arnold & Porter Kaye Scholer LLP in New York",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Adeyemi Adetuwo",
@@ -143,6 +151,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Adebodun Aina",
@@ -157,6 +166,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Adebodun Aina is a Nigerian business leader and operations expert, currently serving as a Pathways Senior Operations Manager at Amazon. With an MBA from Harvard Business School and prior experience at McKinsey & Company, he specializes in supply chain optimization, operational strategy, and leadership development. Known for his work in vaccine distribution and public sector transformation, he also mentors young African professionals through initiatives like the Young African MBA program",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Ukonwa Kuzi-Orizu Ojo",
@@ -171,6 +181,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Ukonwa Kuzi-Orizu Ojo is a Nigerian-born marketing executive, entrepreneur, and global business leader, renowned for her transformative roles at Amazon Prime Video, MAC Cosmetics, and Coty, and as the Founder/CEO of Zaia Ventures. With a career spanning 26 years, she has driven billion-dollar brands, shattered industry ceilings, and championed underrepresented communities. A Harvard Business Review-listed innovator and Forbes Most Influential CMO, she combines data-driven strategy with creative storytelling to redefine markets globally",
                 'is_published' => true,
+                'is_approved' => true,
                 // https://podcasts.apple.com/us/podcast/episode-88-ukonwa-kuzi-orizu-ojo/id1601870781?i=1000646388179
                 // https://www.youtube.com/watch?v=2IVCF5rlnKA
             ],
@@ -187,6 +198,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Chukwuemeka Afigbo is a Nigerian technology executive and developer ecosystem leader, currently serving as Senior Director of Developer Success at Okta (Workforce Identity Cloud). With a career spanning Google, Facebook (Meta), and Okta, he specializes in fostering developer communities, strategic partnerships, and innovation in emerging markets. A graduate of Electronic Engineering (University of Nigeria) and Technology Innovations Management (Carleton University), he is recognized for pioneering initiatives like Lagos Code Camp and advocating for African tech talent globally",
                 'is_published' => true,
+                'is_approved' => true,
             ],
             [
                 'name' => "Ime Archibong",
@@ -201,6 +213,7 @@ class ProfileSeeder extends Seeder
                 'tiktok_url' => "",
                 'short_bio' => "Ime Archibong is a Nigerian-American technology executive and one of Meta’s highest-ranking Black leaders, currently serving as Vice President of Product Management and Head of Messenger at Meta Platforms. A Yale and Stanford graduate, he began his career at IBM before joining Meta (formerly Facebook) in 2010, where he has spearheaded initiatives like Internet.org, Messenger, and New Product Experimentation (NPE). Recognized for his leadership in diversity and global connectivity, he holds over a dozen patents and serves on the board of Capital One and multiple nonprofits focused on education and underserved communities",
                 'is_published' => true,
+                'is_approved' => true,
                 // https://www.youtube.com/watch?v=JiQuzYIKOGg
                 // https://www.instagram.com/reel/C-FhYTHgVXV/
                 // https://www.youtube.com/watch?v=82wwpWVDWqk
@@ -223,6 +236,7 @@ class ProfileSeeder extends Seeder
             //     'tiktok_url' => "",
             //     'short_bio' => "",
             //     'is_published' => true,
+            // 'is_approved' => true,
             // ],
             // [
             //     'name' => "",
@@ -237,6 +251,7 @@ class ProfileSeeder extends Seeder
             //     'tiktok_url' => "",
             //     'short_bio' => "",
             //     'is_published' => true,
+            // 'is_approved' => true,
             // ],
         ];
 
@@ -252,6 +267,8 @@ class ProfileSeeder extends Seeder
             'linkedin_url' => $profile['linkedin_url'],
             'is_published' => $profile['is_published'],
             'published_at' => now(),
+            'is_approved' => $profile['is_approved'],
+            'approved_at' => now(),
             'created_at' => now(),
             'updated_at' => now()
         ], $profiles);

@@ -24,6 +24,7 @@ class Profile extends Model
         'slug',
         'image',
         'job_title',
+        'views_count',
         'company_id',
         'linkedin_url',
         'twitter_url',
@@ -31,8 +32,13 @@ class Profile extends Model
         'instagram_url',
         'tiktok_url',
         'short_bio',
+        'is_approved',
+        'approved_at',
         'is_published',
         'published_at',
+        'is_featured',
+        'featured_at',
+        'last_featured_at',
     ];
 
     /**
@@ -41,7 +47,8 @@ class Profile extends Model
      * @return array<string, string>
      */
     protected $casts = [
-        'published_at' => 'datetime'
+        'published_at' => 'datetime',
+        'featured_at' => 'datetime'
     ];
 
     /**
@@ -96,6 +103,42 @@ class Profile extends Model
     }
 
     /**
+     * Scope a query to only include approved profile
+     */
+    #[Scope]
+    protected function approved($query)
+    {
+        return $query->where('is_approved', true);
+    }
+
+    /**
+     * Scope a query to only include unapproved profile
+     */
+    #[Scope]
+    protected function unapproved($query)
+    {
+        return $query->where('is_approved', false);
+    }
+
+    /**
+     * Scope a query to only include featured profile
+     */
+    #[Scope]
+    protected function featured($query)
+    {
+        return $query->where('is_featured', true);
+    }
+
+    /**
+     * Scope a query to only include unfeatured profile
+     */
+    #[Scope]
+    protected function unfeatured($query)
+    {
+        return $query->where('is_featured', false);
+    }
+
+    /**
      * Scope a query to only include published profile
      */
     #[Scope]
@@ -111,5 +154,16 @@ class Profile extends Model
     protected function unpublished($query)
     {
         return $query->where('is_published', false);
+    }
+
+    /**
+     * Scope a query to only include profiles that are approved, featured, and published.
+     */
+    #[Scope]
+    protected function publiclyVisible($query)
+    {
+        return $query->where('is_approved', true)
+            // ->where('is_featured', true)
+            ->where('is_published', true);
     }
 }

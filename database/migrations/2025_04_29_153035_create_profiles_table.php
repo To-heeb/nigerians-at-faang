@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('image');
             $table->string('job_title');
+            $table->unsignedInteger('views_count')->default(0)->index();
             $table->foreignId('company_id')->constrained();
             $table->string('linkedin_url')->nullable();
             $table->string('twitter_url')->nullable();
@@ -24,8 +25,13 @@ return new class extends Migration
             $table->string('instagram_url')->nullable();
             $table->string('tiktok_url')->nullable();
             $table->text('short_bio');
+            $table->boolean('is_approved')->default(false);
+            $table->timestamp('approved_at')->nullable();
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
+            $table->boolean('is_featured')->default(false);
+            $table->timestamp('featured_at')->nullable();
+            $table->timestamp('last_featured_at')->nullable();
             $table->timestamps();
 
             $table->fullText(['name', 'job_title', 'short_bio']);
