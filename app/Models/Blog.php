@@ -24,9 +24,13 @@ class Blog extends Model
         'slug',
         'body',
         'image',
+        'author',
         'profile_id',
         'is_published',
         'published_at',
+        'is_featured',
+        'featured_at',
+        'last_featured_at',
     ];
 
     /**

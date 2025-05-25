@@ -1,13 +1,15 @@
- <!-- Profiles Section -->
- <section id="team" class="team section-home profile-section py-5">
+ <!-- Blog Section -->
+ <section id="blog-posts" class="blog-posts section-home blog-section py-5">
 
      <!-- Section Title -->
      <div class="container section-title search-container">
-         <h3 class="mb-2">Discover Nigerian Talent at Top Companies</h3>
-         <p class="mb-4">Search FAANG and beyond to explore career journeys, interview tips, and insider insights.</p>
+         <h3 class="mb-2">Nigerian Excellence in Global Tech</h3>
+         <p class="mb-4">Unfiltered career blueprints from Nigerians at FAANG+ companies.
+             Learn how they conquered technical interviews,
+             negotiated offers, and navigated relocations.</p>
          <input type="search" wire:model.live.debounce.500ms="search"
              wire:keydown.enter.prevent="if ($event.target.value.trim() === '') {return false;} else {$wire.$refresh();}"
-             class="form-control" id="company-search" placeholder="Search by 'Name' Or 'Job Title' Or 'Company'"
+             class="form-control" id="company-search" placeholder="Search by 'Blog Title' Or 'Profile Name'"
              autocomplete="off" autofocus="on" aria-describedby="searchHelp" wire:keydown.space.prevent
              @keyup.space="if($event.target.value.trim() === '') $event.target.value = ''" />
      </div>
@@ -23,7 +25,7 @@
              <span class="fw-semibold text-muted">
                  Finding
                  <span class="text-success"
-                     x-text="$wire.search ? 'matches for ' + $wire.search  : 'profiles by name, job title or company'">
+                     x-text="$wire.search ? 'matches for ' + $wire.search  : 'blogs by title or profile'">
                  </span> ...
              </span>
          </div>
@@ -52,29 +54,21 @@
          });
      });">
          <div class="row gy-4">
-             @forelse($profiles as $profile)
-                 <x-profile-card wire:key="{{ $profile->id }}" :profile="$profile" :delay="$loop->index % 100" />
+             @forelse($blogs as $blog)
+                 <x-blog-card wire:key="{{ $blog->id }}" :blog="$blog" :delay="$loop->index % 100" />
              @empty
-                 <p class="text-muted">No profile or job title or company found for "{{ $search }}".</p>
+                 <p class="text-muted">No blog with "{{ $search }}" title found.</p>
              @endforelse
          </div>
      </div>
 
      <!-- Pagination -->
-     @if ($profiles->hasPages())
-         {{-- <div class="container text-center mt-3">
-             <div class="text-center mt-3" wire:loading.flex wire:target="nextPage,gotoPage,previousPage">
-                 <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-light">
-                     <div class="spinner-border spinner-border-sm text-success" role="status"></div>
-                     <span class="text-muted small">Loading company data...</span>
-                 </div>
-             </div>
-         </div> --}}
-
+     @if ($blogs->hasPages())
          <div class="container text-center mt-3" wire:loading.flex wire:target="nextPage,gotoPage,previousPage">
              <div class="d-flex align-items-center justify-content-center gap-3 p-3 bg-light rounded-3"
                  style="max-width: 300px; margin: 0 auto;">
                  <!-- Modern spinner with company-themed icon -->
+
                  <div class="position-relative" style="width: 24px; height: 24px;">
                      <div class="spinner-border text-success" style="width: 100%; height: 100%;" role="status">
                          <span class="visually-hidden">Loading...</span>
@@ -85,7 +79,7 @@
 
                  <!-- Animated text with progress -->
                  <div class="text-start">
-                     <p class="mb-0 fw-semibold text-dark">Loading more profile</p>
+                     <p class="my-0 fw-semibold text-dark">Loading more blogs</p>
                      <div class="progress" style="height: 3px; width: 180px;">
                          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
                              style="width: 100%"></div>
@@ -95,12 +89,13 @@
          </div>
 
          <div class="pagination-container mt-4 mb-2">
-             {{ $profiles->links('livewire.custom-pagination') }}
+             {{ $blogs->links('livewire.custom-pagination') }}
          </div>
      @endif
      <!-- End Pagination -->
 
  </section>
+ <!-- /Blog Section -->
 
  <script>
      // Extend AOS with refreshHard method

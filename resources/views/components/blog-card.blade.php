@@ -16,12 +16,12 @@
             <div class="meta d-flex align-items-center">
                 <div class="d-flex align-items-center">
                     <i class="bi bi-person"></i>
-                    <span class="ps-2">{{ $blog->profile ? $blog->profile->name : 'Toheeb Oyekola' }}</span>
+                    <span class="ps-2">{{ $blog->profile ? $blog->profile->name : $blog->author }}</span>
                 </div>
                 <span class="px-3 text-black-50">/</span>
                 <div class="d-flex align-items-center">
                     <i class="bi bi-folder2"></i>
-                    <span class="ps-2">Politics</span>
+                    <span class="ps-2">{{ $blog->tags->first() ?? 'Politics' }}</span>
                 </div>
             </div>
 

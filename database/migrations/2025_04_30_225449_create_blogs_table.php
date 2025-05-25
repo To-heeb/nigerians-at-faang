@@ -17,9 +17,14 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->longText('body');
             $table->string('image');
+            $table->string('author')->nullable();
+            $table->unsignedInteger('views_count')->default(0)->index();
             $table->foreignId('profile_id')->nullable()->constrained()->onDelete('cascade');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();
+            $table->boolean('is_featured')->default(false);
+            $table->timestamp('featured_at')->nullable();
+            $table->timestamp('last_featured_at')->nullable();
             $table->timestamps();
 
             $table->fullText(['title', 'body']);
