@@ -105,7 +105,7 @@
     <!-- /Blog Section -->
 
     <!-- Get Involved Section -->
-    <section id="pricing" class="pricing section-home">
+    <section id="get-involved" class="pricing section-home">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Get Involved</h2>
@@ -124,7 +124,7 @@
                     under_text="We verify all nominations before publishing." id="nominate-someone" />
                 <x-get-involved-card name="Join the Community"
                     description="Be part of a growing network of Nigerians in tech. Connect, learn, and grow with others like you."
-                    cta_text="Join Us" cta_route="{{ route('profiles.create') }}"
+                    cta_text="Join Us" cta_route="#newsletter"
                     under_text="We’re building something powerful — together." id="join-the-community" />
             </div>
         </div>
@@ -201,8 +201,8 @@
                                     every submission to ensure it aligns with our mission.
                                 </li>
                             </ul>
-                            You can do this directly from the <a href="#pricing">“Submit a Story”</a> or <a
-                                href="#pricing"> “Nominate”</a>
+                            You can do this directly from the <a href="#get-involved">“Submit a Story”</a> or <a
+                                href="#get-involved"> “Nominate”</a>
                             section on the homepage.
                         </div>
                     </div>

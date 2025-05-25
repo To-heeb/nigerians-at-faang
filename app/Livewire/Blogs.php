@@ -38,7 +38,7 @@ class Blogs extends Component
         $searchTerm = trim($this->search ?? '');
         $blogs = Blog::query()
             ->published()
-            ->with(["profile", "tags"])
+            ->with(["profile", "tags"]) //TODO(toheeb) get just the first tag instead if everything
             ->when(!empty($searchTerm), function ($query) use ($searchTerm) {
                 // info("Search term", [$searchTerm]);
                 return $query->whereFullText(['title', 'body'], $searchTerm);

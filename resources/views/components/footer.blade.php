@@ -55,7 +55,7 @@
             <div class="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Our Newsletter</h4>
                 <p>Subscribe to our newsletter and receive the latest update about profile and blog added!</p>
-                <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <form action="forms/newsletter.php" method="post" class="php-email-form" id="newsletter">
                     <div class="newsletter-form"><input type="email" name="email"><input type="submit"
                             value="Join 🚀"></div>
                     <div class="loading">Loading</div>
