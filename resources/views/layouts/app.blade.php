@@ -9,6 +9,7 @@
     </title>
     <meta name="description" content="{{ config('app.description') }}">
     <meta name="keywords" content="{{ config('app.keywords') }}">
+    <meta name="author" content="{{ config('app.author') }}">
 
     @include('layouts/sections/styles')
 </head>

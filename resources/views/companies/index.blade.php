@@ -1,5 +1,8 @@
 <x-app-layout>
-    @section('title', 'Companies')
+
+    <x-slot:title>
+        Companies
+    </x-slot>
 
     <!-- Page Title -->
     <x-header-banner page="Companies" />

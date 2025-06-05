@@ -2501,6 +2501,73 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Create Profile Section
+--------------------------------------------------------------*/
+
+.create-profile .create-profile-form {
+    width: 100%;
+}
+
+.create-profile .create-profile-form .form-group {
+    padding-bottom: 8px;
+}
+
+.create-profile .create-profile-form input[type="text"],
+.create-profile .create-profile-form input[type="email"],
+.create-profile .create-profile-form input[type="url"],
+.create-profile .create-profile-form select,
+.create-profile .create-profile-form textarea {
+    color: var(--default-color);
+    background-color: var(--surface-color);
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 14px;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.create-profile .create-profile-form input[type="text"]:focus,
+.create-profile .create-profile-form input[type="email"]:focus,
+.create-profile .create-profile-form input[type="url"]:focus,
+.create-profile .create-profile-form select:focus,
+.create-profile .create-profile-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.create-profile .create-profile-form input[type="text"]::placeholder,
+.create-profile .create-profile-form input[type="email"]::placeholder,
+.create-profile .create-profile-form input[type="url"]::placeholder,
+.create-profile .create-profile-form select::placeholder,
+.create-profile .create-profile-form textarea::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.create-profile .create-profile-form input[type="text"],
+.create-profile .create-profile-form input[type="email"],
+.create-profile .create-profile-form input[type="url"],
+.create-profile .create-profile-form select {
+    height: 48px;
+    padding: 25px 12px 10px 12px;
+}
+
+.create-profile .create-profile-form textarea {
+    padding: 10px 12px;
+    height: 100px;
+}
+
+.create-profile .create-profile-form button[type="submit"] {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: 0;
+    padding: 13px 50px;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.create-profile .create-profile-form button[type="submit"]:hover {
+    background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widgets-container {

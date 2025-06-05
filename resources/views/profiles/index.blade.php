@@ -1,4 +1,9 @@
-<x-app-layout title="Profiles">
+<x-app-layout>
+
+    <x-slot:title>
+        Profiles
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="Profiles" />
     <!-- End Page Title -->

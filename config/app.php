@@ -141,6 +141,7 @@ return [
     "twitterUrl" => "https://x.com/nigerians-at-faang/",
     "description" => "",
     "keywords" => "",
+    "author" => "Oyekola Toheeb",
     "instagramUrl" => "https://instgram.com/nigerians-at-faang/",
     "linkedInUrl" => "https://www.linkedin.com/company/nigerians-faang/",
     "contact_mail" => env('CONTACT_MAIL', 'contact@nigeriansatfaang.com'),

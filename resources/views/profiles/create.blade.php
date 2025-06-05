@@ -1,13 +1,13 @@
 <x-app-layout>
 
     <x-slot:title>
-        Blogs
+        Nominate A Profile
     </x-slot>
 
     <!-- Page Title -->
-    <x-header-banner page="Blogs" />
+    <x-header-banner page="Nominate A Profile" />
     <!-- End Page Title -->
 
-    <livewire:blogs>
+    <livewire:create-profile>
 
 </x-app-layout>

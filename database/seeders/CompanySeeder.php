@@ -439,6 +439,14 @@ class CompanySeeder extends Seeder
                 "twitter_url" => "https://x.com/walmartinc",
                 "youtube_url" => "https://www.youtube.com/walmart"
             ],
+            [
+                'name' => "Zillow",
+                "website" => "https://www.zillow.com/",
+                "information_website" => "https://www.zillow.com/z/corp/about/",
+                "linkedin_url" => "https://www.linkedin.com/company/zillow",
+                "twitter_url" => "https://twitter.com/zillow",
+                "youtube_url" => "https://www.youtube.com/user/zillownews"
+            ],
         ];
 
         $companies = array_map(fn($company) => [
