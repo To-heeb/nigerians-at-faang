@@ -447,6 +447,14 @@ class CompanySeeder extends Seeder
                 "twitter_url" => "https://twitter.com/zillow",
                 "youtube_url" => "https://www.youtube.com/user/zillownews"
             ],
+            [
+                'name' => "SAP",
+                "website" => "https://www.sap.com/",
+                "information_website" => "https://www.sap.com/about/company.html",
+                "linkedin_url" => "https://www.linkedin.com/company/sap",
+                "twitter_url" => "https://twitter.com/sap",
+                "youtube_url" => "https://www.youtube.com/@SAP"
+            ],
         ];
 
         $companies = array_map(fn($company) => [

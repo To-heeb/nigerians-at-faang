@@ -75,14 +75,14 @@
                             <div class="col-md-6 form-group">
                                 <div class="form-floating">
                                     <input type="url" name="linkedin_url" class="form-control" id="linkedin_url"
-                                        placeholder="" title="Please add one of the links either(twitter or linkedin)">
+                                        placeholder="" title="Please add one of the links either(X or Linkedin)">
                                     <label for="linkedin_url">LinkedIn Url</label>
                                 </div>
                             </div>
                             <div class="col-md-6 form-group mt-3 mt-md-0">
                                 <div class="form-floating">
                                     <input type="url" class="form-control" name="twitter_url" id="twitter_url"
-                                        placeholder="" title="Please add one of the links either(twitter or linkedin)">
+                                        placeholder="" title="Please add one of the links either(X or Linkedin)">
                                     <label for="twitter_url">X Url</label>
                                 </div>
                             </div>
