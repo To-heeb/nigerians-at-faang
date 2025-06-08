@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -32,6 +34,7 @@ class Profile extends Model
         'instagram_url',
         'tiktok_url',
         'short_bio',
+        'nominated_by',
         'is_approved',
         'approved_at',
         'is_published',
@@ -64,7 +67,8 @@ class Profile extends Model
      */
     public function setNameAttribute($value)
     {
-        $this->attributes['slug'] = strtolower($value);
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = Str::slug($value);
     }
 
     /**

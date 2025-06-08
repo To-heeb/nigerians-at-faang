@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('instagram_url')->nullable();
             $table->string('tiktok_url')->nullable();
             $table->text('short_bio');
+            $table->string('nominated_by')->nullable();
             $table->boolean('is_approved')->default(false);
             $table->timestamp('approved_at')->nullable();
             $table->boolean('is_published')->default(false);

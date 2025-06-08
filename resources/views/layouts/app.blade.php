@@ -11,6 +11,7 @@
     <meta name="keywords" content="{{ config('app.keywords') }}">
     <meta name="author" content="{{ config('app.author') }}">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     @include('layouts/sections/styles')
 </head>
 
@@ -49,7 +50,7 @@
                 dismissible: true,
                 duration: 4000,
                 position: {
-                    x: 'center',
+                    x: 'right',
                     y: 'top',
                 },
             })
@@ -63,7 +64,7 @@
                 dismissible: true,
                 duration: 3000,
                 position: {
-                    x: 'center',
+                    x: 'right',
                     y: 'top',
                 },
             })

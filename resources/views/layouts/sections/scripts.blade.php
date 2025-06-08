@@ -15,4 +15,3 @@
   <!-- BEGIN: Page JS-->
   @stack('page-script')
   <!-- END: Page JS-->
-
