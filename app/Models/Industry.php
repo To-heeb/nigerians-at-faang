@@ -4,13 +4,11 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Tag extends Model
+class Industry extends Model
 {
-    /** @use HasFactory<\Database\Factories\TagFactory> */
+    /** @use HasFactory<\Database\Factories\IndustryFactory> */
     use HasFactory;
 
     /**
@@ -22,6 +20,7 @@ class Tag extends Model
         'name',
         'slug',
     ];
+
 
     /**
      * Get the route key for the model.
@@ -41,26 +40,10 @@ class Tag extends Model
     }
 
     /**
-     * Get the parent taggable model (profile or blog).
+     * The companies that belong to the industry.
      */
-    public function taggable(): MorphTo
+    public function companies()
     {
-        return $this->morphTo();
-    }
-
-    /**
-     * Get all of the profiles that are assigned this tag.
-     */
-    public function profiles(): MorphToMany
-    {
-        return $this->morphedByMany(Profile::class, 'taggable');
-    }
-
-    /**
-     * Get all of the blogs that are assigned this tag.
-     */
-    public function blogs(): MorphToMany
-    {
-        return $this->morphedByMany(Blog::class, 'taggable');
+        return $this->belongsToMany(Company::class);
     }
 }

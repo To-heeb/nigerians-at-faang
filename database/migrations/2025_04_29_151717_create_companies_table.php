@@ -18,9 +18,9 @@ return new class extends Migration
             $table->text('about');
             $table->year('founded_at');
             $table->string('headquarters');
-            $table->string('industry');
             $table->string('website');
             $table->string('information_website');
+            $table->string('career_page_url')->nullable();
             $table->string('linkedin_url')->nullable();
             $table->string('twitter_url')->nullable();
             $table->string('youtube_url')->nullable();
