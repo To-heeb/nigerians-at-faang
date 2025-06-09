@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,6 +26,7 @@ class Blog extends Model
         'body',
         'image',
         'author',
+        'views_count',
         'profile_id',
         'is_published',
         'published_at',
@@ -75,10 +77,35 @@ class Blog extends Model
     }
 
     /**
+     * Scope a query to order by views_count
+     */
+    #[Scope]
+    protected function mostViewed(Builder $query, $limit = 10)
+    {
+        return $query->orderByDesc('views_count')->take($limit);
+    }
+
+    /**
+     * Scope a query to only include profiles that have at least one of the given tags.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param array $tags An array of tag names or IDs to filter profiles by.
+     *                    Make sure to modify the query inside based on whether you're using names or IDs.
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    #[Scope]
+    protected function withTags(Builder $query, array $tags)
+    {
+        return $query->whereHas('tags', function ($q) use ($tags) {
+            $q->whereIn('name', $tags); // or use 'id' if you're passing tag IDs
+        });
+    }
+
+    /**
      * Scope a query to only include latest profile with company.
      */
     #[Scope]
-    protected function latestWithProfile($query, ?int $limit = 3)
+    protected function latestWithProfile(Builder $query, ?int $limit = 3)
     {
         return $query->with('profile')
             ->latest('published_at')
@@ -89,7 +116,7 @@ class Blog extends Model
      * Scope a query to only include published blog
      */
     #[Scope]
-    protected function published($query)
+    protected function published(Builder $query)
     {
         return $query->where('is_published', true);
     }
@@ -98,7 +125,7 @@ class Blog extends Model
      * Scope a query to only include unpublished blog
      */
     #[Scope]
-    protected function unpublished($query)
+    protected function unpublished(Builder $query)
     {
         return $query->where('is_published', false);
     }

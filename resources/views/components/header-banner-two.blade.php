@@ -1,4 +1,4 @@
-@props(['page'])
+@props(['page', 'above_page', 'above_page_route'])
 
 <!-- Page Title -->
 <div class="page-title accent-background">
@@ -7,6 +7,7 @@
         <nav class="breadcrumbs">
             <ol>
                 <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ $above_page_route }}">{{ $above_page }}</a></li>
                 <li class="current">{{ $page }}</li>
             </ol>
         </nav>

@@ -33,6 +33,7 @@
                     class="bi bi-instagram"></i></a>
             <a href="{{ config('app.linkedInUrl') }}" target="_blank" class="linkedin"><i
                     class="bi bi-linkedin"></i></a>
+            <a href="{{ config('app.githubUrl') }}" target="_blank" class="github"><i class="bi bi-github"></i></a>
         </div>
 
     </div>

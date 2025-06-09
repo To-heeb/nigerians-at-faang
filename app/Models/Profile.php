@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -96,10 +96,35 @@ class Profile extends Model
     }
 
     /**
+     * Scope a query to order by views_count
+     */
+    #[Scope]
+    protected function mostViewed(Builder $query, $limit = 10)
+    {
+        return $query->orderByDesc('views_count')->take($limit);
+    }
+
+    /**
+     * Scope a query to only include profiles that have at least one of the given tags.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param array $tags An array of tag names or IDs to filter profiles by.
+     *                    Make sure to modify the query inside based on whether you're using names or IDs.
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    #[Scope]
+    protected function withTags(Builder $query, array $tags)
+    {
+        return $query->whereHas('tags', function ($q) use ($tags) {
+            $q->whereIn('name', $tags); // or use 'id' if you're passing tag IDs
+        });
+    }
+
+    /**
      * Scope a query to only include latest profile with company.
      */
     #[Scope]
-    protected function latestWithCompany($query, ?int $limit = 4)
+    protected function latestWithCompany(Builder $query, ?int $limit = 4)
     {
         return $query->with('company')
             ->latest('published_at')
@@ -110,7 +135,7 @@ class Profile extends Model
      * Scope a query to only include approved profile
      */
     #[Scope]
-    protected function approved($query)
+    protected function approved(Builder $query)
     {
         return $query->where('is_approved', true);
     }
@@ -119,7 +144,7 @@ class Profile extends Model
      * Scope a query to only include unapproved profile
      */
     #[Scope]
-    protected function unapproved($query)
+    protected function unapproved(Builder $query)
     {
         return $query->where('is_approved', false);
     }
@@ -128,7 +153,7 @@ class Profile extends Model
      * Scope a query to only include featured profile
      */
     #[Scope]
-    protected function featured($query)
+    protected function featured(Builder $query)
     {
         return $query->where('is_featured', true);
     }
@@ -137,7 +162,7 @@ class Profile extends Model
      * Scope a query to only include unfeatured profile
      */
     #[Scope]
-    protected function unfeatured($query)
+    protected function unfeatured(Builder $query)
     {
         return $query->where('is_featured', false);
     }
@@ -146,7 +171,7 @@ class Profile extends Model
      * Scope a query to only include published profile
      */
     #[Scope]
-    protected function published($query)
+    protected function published(Builder $query)
     {
         return $query->where('is_published', true);
     }
@@ -155,7 +180,7 @@ class Profile extends Model
      * Scope a query to only include  unpublished profile
      */
     #[Scope]
-    protected function unpublished($query)
+    protected function unpublished(Builder $query)
     {
         return $query->where('is_published', false);
     }
@@ -164,7 +189,7 @@ class Profile extends Model
      * Scope a query to only include profiles that are approved, featured, and published.
      */
     #[Scope]
-    protected function publiclyVisible($query)
+    protected function publiclyVisible(Builder $query)
     {
         return $query->where('is_approved', true)
             // ->where('is_featured', true)

@@ -1,6 +1,6 @@
 <div>
     <!-- Create Profile Section -->
-    <section id="contact" class="create-profile section">
+    <section id="create-profile" class="create-profile section">
 
         <!-- Section Title -->
         <div class="container section-title mt-5">
@@ -14,19 +14,21 @@
         <div class="container">
 
             <div class="row mb-3">
-                <div class="alert alert-light border-0 rounded-3 p-4" style="background-color: #F6FAF7;">
-                    <h5 class="text-dark mb-3">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        A few submission rules:
-                    </h5>
-                    <ul class="text-dark mb-0">
-                        <li>Every submission will be verified before it's published to the site.</li>
-                        <li>Search if profile already exists before a submission, as duplicated profile will not be
-                            published</li>
-                        <li>Submission does not guarantee that the profile will be published.</li>
-                    </ul>
-                    {{-- <li>No naughty, hate-speech or projects showing violence will be published.</li> --}}
-                    {{-- <li>Be nice, be kind, be respectful <span class="text-danger">❤️</span>.</li> --}}
+                <div class="col-lg-12">
+                    <div class="alert alert-light border-0 rounded-3 py-4 px-3" style="background-color: #F6FAF7;">
+                        <h5 class="text-dark mb-3">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            A few submission rules:
+                        </h5>
+                        <ul class="text-dark mb-0">
+                            <li>Every submission will be verified before it's published to the site.</li>
+                            <li>Search if profile already exists before a submission, as duplicated profile will not be
+                                published</li>
+                            <li>Submission does not guarantee that the profile will be published.</li>
+                        </ul>
+                        {{-- <li>No naughty, hate-speech or projects showing violence will be published.</li> --}}
+                        {{-- <li>Be nice, be kind, be respectful <span class="text-danger">❤️</span>.</li> --}}
+                    </div>
                 </div>
             </div>
 

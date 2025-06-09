@@ -21,11 +21,16 @@ class Company extends Model
         'name',
         'slug',
         'logo',
+        'about',
         'website',
+        'industry',
         'mini_logo',
-        'linkedin_url',
+        'founded_at',
+        'headquarters',
         'twitter_url',
         'youtube_url',
+        'linkedin_url',
+        'wikipedia_url',
         'information_website'
     ];
 

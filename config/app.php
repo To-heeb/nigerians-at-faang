@@ -144,6 +144,7 @@ return [
     "author" => "Oyekola Toheeb",
     "instagramUrl" => "https://instgram.com/nigerians-at-faang/",
     "linkedInUrl" => "https://www.linkedin.com/company/nigerians-faang/",
+    "githubUrl" => "https://github.com/To-heeb/nigerians-at-faang/",
     "contact_mail" => env('CONTACT_MAIL', 'contact@nigeriansatfaang.com'),
     "privacy_mail" => env('PRIVACY_MAIL', 'contact@nigeriansatfaang.com'),
     "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),

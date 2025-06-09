@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
+use App\Models\Profile;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
-use App\Models\Company;
+use App\Models\Blog;
 
 class CompanyController extends Controller
 {
@@ -23,8 +25,14 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        // TODO(toheeb): pass the profiles related to this company
 
-        return view('companies.show', compact('company'));
+        $relatedCompanies = Company::whereNot('id', $company->id)->limit(10)->get(); // TODO(toheeb): use company that are in the industry ->where('industry', $company->industry)
+        $companyProfiles = Profile::where('company_id', $company->id)->mostViewed(4)->get();
+        $companyBlogs = Blog::mostViewed(2)->get();  // TODO(toheeb): use company as the it's tag is related to the blog withTags([$company->name])
+
+        return view(
+            'companies.show',
+            compact('company', 'relatedCompanies', 'companyProfiles', 'companyBlogs')
+        );
     }
 }
