@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             ProfileSeeder::class,
             TagSeeder::class,
+            IndustrySeeder::class,
             BlogSeeder::class
         ]);
 
