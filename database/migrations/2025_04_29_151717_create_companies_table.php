@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->unique()->index();
             $table->string('slug')->unique();
             $table->text('about');
-            $table->year('founded_at');
+            $table->integer('founded_at');
             $table->string('headquarters');
             $table->string('website');
             $table->string('information_website');

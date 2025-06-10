@@ -59,21 +59,65 @@
                         <h3 class="h4 mb-3">About</h3>
                         <div class="bg-light p-4 mb-3 rounded">
                             {{-- <p class="text-muted mb-0">No company description available yet.</p> --}}
-                            <div class="row">
-                                <p class="text-muted mb-3">{{ $company->name }}</p>
+                            <div class="row mb-2">
+                                <p class="text-muted mb-3">{!! str($company->about) !!}</p>
                             </div>
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 gx-1">
-                                <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">Row column</div>
+                            <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 gx-1">
+                                {{-- <div class="col " style="border: 1px solid red;">
+                                    <div class="p-3">
+                                        <strong>stripe.com</strong>
+                                        <div class="mt-1">
+                                            <i class="bi bi-twitter-x me-1"></i>
+                                            <i class="bi bi-linkedin"></i>
+                                        </div>
+                                        <small class="text-muted d-block mt-1">Website</small>
+                                    </div>
                                 </div>
                                 <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">Row column</div>
+                                    <div class="p-3">
+                                        <strong>2010</strong>
+                                        <small class="text-muted d-block mt-1">Year Founded</small>
+                                    </div>
                                 </div>
                                 <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">Row column</div>
+                                    <div class="p-3">
+                                        <strong>4,000</strong>
+                                        <small class="text-muted d-block mt-1"># of Employees</small>
+                                    </div>
                                 </div>
                                 <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">Row column</div>
+                                    <div class="p-3">
+                                        <strong>$1B–₦16.41T</strong>
+                                        <small class="text-muted d-block mt-1">Estimated Revenue</small>
+                                    </div>
+                                </div> --}}
+                                <div class="col" style="border: 1px solid red;">
+                                    <div>
+                                        <strong>stripe.com</strong>
+                                        <div class="mt-1">
+                                            <i class="bi bi-twitter-x me-1"></i>
+                                            <i class="bi bi-linkedin"></i>
+                                        </div>
+                                        <div class="text-muted">Website</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <strong>2010</strong>
+                                        <div class="text-muted">Year Founded</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <strong>4,000</strong>
+                                        <div class="text-muted"># of Employees</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <strong>$1B - ₦16.41T</strong>
+                                        <div class="text-muted">Estimated Revenue</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +126,7 @@
                     <div class="mt-4">
                         <h3 class="h4 mb-3 mt-2">Featured Nigerians</h3>
                         <div class="bg-light p-4 mb-3 rounded">
-                            <div class="row row-cols-md-1 row-cols-lg-2 gx-3 gy-3">
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 gx-3 gy-3">
                                 @forelse ($companyProfiles as $profile)
                                     <div class="col" style="">
                                         <div class="card" style="">

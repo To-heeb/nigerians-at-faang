@@ -195,6 +195,33 @@ class IndustrySeeder extends Seeder
             [
                 'name' => 'Digital Payments'
             ],
+            [
+                'name' => 'Streaming Entertainment'
+            ],
+            [
+                'name' => 'Content Production & Licensing'
+            ],
+            [
+                'name' => 'Data Center'
+            ],
+            [
+                'name' => 'Computer Peripherals'
+            ],
+            [
+                'name' => 'Gaming Hardware'
+            ],
+            [
+                'name' => 'Database Systems'
+            ],
+            [
+                'name' => 'Enterprise Open-Source Software'
+            ],
+            [
+                'name' => 'Infrastructure'
+            ],
+            [
+                'name' => 'Consulting & IT Services'
+            ],
         ];
 
         $industries = array_map(fn($industry) => [

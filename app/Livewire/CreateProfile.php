@@ -48,7 +48,7 @@ class CreateProfile extends Component
                 'regex:/^(https?:\/\/)?(www\.)?(twitter\.com|x\.com)\/.*$/i',
             ],
             'short_bio' => ['nullable', 'string', 'max:1500'],
-            'nominated_by' => ['required', 'email:rfc,dns'],
+            'nominated_by' => ['required', 'email:rfc,dns', 'indisposable'],
             'recaptchaToken' => ['required', new Recaptcha()],
         ];
     }

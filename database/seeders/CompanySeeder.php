@@ -109,483 +109,483 @@ class CompanySeeder extends Seeder
             [
                 'name' => "Netflix",
                 "website" => "https://www.netflix.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
+                "founded_at" => 2007, //industry => "Streaming Entertainment, Data Analytics, Content Production & Licensing"
+                "headquarters" => "	Los Gatos, California, United States",
                 "information_website" => "https://help.netflix.com/en/node/412",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/netflix",
+                "twitter_url" => "https://x.com/netflix",
+                "youtube_url" => "https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Netflix",
+                "career_page_url" => "https://jobs.netflix.com/careers"
             ],
             [
                 'name' => "Intel",
                 "website" => "https://www.intel.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Intel Corporation is an American multinational corporation and technology company headquartered in Santa Clara, California, and incorporated in Delaware. Intel designs, manufactures, and sells computer components such as central processing units and related products for business and consumer markets.",
+                "founded_at" => 1968, //industry => "Semiconductors, Edge Computing, Artificial Intelligence, Data Center, Cloud Computing "
+                "headquarters" => "Mountain View, California, United States",
                 "information_website" => "https://www.intel.com/content/www/us/en/company-overview/company-overview.html",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/intel-corporation",
+                "twitter_url" => "https://twitter.com/intel",
+                "youtube_url" => "https://www.youtube.com/user/channelintel",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Intel",
+                "career_page_url" => "https://www.intel.com/content/www/us/en/jobs/life-at-intel.html"
             ],
             [
                 'name' => "Logitech",
                 "website" => "https://www.logitech.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Logitech International S.A is a Swiss multinational manufacturer of computer peripherals and software.",
+                "founded_at" => 1981, //industry => "Computer Peripherals, Gaming Hardware"
+                "headquarters" => "Lausanne, Switzerland",
                 "information_website" => "https://www.logitech.com/en-us/about.html",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/logitech",
+                "twitter_url" => "https://x.com/logitech",
+                "youtube_url" => "https://www.youtube.com/c/logitech",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Logitech",
+                "career_page_url" => "https://www.logitech.com/en-eu/careers"
             ],
             [
                 'name' => "Amazon",
                 "website" => "https://www.amazon.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Amazon Inc. is an American multinational technology company engaged in e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.The company originally started as an online marketplace for books but gradually expanded its offerings to include a wide range of product categories, referred to as 'The Everything Store'.",
+                "founded_at" => 1994, //industry => "Cloud Computing, E-Commerce, Entertainment & Media, Artificial Intelligence"
+                "headquarters" => "Seattle, Washington, United States",
                 "information_website" => "https://www.aboutamazon.com/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/amazon",
+                "twitter_url" => "https://x.com/amazon",
+                "youtube_url" => "https://www.youtube.com/user/amazon",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Amazon_(company)",
+                "career_page_url" => "https://www.amazon.jobs/en/"
             ],
             [
                 'name' => "Oracle",
                 "website" => "https://www.oracle.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Oracle Corporation is an American multinational computer technology company headquartered in Austin, Texas. Co-founded in 1977 in Santa Clara, California, by Larry Ellison.",
+                "founded_at" => 1977, //industry => "Artificial Intelligence, Cloud Computing, Enterprise Software, Database Systems"
+                "headquarters" => "Austin, Texas, United States",
                 "information_website" => "https://www.oracle.com/ng/corporate/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/oracle",
+                "twitter_url" => "https://x.com/oracle",
+                "youtube_url" => "http://www.youtube.com/user/Oracle",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Oracle_Corporation",
+                "career_page_url" => "https://www.oracle.com/careers/"
             ],
             [
                 'name' => "Redhat",
                 "website" => "https://www.redhat.com",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Red Hat, Inc. (formerly Red Hat Software, Inc.) is an American software company that provides open source software products to enterprises and is a subsidiary of IBM.",
+                "founded_at" => 1993, //industry => "DevOps , Enterprise Open-Source Software, Automation, Cloud  Computing"
+                "headquarters" => "Raleigh, North Carolina, United States",
                 "information_website" => "https://www.redhat.com/en/about/company",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/red-hat",
+                "twitter_url" => "https://x.com/RedHat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+                "youtube_url" => "https://www.youtube.com/redhat",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Red_Hat",
+                "career_page_url" => "https://www.redhat.com/en/jobs"
             ],
             [
                 'name' => "IBM",
                 "website" => "https://www.ibm.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "International Business Machines Corporation (using the trademark IBM), nicknamed Big Blue, is an American multinational technology company headquartered in Armonk, New York, and present in over 175 countries.",
+                "founded_at" => 1911, //industry => "Enterprise Software, Artificial Intelligence, Cloud Computing, Infrastructure, Consulting & IT Services"
+                "headquarters" => "Armonk, New York, United States",
                 "information_website" => "https://www.ibm.com/about",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/ibm",
+                "twitter_url" => "https://x.com/ibm?",
+                "youtube_url" => "https://www.youtube.com/ibm",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/IBM",
+                "career_page_url" => "https://www.ibm.com/careers/search"
             ],
             [
                 'name' => "X",
                 "website" => "https://x.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Twitter, Inc. was an American social media company based in San Francisco, California, which operated and was named for its flagship social media network prior to its rebrand as X. In addition to Twitter, the company previously operated the Vine short video app and Periscope livestreaming service.",
+                "founded_at" => 2006, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://about.x.com/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/x-corp",
+                "twitter_url" => "https://x.com/x",
+                "youtube_url" => "https://www.youtube.com/@X.com",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Twitter,_Inc",
+                "career_page_url" => "https://careers.x.com/en"
             ],
             [
                 'name' => "Lyft",
                 "website" => "https://www.lyft.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Lyft, Inc. is an American company offering ride-hailing services, motorized scooters, and bicycle-sharing systems in the United States and Canada.",
+                "founded_at" => 2012, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.lyft.com/business",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/lyft",
+                "twitter_url" => "https://x.com/lyft?lang=en",
+                "youtube_url" => "https://www.youtube.com/@lyft",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Lyft",
+                "career_page_url" => "https://www.lyft.com/careers"
             ],
             [
                 'name' => "Uber",
                 "website" => "https://www.uber.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Uber Technologies, Inc. is an American multinational transportation company that provides ride-hailing services, courier services, food delivery, and freight transport.",
+                "founded_at" => 2009, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.uber.com/us/en/about/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/uber-com/",
+                "twitter_url" => "https://x.com/Uber",
+                "youtube_url" => "https://www.youtube.com/channel/UCgnxoUwDmmyzeigmmcf0hZA",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Uber",
+                "career_page_url" => "https://www.uber.com/us/en/careers/"
             ],
             [
                 'name' => "Stripe",
                 "website" => "https://stripe.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Stripe, Inc. is an Irish-American multinational financial services and software as a service company dual-headquartered in South San Francisco, California, United States, and Dublin, Ireland.",
+                "founded_at" => 2010, //industry => ""
+                "headquarters" => "Dublin, Ireland",
                 "information_website" => "https://stripe.com/newsroom/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/stripe",
+                "twitter_url" => "https://x.com/stripe?lang=en",
+                "youtube_url" => "https://www.youtube.com/channel/UCM1guA1E-RHLO2OyfQPOkEQ",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Stripe,_Inc.",
+                "career_page_url" => "https://stripe.com/jobs"
             ],
             [
                 'name' => "Roblox",
                 "website" => "https://www.roblox.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program and play games created by themselves or other users.",
+                "founded_at" => 2006, //industry => ""
+                "headquarters" => "San Mateo, California, United States",
                 "information_website" => "https://corp.roblox.com/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/roblox",
+                "twitter_url" => "https://x.com/Roblox",
+                "youtube_url" => "https://www.youtube.com/@RobloxNoobX",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Roblox",
+                "career_page_url" => "https://careers.roblox.com/"
             ],
             [
                 'name' => "Coinbase",
                 "website" => "https://www.coinbase.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Coinbase Global, Inc. is an American cryptocurrency exchange. It was founded in 2012 by Brian Armstrong and Fred Ehrsam. Coinbase has over 100 million users, and is the largest U.S. based cryptocurrency exchange as well as the world's biggest bitcoin custodian, as of 2024.",
+                "founded_at" => 2012, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.coinbase.com/en-gb/about",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/coinbase",
+                "twitter_url" => "https://x.com/coinbase?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+                "youtube_url" => "https://en.wikipedia.org/wiki/Coinbase",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Coinbase",
+                "career_page_url" => "https://www.coinbase.com/careers/positions"
             ],
             [
                 'name' => "Databricks",
                 "website" => "https://www.databricks.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Databricks, Inc. is a global data, analytics, and artificial intelligence company, founded in 2013 by the original creators of Apache Spark. The company provides a cloud-based platform to help enterprises build, scale, and govern data and AI, including generative AI and other machine learning models.",
+                "founded_at" => 2013, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.databricks.com/company/about-us",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/databricks",
+                "twitter_url" => "https://x.com/databricks",
+                "youtube_url" => "https://www.youtube.com/c/Databricks",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Databricks",
+                "career_page_url" => "https://www.databricks.com/company/careers"
             ],
             [
                 'name' => "Snap",
                 "website" => "https://www.snapchat.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Snapchat is an American multimedia social media and instant messaging app and service developed by Snap Inc., originally Snapchat Inc. One of the principal features of the app are that pictures and messages, known as 'snaps', are usually available for only a short time before they become inaccessible to their recipients.",
+                "founded_at" => 2011, //industry => ""
+                "headquarters" => "Santa Monica, California, United States",
                 "information_website" => "https://www.snap.com/?lang=en-GB",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/snap-inc-co",
+                "twitter_url" => "https://x.com/snapchat",
+                "youtube_url" => "https://www.youtube.com/snapchat",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Snapchat",
+                "career_page_url" => "https://careers.snap.com/"
             ],
             [
                 'name' => "Salesforce",
                 "website" => "https://www.salesforce.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Salesforce, Inc. is an American cloud-based software company headquartered in San Francisco, California. It provides applications focused on sales, customer service, marketing automation, e-commerce, analytics, artificial intelligence, and application development.",
+                "founded_at" => 1999, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.salesforce.com/products/what-is-salesforce/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/salesforce",
+                "twitter_url" => "https://x.com/salesforce?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+                "youtube_url" => "https://www.youtube.com/salesforce",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Salesforce",
+                "career_page_url" => "https://careers.salesforce.com/en/"
             ],
             [
                 'name' => "JPMorgan Chase",
                 "website" => "https://www.jpmorganchase.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "JPMorgan Chase & Co. (stylized as JPMorganChase) is an American multinational finance corporation headquartered in New York City and incorporated in Delaware. It is the largest bank in the United States, and the world's largest bank by market capitalization.",
+                "founded_at" => 2000, //industry => ""
+                "headquarters" => "270 Park Avenue, New York City, United States",
                 "information_website" => "https://www.jpmorganchase.com/about",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/jpmorganchase",
+                "twitter_url" => "https://x.com/jpmorgan",
+                "youtube_url" => "https://www.youtube.com/jpmorgan",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/JPMorgan_Chase",
+                "career_page_url" => "https://www.jpmorganchase.com/careers"
             ],
             [
                 'name' => "Capital One",
                 "website" => "https://www.capitalone.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Capital One Financial Corporation is an American bank holding company founded on July 21, 1994, and specializing in credit cards, auto loans, banking, and savings accounts, headquartered in Tysons, Virginia, with operations primarily in the United States.",
+                "founded_at" => 1994, //industry => ""
+                "headquarters" => "	Capital One Tower, Tysons, Virginia, United States",
                 "information_website" => "https://www.capitalone.com/about/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/capital-one",
+                "twitter_url" => "https://x.com/capitalone",
+                "youtube_url" => "https://www.youtube.com/user/capitalone",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Capital_One",
+                "career_page_url" => "https://www.capitalonecareers.com/"
             ],
             [
                 'name' => "ByteDance",
                 "website" => "https://www.bytedance.com/en/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
-                "information_website" => "",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "about" => "ByteDance Ltd. is a Chinese internet technology company headquartered in Haidian, Beijing, and incorporated in the Cayman Islands. Founded by Zhang Yiming, Liang Rubo, and a team of others in 2012, ByteDance developed the video-sharing apps TikTok and Douyin.",
+                "founded_at" => 2012, //industry => ""
+                "headquarters" => "Beijing, China",
+                "information_website" => "https://www.bytedance.com/en/",
+                "linkedin_url" => "https://www.linkedin.com/company/bytedance/",
+                "twitter_url" => "https://x.com/bytedancetalk",
+                "youtube_url" => "https://www.youtube.com/c/ByteDance",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/ByteDance",
+                "career_page_url" => "https://job.bytedance.com/en/"
             ],
             [
                 'name' => "Xiaomi",
                 "website" => "https://www.mi.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Xiaomi Corporation (Chinese: 小米集团) is a Chinese multinational corporation and technology company headquartered in Beijing, China. It is best known for its consumer electronics, software, and electric vehicles. It is the second-largest manufacturer of smartphones in the world.",
+                "founded_at" => 2010, //industry => ""
+                "headquarters" => "Beijing, China",
                 "information_website" => "https://www.mi.com/us/about/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/xiaomi-technology/",
+                "twitter_url" => "https://x.com/Xiaomi",
+                "youtube_url" => "https://www.youtube.com/channel/UCCspJ6mFfCwOV4qFjZWi2wg",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Xiaomi",
+                "career_page_url" => "https://www.mi.com/global/careers/"
             ],
             [
                 'name' => "Alibaba",
                 "website" => "https://www.alibaba.com",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
-                "information_website" => "",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "about" => "Alibaba Group Holding Limited, branded as Alibaba, is a Chinese multinational technology company specializing in e-commerce, retail, Internet, and technology. Founded on 28 June 1999 in Hangzhou, Zhejiang, the company provides consumer-to-consumer (C2C), business-to-consumer (B2C), and business-to-business (B2B) sales services via Chinese and global marketplaces, as well as local consumer, digital media and entertainment, logistics, and cloud computing services.",
+                "founded_at" => 1999, //industry => ""
+                "headquarters" => "Hangzhou, Zhejiang, China",
+                "information_website" => "https://www.alibaba.com",
+                "linkedin_url" => "https://www.linkedin.com/company/alibaba-com",
+                "twitter_url" => "https://twitter.com/AlibabaB2B",
+                "youtube_url" => "https://www.youtube.com/channel/UCSoIxtP6J6oNo_d1njSluxw",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Alibaba_Group",
+                "career_page_url" => "https://talent.alibaba.com/en/home"
             ],
             [
                 'name' => "Dell",
                 "website" => "https://www.dell.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Dell Technologies Inc. is an American multinational technology company headquartered in Round Rock, Texas. It was formed as a result of the September 2016 merger of Dell and EMC Corporation.",
+                "founded_at" => 2016, //industry => ""
+                "headquarters" => "	Round Rock, Texas, United States",
                 "information_website" => "https://www.dell.com/en-us/lp/dt/who-we-are",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/delltechnologies",
+                "twitter_url" => "https://x.com/delltech",
+                "youtube_url" => "https://www.youtube.com/dell",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Dell_Technologies",
+                "career_page_url" => "https://jobs.dell.com/en"
             ],
             [
                 'name' => "Nvidia",
                 "website" => "https://www.nvidia.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Nvidia Corporation is an American multinational corporation and technology company that invents the GPU and drives advances in AI, HPC, gaming, creative design, autonomous vehicles, and robotics.",
+                "founded_at" => 1993, //industry => ""
+                "headquarters" => "Santa Clara, California, United States",
                 "information_website" => "https://www.nvidia.com/en-us/about-nvidia/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/nvidia",
+                "twitter_url" => "https://x.com/nvidia",
+                "youtube_url" => "https://www.youtube.com/user/nvidia",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Nvidia",
+                "career_page_url" => "https://www.nvidia.com/en-us/about-nvidia/careers/"
             ],
             [
                 'name' => "Reddit",
                 "website" => "https://www.reddit.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
-                "information_website" => "",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "about" => "Reddit is an American proprietary social news aggregation and forum social media platform.",
+                "founded_at" => 2005, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
+                "information_website" => "https://redditinc.com/",
+                "linkedin_url" => "https://www.linkedin.com/company/reddit-com",
+                "twitter_url" => "https://x.com/Reddit?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+                "youtube_url" => "https://www.youtube.com/c/reddit",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Reddit",
+                "career_page_url" => "https://redditinc.com/careers"
             ],
             [
                 'name' => "Bolt",
                 "website" => "https://bolt.eu/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Bolt is an Estonian multinational mobility company that offers ride-hailing, micromobility rental, food and grocery delivery (via the Bolt Food app), and carsharing services.",
+                "founded_at" => 2013, //industry => ""
+                "headquarters" => "Tallinn, Estonia",
                 "information_website" => "https://bolt.eu/en/careers/life-at-bolt/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://ng.linkedin.com/company/bolt-eu",
+                "twitter_url" => "https://x.com/boltapp",
+                "youtube_url" => "https://www.youtube.com/@BoltApp",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Bolt_(company)",
+                "career_page_url" => "https://bolt.eu/en/careers/"
             ],
             [
                 'name' => "Airbnb",
                 "website" => "https://www.airbnb.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Airbnb, Inc. (an abbreviation of its original name, 'Air Bed and Breakfast') is an American company operating an online marketplace for short-and-long-term homestays, experiences and services in various countries and regions.",
+                "founded_at" => 2007, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.airbnb.com/release/",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/showcase/airbnb-for-work",
+                "twitter_url" => "https://x.com/Airbnb",
+                "youtube_url" => "https://www.youtube.com/channel/UCCww-R0oM_CQWXerBcNyKKw",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Airbnb",
+                "career_page_url" => "https://careers.airbnb.com/"
             ],
             [
                 'name' => "Yelp",
                 "website" => "https://www.yelp.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Yelp Inc. is an American company that develops the Yelp.com website and the Yelp mobile app, which publishes crowd-sourced reviews about businesses. It also operates Yelp Guest Manager, a table reservation service.",
+                "founded_at" => 2004, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.yelp.com/about",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/yelp-com",
+                "twitter_url" => "https://x.com/Yelp",
+                "youtube_url" => "https://www.youtube.com/user/yelp",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Yelp",
+                "career_page_url" => "https://www.linkedin.com/company/yelp-com"
             ],
             [
                 'name' => "Bloomberg",
                 "website" => "https://bloomberg.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Bloomberg L.P. is an American privately-held financial, software, data, and media company headquartered in Midtown Manhattan, New York City.",
+                "founded_at" => 1981, //industry => ""
+                "headquarters" => "New York, New York, United States",
                 "information_website" => "https://bloomberg.com/context",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/bloomberg-lp",
+                "twitter_url" => "https://twitter.com/bloomberg",
+                "youtube_url" => "https://www.youtube.com/@Bloomberg_Livess",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Bloomberg_L.P.",
+                "career_page_url" => "https://www.bloomberg.com/company/early-careers/"
             ],
             [
                 'name' => "Binance",
                 "website" => "https://www.binance.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Binance Holdings Ltd., branded Binance, is the largest cryptocurrency exchange in terms of daily trading volume of cryptocurrencies. Binance was founded in 2017 by Changpeng Zhao, a developer who had previously created high-frequency trading software.",
+                "founded_at" => 2017, //industry => ""
+                "headquarters" => "Unknown",
                 "information_website" => "https://www.binance.com/en/about",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/binance",
+                "twitter_url" => "https://x.com/binance",
+                "youtube_url" => "https://www.youtube.com/binanceyoutube",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Binance",
+                "career_page_url" => "https://www.binance.com/en/careers"
             ],
             [
                 'name' => "DoorDash",
                 "website" => "https://www.doordash.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "DoorDash, Inc. is an American company operating online food ordering and food delivery. It trades under the symbol DASH. With a 56% market share, DoorDash is the largest food delivery platform in the United States",
+                "founded_at" => 2012, //industry => ""
+                "headquarters" => "	San Francisco, California, United States",
                 "information_website" => "https://about.doordash.com/en-us",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/doordash",
+                "twitter_url" => "https://x.com/DoorDash",
+                "youtube_url" => "https://www.youtube.com/c/DoorDash",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/DoorDash",
+                "career_page_url" => "https://careersatdoordash.com/career-areas/"
             ],
             [
                 'name' => "Adobe",
                 "website" => "https://www.adobe.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Adobe Inc., formerly Adobe Systems Incorporated, is an American computer software company based in San Jose, California. It offers a wide range of programs from web design tools, photo manipulation and vector creation, through to video/audio editing, mobile app development, print layout and animation software.",
+                "founded_at" => 1982, //industry => ""
+                "headquarters" => "San Jose, California, United States",
                 "information_website" => "https://www.adobe.com/about-adobe.html",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/adobe/",
+                "twitter_url" => "https://x.com/adobe",
+                "youtube_url" => "https://www.youtube.com/user/AdobeSystems/Adobe",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Adobe_Inc.",
+                "career_page_url" => "https://careers.adobe.com/"
             ],
             [
                 'name' => "Goldman Sachs",
                 "website" => "https://www.goldmansachs.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "The Goldman Sachs Group, Inc. is an American multinational investment bank and financial services company.",
+                "founded_at" => 1869, //industry => ""
+                "headquarters" => "New York City, New York, United States",
                 "information_website" => "https://www.goldmansachs.com/what-we-do/our-businesses",
-                "linkedin_url" => "",
-                "twitter_url" => "",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "linkedin_url" => "https://www.linkedin.com/company/goldman-sachs",
+                "twitter_url" => "https://x.com/GoldmanSachs",
+                "youtube_url" => "https://www.youtube.com/user/GoldmanSachs",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Goldman_Sachs",
+                "career_page_url" => "https://www.goldmansachs.com/careers"
             ],
             [
                 'name' => "MasterCard",
                 "website" => "https://www.mastercard.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Mastercard Inc., stylized as MasterCard from 1979 to 2016 and as mastercard from 2016 to 2019, is an American multinational payment card services corporation headquartered in Purchase, New York.",
+                "founded_at" => 1966, //industry => ""
+                "headquarters" => "Purchase, Harrison, New York, United States",
                 "information_website" => "https://www.mastercard.us/en-us/vision/who-we-are.html",
                 "linkedin_url" => "http://www.linkedin.com/company/mastercard",
                 "twitter_url" => "https://x.com/mastercardmena",
                 "youtube_url" => "http://www.youtube.com/user/MasterCard",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Mastercard",
+                "career_page_url" => "https://careers.mastercard.com/"
             ],
             [
                 'name' => "Visa",
                 "website" => "https://corporate.visa.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Visa Inc. is an American multinational payment card services corporation headquartered in San Francisco, California. It facilitates electronic funds transfers throughout the world, most commonly through Visa-branded credit cards, debit cards and prepaid cards.",
+                "founded_at" => 1958, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://corporate.visa.com/en/about-visa.html",
                 "linkedin_url" => "https://www.linkedin.com/company/visa",
                 "twitter_url" => "https://x.com/Visa",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "youtube_url" => "https://www.youtube.com/watch?v=YpZiTrWGmL4",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Visa_Inc.",
+                "career_page_url" => "https://corporate.visa.com/en/jobs/"
             ],
             [
                 'name' => "Open AI",
                 "website" => "https://openai.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "OpenAI, Inc. is an American artificial intelligence organization founded in December 2015 and headquartered in San Francisco, California. It aims to develop 'safe and beneficial' artificial general intelligence",
+                "founded_at" => 2015, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://openai.com/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/openai",
                 "twitter_url" => "https://x.com/OpenAI",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "youtube_url" => "https://www.youtube.com/OpenAI",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/OpenAI",
+                "career_page_url" => "https://openai.com/careers/"
             ],
             [
                 'name' => "Cisco",
                 "website" => "https://www.cisco.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.",
+                "founded_at" => 1984, //industry => ""
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.cisco.com/c/en/us/about.html",
                 "linkedin_url" => "https://www.linkedin.com/company/cisco",
                 "twitter_url" => "https://twitter.com/Cisco/",
-                "youtube_url" => "",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "youtube_url" => "https://www.youtube.com/user/cisco",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Cisco",
+                "career_page_url" => "https://www.cisco.com/c/en/us/about/careers.html"
             ],
             [
                 'name' => "Fortinet",
                 "website" => "https://www.fortinet.com/",
-                "about" => "",
-                "founded_at" => "", //industry =>
-                "headquarters" => "",
+                "about" => "Fortinet, Inc. is an American cybersecurity company with headquarters in Sunnyvale, California. The company develops and sells security solutions like firewalls, endpoint security and intrusion detection systems.",
+                "founded_at" => 2000, //industry => ""
+                "headquarters" => "Sunnyvale, California, United States",
                 "information_website" => "https://www.fortinet.com/corporate/about-us/about-us",
                 "linkedin_url" => "https://www.linkedin.com/company/fortinet/",
                 "twitter_url" => "https://www.x.com/Fortinet",
-                "youtube_url" => "https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA?sub_confirmation=1",
-                "wikipedia_url" => "",
-                "career_page_url" => ""
+                "youtube_url" => "https://www.youtube.com/channel/UCJHo4AuVomwMRzgkA5DQEOA",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Fortinet",
+                "career_page_url" => "https://www.fortinet.com/corporate/careers"
             ],
             [
                 'name' => "Atlassian",
@@ -763,7 +763,7 @@ class CompanySeeder extends Seeder
             'slug'  => Str::slug($company['name']),
             "website" => $company['website'],
             "about" => $company['about'],
-            "founded_at" => !empty($company['founded_at']) ? $company['founded_at'] : 2000,
+            "founded_at" => $company['founded_at'],
             "headquarters" => $company['headquarters'],
             "information_website" => $company['information_website'],
             "linkedin_url" => $company['linkedin_url'],
