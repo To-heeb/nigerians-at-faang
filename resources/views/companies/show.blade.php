@@ -62,63 +62,48 @@
                             <div class="row mb-2">
                                 <p class="text-muted mb-3">{!! str($company->about) !!}</p>
                             </div>
-                            <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 gx-1">
-                                {{-- <div class="col " style="border: 1px solid red;">
-                                    <div class="p-3">
-                                        <strong>stripe.com</strong>
-                                        <div class="mt-1">
-                                            <i class="bi bi-twitter-x me-1"></i>
-                                            <i class="bi bi-linkedin"></i>
-                                        </div>
-                                        <small class="text-muted d-block mt-1">Website</small>
-                                    </div>
-                                </div>
-                                <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">
-                                        <strong>2010</strong>
-                                        <small class="text-muted d-block mt-1">Year Founded</small>
-                                    </div>
-                                </div>
-                                <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">
-                                        <strong>4,000</strong>
-                                        <small class="text-muted d-block mt-1"># of Employees</small>
-                                    </div>
-                                </div>
-                                <div class="col" style="border: 1px solid red;">
-                                    <div class="p-3">
-                                        <strong>$1B–₦16.41T</strong>
-                                        <small class="text-muted d-block mt-1">Estimated Revenue</small>
-                                    </div>
-                                </div> --}}
-                                <div class="col" style="border: 1px solid red;">
+                            <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 gx-1 mb-2">
+                                <div class="col" style="">
                                     <div>
-                                        <strong>stripe.com</strong>
-                                        <div class="mt-1">
-                                            <i class="bi bi-twitter-x me-1"></i>
-                                            <i class="bi bi-linkedin"></i>
-                                        </div>
-                                        <div class="text-muted">Website</div>
+                                        <strong>
+                                            <a href="{{ $company->website }}" target="_blank"><i
+                                                    class="bi bi-globe me-1"></i></a>
+                                            <a href="{{ $company->twitter_url }}" target="_blank"><i
+                                                    class="bi bi-twitter-x me-1"></i></a>
+                                            <a href="{{ $company->linkedin_url }}" target="_blank"><i
+                                                    class="bi bi-linkedin me-1"></i></a>
+                                            <a href="{{ $company->youtube_url }}" target="_blank"><i
+                                                    class="bi bi-youtube me-1"></i></a>
+                                            <a href="{{ $company->wikipedia_url }}" target="_blank"><i
+                                                    class="bi bi-wikipedia me-1"></i></a>
+                                        </strong>
+                                        <div class="text-muted">Links</div>
+                                        {{-- <div class="text-muted">Website</div> --}}
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div>
-                                        <strong>2010</strong>
+                                        <strong>{{ $company->founded_at }}</strong>
                                         <div class="text-muted">Year Founded</div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div>
-                                        <strong>4,000</strong>
-                                        <div class="text-muted"># of Employees</div>
+                                        <strong><a href="{{ $company->career_page_url }}" target="_blank">Career
+                                                Page <i class="bi bi-box-arrow-up-right"></i></a> </strong>
+                                        <div class="text-muted">View Job listings </div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div>
-                                        <strong>$1B - ₦16.41T</strong>
-                                        <div class="text-muted">Estimated Revenue</div>
+                                    <div class="">
+                                        <strong class="fs-6">{{ $company->headquarters }}</strong>
+                                        <div class="text-muted">Headquarters</div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row mb-2">
+                                <a href="{{ $company->information_website }}" target="_blank">About
+                                    {{ $company->name }} <i class="bi bi-link-45deg me-1"></i></a>
                             </div>
                         </div>
                     </div>
