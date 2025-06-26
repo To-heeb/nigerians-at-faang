@@ -2607,8 +2607,6 @@ section,
     color: var(--accent-color);
 }
 
-/* ========================================================== */
-
 .company-profile .company-header {
     border-bottom: 1px solid #e9ecef;
     padding-bottom: 2rem;
@@ -2637,6 +2635,33 @@ section,
     color: #6c757d;
     font-size: 0.9rem;
 }
+
+/*--------------------------------------------------------------
+# Profile Section
+--------------------------------------------------------------*/
+
+.profile .profile-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+.profile .profile-img  {
+    width: 55px;
+    height: 55px;
+    /* background: linear-gradient(135deg, #ff6b6b, #ff8e8e); */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.profile .company-details {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
 
 /*--------------------------------------------------------------
 # Widgets

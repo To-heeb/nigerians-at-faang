@@ -58,7 +58,6 @@
                     <div>
                         <h3 class="h4 mb-3">About</h3>
                         <div class="bg-light p-4 mb-3 rounded">
-                            {{-- <p class="text-muted mb-0">No company description available yet.</p> --}}
                             <div class="row mb-2">
                                 <p class="text-muted mb-3">{!! str($company->about) !!}</p>
                             </div>
@@ -78,7 +77,6 @@
                                                     class="bi bi-wikipedia me-1"></i></a>
                                         </strong>
                                         <div class="text-muted">Links</div>
-                                        {{-- <div class="text-muted">Website</div> --}}
                                     </div>
                                 </div>
                                 <div class="col">

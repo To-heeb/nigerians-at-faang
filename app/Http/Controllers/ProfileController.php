@@ -37,6 +37,11 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        return view('profiles.show', compact('profile'));
+        $otherProfiles = Profile::whereNot('id', $profile->id)
+            ->where('company_id', $profile->company_id)
+            ->limit(5) //TODO(toheeb): look forward to update too  10 if that looks better
+            ->get();
+        $profile->load(['company', 'blogs']);
+        return view('profiles.show', compact('profile', 'otherProfiles'));
     }
 }

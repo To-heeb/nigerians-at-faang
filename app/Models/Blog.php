@@ -53,10 +53,11 @@ class Blog extends Model
     ];
 
     /**
-     * Automatically convert the name to slug before saving.
+     * Automatically convert the title to slug before saving.
      */
-    public function setNameAttribute($value)
+    public function setTitleAttribute($value)
     {
+        $this->attributes['title'] = $value;
         $this->attributes['slug'] = Str::slug($value);
     }
 

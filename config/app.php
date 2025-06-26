@@ -128,9 +128,7 @@ return [
     | Custom Title
     |--------------------------------------------------------------------------
     |
-    | This value defines a custom title to be displayed on the maintenance
-    | mode page. You can use it to show a clear and friendly message
-    | heading when your application is temporarily down.
+    | These value defines a custom title to be displayed in various pages of the application.
     |
     */
 

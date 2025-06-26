@@ -35,6 +35,7 @@ class Blogs extends Component
 
     public function render()
     {
+        // TODO(toheeb): Search by author, profile, profile->company
         $searchTerm = trim($this->search ?? '');
         $blogs = Blog::query()
             ->published()

@@ -112,7 +112,7 @@ class CompanySeeder extends Seeder
                 "about" => "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
                 "founded_at" => 2007, //industry => "Streaming Entertainment, Data Analytics, Content Production & Licensing"
                 "headquarters" => "	Los Gatos, California, United States",
-                "information_website" => "https://help.netflix.com/en/node/412",
+                "information_website" => "https://about.netflix.com/en",
                 "linkedin_url" => "https://www.linkedin.com/company/netflix",
                 "twitter_url" => "https://x.com/netflix",
                 "youtube_url" => "https://www.youtube.com/channel/UCWOA1ZGywLbqmigxE4Qlvuw",
