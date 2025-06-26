@@ -74,7 +74,6 @@
                                 <div class="col">
                                     <div>
                                         <strong><a href="{{ route('companies.show', $profile->company) }}"
-                                                target="_blank"
                                                 rel="noopener noreferrer">{{ $profile->company->name }}</a></strong>
                                         <div class="text-muted">Company</div>
                                     </div>
@@ -142,8 +141,9 @@
 
                             <div class="row">
                                 <div class="col-12 d-flex justify-content-center">
-                                    <a class="btn btn-success btn-sm" href="{{ route('companies.index') }}"
-                                        role="button">View All Companies</a>
+                                    <a class="btn btn-success btn-sm"
+                                        href="{{ route('profiles.index', ['q' => $profile->company->name]) }}"
+                                        role="button">View All Profiles from {{ $profile->company->name }}</a>
                                 </div>
                             </div>
                         </div>

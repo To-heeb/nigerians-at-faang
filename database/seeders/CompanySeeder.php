@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tag;
 use App\Models\Company;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
@@ -778,5 +779,14 @@ class CompanySeeder extends Seeder
         ], $companies);
 
         Company::insert($companies);
+
+        $tags = array_map(fn($company) => [
+            'name'  =>  Str::lower($company['name']),
+            'slug'  => Str::slug($company['name']),
+            'created_at' => now(),
+            'updated_at' => now()
+        ], $companies);
+
+        Tag::insert($tags);
     }
 }

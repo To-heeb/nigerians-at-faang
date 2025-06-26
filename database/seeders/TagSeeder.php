@@ -18,108 +18,6 @@ class TagSeeder extends Seeder
 
         $tags = [
             [
-                'name' => "meta"
-            ],
-            [
-                'name' => "samsung"
-            ],
-            [
-                'name' => "microsoft"
-            ],
-            [
-                'name' => "google"
-            ],
-            [
-                'name' => "sony"
-            ],
-            [
-                'name' => "paypal"
-            ],
-            [
-                'name' => "netflix"
-            ],
-            [
-                'name' => "intel"
-            ],
-            [
-                'name' => "logitech"
-            ],
-            [
-                'name' => "amazon"
-            ],
-            [
-                'name' => "oracle"
-            ],
-            [
-                'name' => "redhat"
-            ],
-            [
-                'name' => "ibm"
-            ],
-            [
-                'name' => "x"
-            ],
-            [
-                'name' => "twitter"
-            ],
-            [
-                'name' => "lyft"
-            ],
-            [
-                'name' => "uber"
-            ],
-            [
-                'name' => "stripe"
-            ],
-            [
-                'name' => "roblox"
-            ],
-            [
-                'name' => "coinbase"
-            ],
-            [
-                'name' => "database"
-            ],
-            [
-                'name' => "snap"
-            ],
-            [
-                'name' => "salesforce"
-            ],
-            [
-                'name' => "jpmorgan chase"
-            ],
-            [
-                'name' => "capital_one"
-            ],
-            [
-                'name' => "bytedance"
-            ],
-            [
-                'name' => "xiaomi"
-            ],
-            [
-                'name' => "alibaba"
-            ],
-            [
-                'name' => "dell"
-            ],
-            [
-                'name' => "nvidia"
-            ],
-            [
-                'name' => "reddit"
-            ],
-            [
-                'name' => "bolt"
-            ],
-            [
-                'name' => "airbnb"
-            ],
-            [
-                'name' => "yelp"
-            ],
-            [
                 'name' => "software engineer"
             ],
             [
@@ -127,9 +25,6 @@ class TagSeeder extends Seeder
             ],
             [
                 'name' => "product management"
-            ],
-            [
-                'name' => "bloomberg"
             ],
         ];
 

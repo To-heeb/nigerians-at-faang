@@ -752,7 +752,7 @@ section,
 .section {
     color: var(--default-color);
     background-color: var(--background-color);
-    padding: 10px 0;
+    padding: 60px 0;
     scroll-margin-top: 100px;
     overflow: clip;
 }
@@ -1455,6 +1455,18 @@ section,
 
 .team .team-member:hover .social {
     opacity: 1;
+}
+
+.team-member-image {
+    width: 248px;
+    height: 248px;
+}
+
+@media (max-width: 576px) {
+   .team-member-image {
+    min-width: 485px;
+    height: 485px;
+    }
 }
 
 /*--------------------------------------------------------------

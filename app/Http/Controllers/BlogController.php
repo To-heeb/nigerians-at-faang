@@ -37,6 +37,9 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return view('blogs.show', compact('blog'));
+        $blog->load(['tags', 'profile']);
+        $recentBlogs = Blog::published()->latestWithProfile(5)->get();
+
+        return view('blogs.show', compact('blog', 'recentBlogs'));
     }
 }

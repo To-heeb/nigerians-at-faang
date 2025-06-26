@@ -39,7 +39,8 @@
                     {{-- <div class="insights-section">
                         <h3 class="h4 mb-3">Top Insights</h3>
                         <p class="text-muted mb-4">
-                            Contribute something unique about Databricks that may be helpful for others (ex. interview
+                            Contribute something unique about {{ $company->name }} that may be helpful for others (ex.
+                            interview
                             tips,
                             choosing teams, unique culture, etc).
                         </p>
@@ -49,7 +50,7 @@
                                 <input type="text" class="form-control" placeholder="Add Insight">
                             </div>
                             <div class="col-md-4 mt-2 mt-md-0">
-                                <button class="btn btn-primary w-100">Submit</button>
+                                <button class="btn btn-success w-100">Submit</button>
                             </div>
                         </div>
                     </div> --}}
@@ -63,7 +64,7 @@
                             </div>
                             <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 gx-1 mb-2">
                                 <div class="col" style="">
-                                    <div>
+                                    <div class="mt-2 mt-lg-0">
                                         <strong>
                                             <a href="{{ $company->website }}" target="_blank"><i
                                                     class="bi bi-globe me-1"></i></a>
@@ -80,20 +81,20 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div>
+                                    <div class="mt-2 mt-lg-0">
                                         <strong>{{ $company->founded_at }}</strong>
                                         <div class="text-muted">Year Founded</div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div>
+                                    <div class="mt-2 mt-lg-0">
                                         <strong><a href="{{ $company->career_page_url }}" target="_blank">Career
                                                 Page <i class="bi bi-box-arrow-up-right"></i></a> </strong>
                                         <div class="text-muted">View Job listings </div>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="">
+                                    <div class="mt-2 mt-lg-0">
                                         <strong class="fs-6">{{ $company->headquarters }}</strong>
                                         <div class="text-muted">Headquarters</div>
                                     </div>
@@ -159,7 +160,8 @@
                                                     href="{{ route('blogs.show', $blog) }}">{{ $blog->title }}</a>
                                             </h6>
                                             <p class="card-text">{!! str($blog->body)->limit(100) !!}</p>
-                                            <a href="#" class="readmore stretched-link"><span>Read More</span><i
+                                            <a href="{{ route('blogs.show', $blog) }}"
+                                                class="readmore stretched-link"><span>Read More</span><i
                                                     class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>

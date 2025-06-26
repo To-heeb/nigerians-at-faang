@@ -1,6 +1,6 @@
 @props(['profile', 'delay'])
 
-<div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ $delay }}">
+<div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ $delay }}">
     <div class="team-member featured">
         {{-- <p class="popular">{{ $profile->company->name }}</p> --}}
         <p class="popular"><a href="{{ route('companies.show', $profile->company) }}" class="white-link"
@@ -8,7 +8,7 @@
         </p>
         <div class="member-img">
             <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
-                class="img-fluid" width="248px" height="248px" alt="{{ $profile->image }}'s image">
+                class="img-fluid team-member-image" alt="{{ $profile->image }}'s image">
             <div class="social">
                 @if ($profile->twitter_url)
                     <a href="{{ $profile->twitter_url }}" target="__blank"><i class="bi bi-twitter-x"></i></a>
