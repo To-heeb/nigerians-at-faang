@@ -202,7 +202,7 @@ class CompanySeeder extends Seeder
                 'name' => "X",
                 "website" => "https://x.com/",
                 "about" => "Twitter, Inc. was an American social media company based in San Francisco, California, which operated and was named for its flagship social media network prior to its rebrand as X. In addition to Twitter, the company previously operated the Vine short video app and Periscope livestreaming service.",
-                "founded_at" => 2006, //industry => ""
+                "founded_at" => 2006, //industry => "Digital Advertising, Social Media, Artificial Intelligence"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://about.x.com/",
                 "linkedin_url" => "https://www.linkedin.com/company/x-corp",
@@ -215,7 +215,7 @@ class CompanySeeder extends Seeder
                 'name' => "Lyft",
                 "website" => "https://www.lyft.com/",
                 "about" => "Lyft, Inc. is an American company offering ride-hailing services, motorized scooters, and bicycle-sharing systems in the United States and Canada.",
-                "founded_at" => 2012, //industry => ""
+                "founded_at" => 2012, //industry => "Ride-Hailing, Autonomous Vehicle Technology"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.lyft.com/business",
                 "linkedin_url" => "https://www.linkedin.com/company/lyft",
@@ -228,7 +228,7 @@ class CompanySeeder extends Seeder
                 'name' => "Uber",
                 "website" => "https://www.uber.com/",
                 "about" => "Uber Technologies, Inc. is an American multinational transportation company that provides ride-hailing services, courier services, food delivery, and freight transport.",
-                "founded_at" => 2009, //industry => ""
+                "founded_at" => 2009, //industry => "Ride-Hailing, Autonomous Vehicle Technology, Food Delivery"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.uber.com/us/en/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/uber-com/",
@@ -241,7 +241,7 @@ class CompanySeeder extends Seeder
                 'name' => "Stripe",
                 "website" => "https://stripe.com/",
                 "about" => "Stripe, Inc. is an Irish-American multinational financial services and software as a service company dual-headquartered in South San Francisco, California, United States, and Dublin, Ireland.",
-                "founded_at" => 2010, //industry => ""
+                "founded_at" => 2010, //industry => "Digital Payments, Fintech Infrastructure, Developer Tools, "
                 "headquarters" => "Dublin, Ireland",
                 "information_website" => "https://stripe.com/newsroom/",
                 "linkedin_url" => "https://www.linkedin.com/company/stripe",
@@ -254,7 +254,7 @@ class CompanySeeder extends Seeder
                 'name' => "Roblox",
                 "website" => "https://www.roblox.com/",
                 "about" => "Roblox is an online game platform and game creation system developed by Roblox Corporation that allows users to program and play games created by themselves or other users.",
-                "founded_at" => 2006, //industry => ""
+                "founded_at" => 2006, //industry => "Gaming & Interactive Entertainment, Digital Commerce, Education & Learning Tools"
                 "headquarters" => "San Mateo, California, United States",
                 "information_website" => "https://corp.roblox.com/",
                 "linkedin_url" => "https://www.linkedin.com/company/roblox",
@@ -267,7 +267,7 @@ class CompanySeeder extends Seeder
                 'name' => "Coinbase",
                 "website" => "https://www.coinbase.com/",
                 "about" => "Coinbase Global, Inc. is an American cryptocurrency exchange. It was founded in 2012 by Brian Armstrong and Fred Ehrsam. Coinbase has over 100 million users, and is the largest U.S. based cryptocurrency exchange as well as the world's biggest bitcoin custodian, as of 2024.",
-                "founded_at" => 2012, //industry => ""
+                "founded_at" => 2012, //industry => "Cryptocurrency, Blockchain Infrastructure, Cryptocurrency Exchange"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.coinbase.com/en-gb/about",
                 "linkedin_url" => "https://www.linkedin.com/company/coinbase",
@@ -280,7 +280,7 @@ class CompanySeeder extends Seeder
                 'name' => "Databricks",
                 "website" => "https://www.databricks.com/",
                 "about" => "Databricks, Inc. is a global data, analytics, and artificial intelligence company, founded in 2013 by the original creators of Apache Spark. The company provides a cloud-based platform to help enterprises build, scale, and govern data and AI, including generative AI and other machine learning models.",
-                "founded_at" => 2013, //industry => ""
+                "founded_at" => 2013, //industry => "Artificial Intelligence, Machine Learning, Big Data, Enterprise Data Governance"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.databricks.com/company/about-us",
                 "linkedin_url" => "https://www.linkedin.com/company/databricks",
@@ -293,7 +293,7 @@ class CompanySeeder extends Seeder
                 'name' => "Snap",
                 "website" => "https://www.snapchat.com/",
                 "about" => "Snapchat is an American multimedia social media and instant messaging app and service developed by Snap Inc., originally Snapchat Inc. One of the principal features of the app are that pictures and messages, known as 'snaps', are usually available for only a short time before they become inaccessible to their recipients.",
-                "founded_at" => 2011, //industry => ""
+                "founded_at" => 2011, //industry => "Digital Advertising, Social Media, Virtual/Augmented Reality (VR/AR)"
                 "headquarters" => "Santa Monica, California, United States",
                 "information_website" => "https://www.snap.com/?lang=en-GB",
                 "linkedin_url" => "https://www.linkedin.com/company/snap-inc-co",
@@ -306,7 +306,7 @@ class CompanySeeder extends Seeder
                 'name' => "Salesforce",
                 "website" => "https://www.salesforce.com/",
                 "about" => "Salesforce, Inc. is an American cloud-based software company headquartered in San Francisco, California. It provides applications focused on sales, customer service, marketing automation, e-commerce, analytics, artificial intelligence, and application development.",
-                "founded_at" => 1999, //industry => ""
+                "founded_at" => 1999, //industry => "Enterprise Software, Cloud Computing, Artificial Intelligence, Customer Relationship Management"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.salesforce.com/products/what-is-salesforce/",
                 "linkedin_url" => "https://www.linkedin.com/company/salesforce",
@@ -319,7 +319,7 @@ class CompanySeeder extends Seeder
                 'name' => "JPMorgan Chase",
                 "website" => "https://www.jpmorganchase.com/",
                 "about" => "JPMorgan Chase & Co. (stylized as JPMorganChase) is an American multinational finance corporation headquartered in New York City and incorporated in Delaware. It is the largest bank in the United States, and the world's largest bank by market capitalization.",
-                "founded_at" => 2000, //industry => ""
+                "founded_at" => 2000, //industry => "Commercial Banking, Corporate & Investment Banking, Consumer & Community Banking, Asset & Wealth Management, Fintech Infrastructure"
                 "headquarters" => "270 Park Avenue, New York City, United States",
                 "information_website" => "https://www.jpmorganchase.com/about",
                 "linkedin_url" => "https://www.linkedin.com/company/jpmorganchase",
@@ -332,7 +332,7 @@ class CompanySeeder extends Seeder
                 'name' => "Capital One",
                 "website" => "https://www.capitalone.com/",
                 "about" => "Capital One Financial Corporation is an American bank holding company founded on July 21, 1994, and specializing in credit cards, auto loans, banking, and savings accounts, headquartered in Tysons, Virginia, with operations primarily in the United States.",
-                "founded_at" => 1994, //industry => ""
+                "founded_at" => 1994,  //industry => "Commercial Banking, Corporate & Investment Banking, Consumer & Community Banking, Asset & Wealth Management, Fintech Infrastructure"
                 "headquarters" => "	Capital One Tower, Tysons, Virginia, United States",
                 "information_website" => "https://www.capitalone.com/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/capital-one",
@@ -345,7 +345,7 @@ class CompanySeeder extends Seeder
                 'name' => "ByteDance",
                 "website" => "https://www.bytedance.com/en/",
                 "about" => "ByteDance Ltd. is a Chinese internet technology company headquartered in Haidian, Beijing, and incorporated in the Cayman Islands. Founded by Zhang Yiming, Liang Rubo, and a team of others in 2012, ByteDance developed the video-sharing apps TikTok and Douyin.",
-                "founded_at" => 2012, //industry => ""
+                "founded_at" => 2012, //industry => "Digital Advertising, Social Media, Gaming"
                 "headquarters" => "Beijing, China",
                 "information_website" => "https://www.bytedance.com/en/",
                 "linkedin_url" => "https://www.linkedin.com/company/bytedance/",
@@ -358,7 +358,7 @@ class CompanySeeder extends Seeder
                 'name' => "Xiaomi",
                 "website" => "https://www.mi.com/",
                 "about" => "Xiaomi Corporation (Chinese: 小米集团) is a Chinese multinational corporation and technology company headquartered in Beijing, China. It is best known for its consumer electronics, software, and electric vehicles. It is the second-largest manufacturer of smartphones in the world.",
-                "founded_at" => 2010, //industry => ""
+                "founded_at" => 2010, //industry => "Consumer Electronics, Smart Home Devices, E-Commerce, IoT & Smart Home Devices"
                 "headquarters" => "Beijing, China",
                 "information_website" => "https://www.mi.com/us/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/xiaomi-technology/",
@@ -371,7 +371,7 @@ class CompanySeeder extends Seeder
                 'name' => "Alibaba",
                 "website" => "https://www.alibaba.com",
                 "about" => "Alibaba Group Holding Limited, branded as Alibaba, is a Chinese multinational technology company specializing in e-commerce, retail, Internet, and technology. Founded on 28 June 1999 in Hangzhou, Zhejiang, the company provides consumer-to-consumer (C2C), business-to-consumer (B2C), and business-to-business (B2B) sales services via Chinese and global marketplaces, as well as local consumer, digital media and entertainment, logistics, and cloud computing services.",
-                "founded_at" => 1999, //industry => ""
+                "founded_at" => 1999, //industry => "Cloud Computing, Digital Payments, Financial Services, E-Commerce"
                 "headquarters" => "Hangzhou, Zhejiang, China",
                 "information_website" => "https://www.alibaba.com",
                 "linkedin_url" => "https://www.linkedin.com/company/alibaba-com",
@@ -384,7 +384,7 @@ class CompanySeeder extends Seeder
                 'name' => "Dell",
                 "website" => "https://www.dell.com/",
                 "about" => "Dell Technologies Inc. is an American multinational technology company headquartered in Round Rock, Texas. It was formed as a result of the September 2016 merger of Dell and EMC Corporation.",
-                "founded_at" => 2016, //industry => ""
+                "founded_at" => 2016, //industry => "Edge Computing, Personal Computing, Hardware, Cybersecurity, Data Protection"
                 "headquarters" => "	Round Rock, Texas, United States",
                 "information_website" => "https://www.dell.com/en-us/lp/dt/who-we-are",
                 "linkedin_url" => "https://www.linkedin.com/company/delltechnologies",
@@ -397,7 +397,7 @@ class CompanySeeder extends Seeder
                 'name' => "Nvidia",
                 "website" => "https://www.nvidia.com/",
                 "about" => "Nvidia Corporation is an American multinational corporation and technology company that invents the GPU and drives advances in AI, HPC, gaming, creative design, autonomous vehicles, and robotics.",
-                "founded_at" => 1993, //industry => ""
+                "founded_at" => 1993, //industry => "Artificial Intelligence, Machine Learning, Semiconductors, Cloud Computing, Data Center,, Automotive & Robotics"
                 "headquarters" => "Santa Clara, California, United States",
                 "information_website" => "https://www.nvidia.com/en-us/about-nvidia/",
                 "linkedin_url" => "https://www.linkedin.com/company/nvidia",
@@ -410,7 +410,7 @@ class CompanySeeder extends Seeder
                 'name' => "Reddit",
                 "website" => "https://www.reddit.com/",
                 "about" => "Reddit is an American proprietary social news aggregation and forum social media platform.",
-                "founded_at" => 2005, //industry => ""
+                "founded_at" => 2005, //industry => "Digital Advertising, Social Media, E-Commerce"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://redditinc.com/",
                 "linkedin_url" => "https://www.linkedin.com/company/reddit-com",
@@ -423,7 +423,7 @@ class CompanySeeder extends Seeder
                 'name' => "Bolt",
                 "website" => "https://bolt.eu/",
                 "about" => "Bolt is an Estonian multinational mobility company that offers ride-hailing, micromobility rental, food and grocery delivery (via the Bolt Food app), and carsharing services.",
-                "founded_at" => 2013, //industry => ""
+                "founded_at" => 2013, //industry => "Ride-Hailing, Food Delivery"
                 "headquarters" => "Tallinn, Estonia",
                 "information_website" => "https://bolt.eu/en/careers/life-at-bolt/",
                 "linkedin_url" => "https://ng.linkedin.com/company/bolt-eu",
@@ -436,7 +436,7 @@ class CompanySeeder extends Seeder
                 'name' => "Airbnb",
                 "website" => "https://www.airbnb.com/",
                 "about" => "Airbnb, Inc. (an abbreviation of its original name, 'Air Bed and Breakfast') is an American company operating an online marketplace for short-and-long-term homestays, experiences and services in various countries and regions.",
-                "founded_at" => 2007, //industry => ""
+                "founded_at" => 2007, //industry => "Short-Term Rental, Hospitality, Experiential Travel"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.airbnb.com/release/",
                 "linkedin_url" => "https://www.linkedin.com/showcase/airbnb-for-work",
@@ -449,7 +449,7 @@ class CompanySeeder extends Seeder
                 'name' => "Yelp",
                 "website" => "https://www.yelp.com/",
                 "about" => "Yelp Inc. is an American company that develops the Yelp.com website and the Yelp mobile app, which publishes crowd-sourced reviews about businesses. It also operates Yelp Guest Manager, a table reservation service.",
-                "founded_at" => 2004, //industry => ""
+                "founded_at" => 2004, //industry => "Digital Advertising, Marketing Services, Local Business Reviews, Enterprise Solutions, Discovery"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.yelp.com/about",
                 "linkedin_url" => "https://www.linkedin.com/company/yelp-com",
@@ -462,7 +462,7 @@ class CompanySeeder extends Seeder
                 'name' => "Bloomberg",
                 "website" => "https://bloomberg.com/",
                 "about" => "Bloomberg L.P. is an American privately-held financial, software, data, and media company headquartered in Midtown Manhattan, New York City.",
-                "founded_at" => 1981, //industry => ""
+                "founded_at" => 1981, //industry => "Financial Data & Analytics, News & Media, Enterprise Software"
                 "headquarters" => "New York, New York, United States",
                 "information_website" => "https://bloomberg.com/context",
                 "linkedin_url" => "https://www.linkedin.com/company/bloomberg-lp",
@@ -475,7 +475,7 @@ class CompanySeeder extends Seeder
                 'name' => "Binance",
                 "website" => "https://www.binance.com/",
                 "about" => "Binance Holdings Ltd., branded Binance, is the largest cryptocurrency exchange in terms of daily trading volume of cryptocurrencies. Binance was founded in 2017 by Changpeng Zhao, a developer who had previously created high-frequency trading software.",
-                "founded_at" => 2017, //industry => ""
+                "founded_at" => 2017, //industry => "Cryptocurrency Exchange, Blockchain Infrastructure, Cryptocurrency"
                 "headquarters" => "Unknown",
                 "information_website" => "https://www.binance.com/en/about",
                 "linkedin_url" => "https://www.linkedin.com/company/binance",
@@ -488,7 +488,7 @@ class CompanySeeder extends Seeder
                 'name' => "DoorDash",
                 "website" => "https://www.doordash.com/",
                 "about" => "DoorDash, Inc. is an American company operating online food ordering and food delivery. It trades under the symbol DASH. With a 56% market share, DoorDash is the largest food delivery platform in the United States",
-                "founded_at" => 2012, //industry => ""
+                "founded_at" => 2012, //industry => "Food Delivery & Logistics, Digital Commerce"
                 "headquarters" => "	San Francisco, California, United States",
                 "information_website" => "https://about.doordash.com/en-us",
                 "linkedin_url" => "https://www.linkedin.com/company/doordash",
@@ -501,7 +501,7 @@ class CompanySeeder extends Seeder
                 'name' => "Adobe",
                 "website" => "https://www.adobe.com/",
                 "about" => "Adobe Inc., formerly Adobe Systems Incorporated, is an American computer software company based in San Jose, California. It offers a wide range of programs from web design tools, photo manipulation and vector creation, through to video/audio editing, mobile app development, print layout and animation software.",
-                "founded_at" => 1982, //industry => ""
+                "founded_at" => 1982, //industry => "Creative Software, Design Tools, Digital Experience & Marketing, Document Management"
                 "headquarters" => "San Jose, California, United States",
                 "information_website" => "https://www.adobe.com/about-adobe.html",
                 "linkedin_url" => "https://www.linkedin.com/company/adobe/",
@@ -514,7 +514,7 @@ class CompanySeeder extends Seeder
                 'name' => "Goldman Sachs",
                 "website" => "https://www.goldmansachs.com/",
                 "about" => "The Goldman Sachs Group, Inc. is an American multinational investment bank and financial services company.",
-                "founded_at" => 1869, //industry => ""
+                "founded_at" => 1869, //industry => "Investment Banking, Asset & Wealth Management, Consumer & Community Banking"
                 "headquarters" => "New York City, New York, United States",
                 "information_website" => "https://www.goldmansachs.com/what-we-do/our-businesses",
                 "linkedin_url" => "https://www.linkedin.com/company/goldman-sachs",
@@ -527,7 +527,7 @@ class CompanySeeder extends Seeder
                 'name' => "MasterCard",
                 "website" => "https://www.mastercard.com/",
                 "about" => "Mastercard Inc., stylized as MasterCard from 1979 to 2016 and as mastercard from 2016 to 2019, is an American multinational payment card services corporation headquartered in Purchase, New York.",
-                "founded_at" => 1966, //industry => ""
+                "founded_at" => 1966, //industry => "Payment Processing, Card Networks, Fintech Infrastructure, Financial Data & Analytics, Digital Payments & Fintech Solutions"
                 "headquarters" => "Purchase, Harrison, New York, United States",
                 "information_website" => "https://www.mastercard.us/en-us/vision/who-we-are.html",
                 "linkedin_url" => "http://www.linkedin.com/company/mastercard",
@@ -540,7 +540,7 @@ class CompanySeeder extends Seeder
                 'name' => "Visa",
                 "website" => "https://corporate.visa.com/",
                 "about" => "Visa Inc. is an American multinational payment card services corporation headquartered in San Francisco, California. It facilitates electronic funds transfers throughout the world, most commonly through Visa-branded credit cards, debit cards and prepaid cards.",
-                "founded_at" => 1958, //industry => ""
+                "founded_at" => 1958, //industry => "Payment Processing, Card Networks, Fintech Infrastructure, Financial Data & Analytics, Digital Payments & Fintech Solutions"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://corporate.visa.com/en/about-visa.html",
                 "linkedin_url" => "https://www.linkedin.com/company/visa",
@@ -553,7 +553,7 @@ class CompanySeeder extends Seeder
                 'name' => "Open AI",
                 "website" => "https://openai.com/",
                 "about" => "OpenAI, Inc. is an American artificial intelligence organization founded in December 2015 and headquartered in San Francisco, California. It aims to develop 'safe and beneficial' artificial general intelligence",
-                "founded_at" => 2015, //industry => ""
+                "founded_at" => 2015, //industry => "Artificial Intelligence, Enterprise Solution, Machine Learning"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://openai.com/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/openai",
@@ -566,7 +566,7 @@ class CompanySeeder extends Seeder
                 'name' => "Cisco",
                 "website" => "https://www.cisco.com/",
                 "about" => "Cisco Systems, Inc. is an American multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.",
-                "founded_at" => 1984, //industry => ""
+                "founded_at" => 1984, //industry => "Cybersecurity, Networking Hardware & Infrastructure"
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.cisco.com/c/en/us/about.html",
                 "linkedin_url" => "https://www.linkedin.com/company/cisco",
@@ -579,7 +579,7 @@ class CompanySeeder extends Seeder
                 'name' => "Fortinet",
                 "website" => "https://www.fortinet.com/",
                 "about" => "Fortinet, Inc. is an American cybersecurity company with headquarters in Sunnyvale, California. The company develops and sells security solutions like firewalls, endpoint security and intrusion detection systems.",
-                "founded_at" => 2000, //industry => ""
+                "founded_at" => 2000, //industry => "Cybersecurity, Network Security & Infrastructure"
                 "headquarters" => "Sunnyvale, California, United States",
                 "information_website" => "https://www.fortinet.com/corporate/about-us/about-us",
                 "linkedin_url" => "https://www.linkedin.com/company/fortinet/",

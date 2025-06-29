@@ -35,7 +35,7 @@
                                                 datetime="{{ $blog->published_at }}">{{ date('M j, Y', strtotime($blog->published_at)) }}</time></a>
                                     </li>
                                     {{-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
-                                            href="#">12 Comments</a></li> --}} <!--TODO(toheeb): -->
+                                            href="#">12 Comments</a></li> --}} <!--TODO(toheeb): add comments and uncomment this-->
                                 </ul>
                             </div><!-- End meta top -->
 

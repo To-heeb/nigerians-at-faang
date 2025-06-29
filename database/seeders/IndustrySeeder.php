@@ -222,6 +222,123 @@ class IndustrySeeder extends Seeder
             [
                 'name' => 'Consulting & IT Services'
             ],
+            [
+                'name' => 'Ride-Hailing'
+            ],
+            [
+                'name' => 'Autonomous Vehicle Technology'
+            ],
+            [
+                'name' => 'Fintech Infrastructure'
+            ],
+            [
+                'name' => 'Digital Commerce'
+            ],
+            [
+                'name' => 'Education & Learning Tools'
+            ],
+            [
+                'name' => 'Cryptocurrency Exchange'
+            ],
+            [
+                'name' => 'Blockchain Infrastructure'
+            ],
+            [
+                'name' => 'Enterprise Data Governance'
+            ],
+            [
+                'name' => 'Big Data'
+            ],
+            [
+                'name' => 'Customer Relationship Management'
+            ],
+            [
+                'name' => 'Commercial Banking'
+            ],
+            [
+                'name' => 'Corporate & Investment Banking'
+            ],
+            [
+                'name' => 'Consumer & Community Banking'
+            ],
+            [
+                'name' => 'Asset & Wealth Management'
+            ],
+            [
+                'name' => 'Smart Home Devices'
+            ],
+            [
+                'name' => 'IoT & Smart Home Devices'
+            ],
+            [
+                'name' => 'Personal Computing'
+            ],
+            [
+                'name' => 'Hardware'
+            ],
+            [
+                'name' => 'Cybersecurity'
+            ],
+            [
+                'name' => 'Data Protection'
+            ],
+            [
+                'name' => 'Automotive & Robotics'
+            ],
+            [
+                'name' => 'Short-Term Rental'
+            ],
+            [
+                'name' => 'Hospitality'
+            ],
+            [
+                'name' => 'Experiential Travel'
+            ],
+            [
+                'name' => 'Local Business Reviews'
+            ],
+            [
+                'name' => 'Marketing Services'
+            ],
+            [
+                'name' => 'Discovery'
+            ],
+            [
+                'name' => 'Financial Data & Analytics'
+            ],
+            [
+                'name' => 'News & Media'
+            ],
+            [
+                'name' => 'Food Delivery & Logistics'
+            ],
+            [
+                'name' => 'Creative Software'
+            ],
+            [
+                'name' => 'Design Tools'
+            ],
+            [
+                'name' => 'Digital Experience & Marketing'
+            ],
+            [
+                'name' => 'Document Management'
+            ],
+            [
+                'name' => 'Payment Processing'
+            ],
+            [
+                'name' => 'Card Networks'
+            ],
+            [
+                'name' => 'Digital Payments & Fintech Solutions'
+            ],
+            [
+                'name' => 'Networking Hardware & Infrastructure'
+            ],
+            [
+                'name' => 'Network Security & Infrastructure'
+            ],
         ];
 
         $industries = array_map(fn($industry) => [

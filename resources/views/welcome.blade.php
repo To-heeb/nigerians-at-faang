@@ -230,16 +230,14 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            What kinds of stories are published?
+                            Some companies other than "FAANG" are listed, Why?
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>We feature stories that are:</strong>
-                            Yes. While <code>“FAANG”</code> is the theme, we welcome stories from Nigerians at other top
-                            tech
-                            companies like Microsoft, Twitter (X), Shopify, Salesforce, TikTok, Stripe, etc. If you're
-                            doing amazing work in global tech, we want to hear about it.
+                            <strong>Yes.</strong> While <code>“FAANG”</code> is the theme, we welcome stories from
+                            Nigerians at other top tech companies like Microsoft, Twitter (X), Shopify, Salesforce,
+                            TikTok, Stripe, etc. If you're doing amazing work in global tech, we want to hear about it.
                         </div>
                     </div>
                 </div>
@@ -306,30 +304,6 @@
                         </button>
                     </h2>
                     <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Not necessarily.</strong>We feature Nigerians across multiple tech roles including:
-                            <ul>
-                                <li>Software Engineering</li>
-                                <li>Product Management</li>
-                                <li>Growth Management</li>
-                                <li>Data Science</li>
-                                <li>UX/UI Design</li>
-                                <li>Cybersecurity</li>
-                                <li>Developer Advocacy</li>
-                                <li>Accounting</li>
-                                <li>Technical Program Management, and more.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            Is there a newsletter or email subscription?
-                        </button>
-                    </h2>
-                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <strong>Coming soon!</strong>We're working on a monthly email that shares:
                             <ul>

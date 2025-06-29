@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Industry extends Model
 {
@@ -42,7 +43,7 @@ class Industry extends Model
     /**
      * The companies that belong to the industry.
      */
-    public function companies()
+    public function companies(): BelongsToMany
     {
         return $this->belongsToMany(Company::class);
     }
