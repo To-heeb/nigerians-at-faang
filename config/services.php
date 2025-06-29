@@ -41,4 +41,8 @@ return [
         'site_verify_url' => env('RECAPTCHA_SITE_VERIFY_URL')
     ],
 
+    'google_analytics' => [
+        'measurement_id' => env('GOOGLE_MEASUREMENT_ID'),
+    ],
+
 ];
