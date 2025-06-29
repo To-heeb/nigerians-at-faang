@@ -4,6 +4,10 @@
         {{ $profile->name }}
     </x-slot>
 
+    <x-slot:type>
+        profile
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner-two page="{{ $profile->name }}" above_page="Profiles"
         above_page_route="{{ route('profiles.index') }}" />

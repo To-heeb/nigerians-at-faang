@@ -45,4 +45,8 @@ return [
         'measurement_id' => env('GOOGLE_MEASUREMENT_ID'),
     ],
 
+    'facebook' => [
+        'app_id' => env('FACEBOOK_APP_ID'),
+    ],
+
 ];

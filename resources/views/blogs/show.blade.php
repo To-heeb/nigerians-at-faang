@@ -1,6 +1,11 @@
 <x-app-layout>
+
     <x-slot:title>
         {{ $blog->title }}
+    </x-slot>
+
+    <x-slot:type>
+        article
     </x-slot>
 
     <!-- Page Title -->
