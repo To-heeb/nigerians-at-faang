@@ -12,6 +12,7 @@
     <meta name="author" content="{{ config('app.author') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/cookie-consent/css/cookie-consent.css') }}">
     @include('layouts/sections/styles')
     <!-- Google tag (gtag.js) -->
     <script async
