@@ -2,16 +2,19 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Spatie\Sitemap\Tags\Url;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Spatie\Sitemap\Contracts\Sitemapable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Profile extends Model
+class Profile extends Model implements Sitemapable
 {
     /** @use HasFactory<\Database\Factories\ProfileFactory> */
     use HasFactory;
@@ -194,5 +197,39 @@ class Profile extends Model
         return $query->where('is_approved', true)
             // ->where('is_featured', true)
             ->where('is_published', true);
+    }
+
+    /**
+     * Scope a query to only include profiles that are approved, featured, and published.
+     */
+    #[Scope]
+    protected function active(Builder $query)
+    {
+        return $query->where('is_approved', true)
+            // ->where('is_featured', true)
+            ->where('is_published', true);
+    }
+
+
+    /**
+     * Generate a sitemap tag for the profile model.
+     *
+     * This method returns a Url object that represents
+     * the sitemap entry for this profile, including:
+     * - The route to the profile's detail page.
+     * - The last modification date.
+     * - The change frequency (daily).
+     * - The priority (0.1).
+     *
+     * @return \Spatie\Sitemap\Tags\Url|string|array
+     */
+    public function toSitemapTag(): Url | string | array
+    {
+
+        // Return with fine-grained control:
+        return Url::create(route('profiles.show', $this))
+            ->setLastModificationDate(Carbon::create($this->updated_at))
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(0.1);
     }
 }

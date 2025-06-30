@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Spatie\Sitemap\Tags\Url;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Attributes\Scope;
@@ -129,5 +131,27 @@ class Blog extends Model
     protected function unpublished(Builder $query)
     {
         return $query->where('is_published', false);
+    }
+
+    /**
+     * Generate a sitemap tag for the company model.
+     *
+     * This method returns a Url object that represents
+     * the sitemap entry for this company, including:
+     * - The route to the company's detail page.
+     * - The last modification date.
+     * - The change frequency (weekly).
+     * - The priority (0.1).
+     *
+     * @return \Spatie\Sitemap\Tags\Url|string|array
+     */
+    public function toSitemapTag(): Url | string | array
+    {
+
+        // Return with fine-grained control:
+        return Url::create(route('blogs.show', $this))
+            ->setLastModificationDate(Carbon::create($this->updated_at))
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+            ->setPriority(0.1);
     }
 }
