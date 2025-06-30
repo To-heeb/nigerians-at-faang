@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <x-slot:title>
+        Terms & Condition
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="Terms of use" />
     <!-- End Page Title -->

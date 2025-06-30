@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <x-slot:title>
+        Contact Us
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="Contact" />
     <!-- End Page Title -->

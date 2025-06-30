@@ -1463,9 +1463,9 @@ section,
 }
 
 @media (max-width: 576px) {
-   .team-member-image {
-    min-width: 485px;
-    height: 485px;
+    .team-member-image {
+        min-width: 485px;
+        height: 485px;
     }
 }
 
@@ -2657,7 +2657,7 @@ section,
     padding-bottom: 2rem;
     margin-bottom: 2rem;
 }
-.profile .profile-img  {
+.profile .profile-img {
     width: 55px;
     height: 55px;
     /* background: linear-gradient(135deg, #ff6b6b, #ff8e8e); */
@@ -2673,7 +2673,6 @@ section,
     color: #6c757d;
     font-size: 0.9rem;
 }
-
 
 /*--------------------------------------------------------------
 # Widgets
@@ -2923,4 +2922,81 @@ a.white-link:visited {
 
 #white-link {
     color: white !important;
+}
+
+
+/*--------------------------------------------------------------
+# Error Section
+--------------------------------------------------------------*/
+
+.error {
+      background: linear-gradient(135deg, #1B7339 0%, #2E8B57 50%, #228B22 100%);
+      min-height: 70vh;
+      position: relative;
+      overflow: hidden;
+}
+
+.error-number {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(45deg, #fff, #f8f9fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 20s infinite linear;
+}
+
+.shape:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+}
+
+.shape:nth-child(2) {
+    top: 60%;
+    right: 10%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    transform: rotate(45deg);
+    animation-delay: 5s;
+}
+
+.shape:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 20px;
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(120deg); }
+    66% { transform: translateY(10px) rotate(240deg); }
+}
+
+@media (max-width: 768px) {
+    .error-number {
+    font-size: 6rem;
+    }
 }

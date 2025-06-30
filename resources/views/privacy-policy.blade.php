@@ -1,4 +1,9 @@
 <x-app-layout>
+
+    <x-slot:title>
+        Privacy Policy
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="Privacy Policy" />
     <!-- End Page Title -->

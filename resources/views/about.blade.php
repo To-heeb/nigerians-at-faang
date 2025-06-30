@@ -1,5 +1,9 @@
 <x-app-layout>
 
+    <x-slot:title>
+        About Us
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="About" />
     <!-- End Page Title -->
