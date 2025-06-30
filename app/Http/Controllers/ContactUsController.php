@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Notifications\ContactUsNotification;
 use Illuminate\Support\Facades\Notification;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Test\Constraint\ResponseStatusCodeSame;
 
 class ContactUsController extends Controller
 {
@@ -33,7 +35,11 @@ class ContactUsController extends Controller
 
         // Check if the message and topic are cached
         if (Cache::has($cacheKey)) {
-            return back()->with('info', 'You have already sent a message regarding this subject. Please try again later.');
+            // return back()->with('info', 'You have already sent a message regarding this subject. Please try again later.');
+            return response()->json([
+                'status' => false,
+                'message' => 'You have already sent a message regarding this subject. Please try again later.'
+            ], Response::HTTP_CONFLICT);
         }
 
         Notification::route('mail', config('mail.from.address'))
@@ -41,6 +47,10 @@ class ContactUsController extends Controller
 
         Cache::put($cacheKey, true, now()->addMinutes(30));
 
-        return back()->with('success', 'Message sent successfully!');
+        return response()->json([
+            'status' => true,
+            'message' => 'Message sent successfully!'
+        ], Response::HTTP_OK);
+        // return back()->with('success', 'Message sent successfully!');
     }
 }
