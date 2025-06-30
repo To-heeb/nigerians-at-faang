@@ -8,6 +8,10 @@
         article
     </x-slot>
 
+    <x-slot:description>
+        {{ config('app.name') }}: {{ $blog->title }}
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner-two page="{{ $blog->title }}" above_page="Blogs" above_page_route="{{ route('blogs.index') }}" />
     <!-- End Page Title -->

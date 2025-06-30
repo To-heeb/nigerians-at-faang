@@ -8,6 +8,10 @@
         article
     </x-slot>
 
+    <x-slot:description>
+        {{ config('app.name') }} Blogs
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner page="Blogs" />
     <!-- End Page Title -->

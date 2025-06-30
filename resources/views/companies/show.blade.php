@@ -4,6 +4,10 @@
         {{ $company->name }}
     </x-slot>
 
+    <x-slot:description>
+        Nigerians at {{ $company->name }}
+    </x-slot>
+
     <!-- Page Title -->
     <x-header-banner-two page="{{ $company->name }}" above_page="Companies"
         above_page_route="{{ route('companies.index') }}" />

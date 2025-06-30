@@ -8,7 +8,7 @@
     <title>
         {{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}
     </title>
-    <meta name="description" content="{{ config('app.description') }}">
+    <meta name="description" content="{{ isset($description) ? $description : config('app.description') }}">
     <meta name="keywords" content="{{ config('app.keywords') }}">
     <meta name="author" content="{{ config('app.author') }}">
     <meta name="application-name" content="{{ config('app.name') }}">
@@ -28,7 +28,7 @@
     <meta name="dcterms.Title" content="{{ !empty($title) ? $title : config('laravel-seo-manager.title') }}">
     <meta name="dcterms.Subject" content="{{ config('app.keywords') }}">
     <meta name="dcterms.Contributor" content="{{ config('app.author') }}">
-    <meta name="dcterms.Description" content="{{ config('app.description') }}">
+    <meta name="dcterms.Description" content="{{ isset($description) ? $description : config('app.description') }}}">
 
     <!--GEO Tags-->
     <meta name="DC.title" content="{{ config('app.name') }}" />
@@ -43,7 +43,7 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title"
         content="{{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}">
-    <meta property="og:description" content="{{ config('app.description') }}">
+    <meta property="og:description" content="{{ isset($description) ? $description : config('app.description') }}">
     <meta property="og:image" content="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}">
     <meta property="og:site_name" content="{{ config('app.name') }}">
     <meta property="fb:app_id" content="{{ config('services.facebook.app_id') }}" />
@@ -53,7 +53,7 @@
     <meta name="twitter:site" content="{{ '@' . config('app.name') }}">
     <meta name="twitter:title"
         content="{{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}">
-    <meta name="twitter:description" content="{{ config('app.description') }}">
+    <meta name="twitter:description" content="{{ isset($description) ? $description : config('app.description') }}">
     <meta name="twitter:image" content="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
