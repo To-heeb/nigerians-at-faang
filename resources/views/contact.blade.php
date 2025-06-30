@@ -60,7 +60,8 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <form action="{{ route('contact.send') }}" method="POST" role="form" class="php-email-form">
+                    <form action="{{ route('contact.send') }}" method="POST" role="form"
+                        data-recaptcha-site-key="{{ config('services.recaptcha.site_key') }}" class="php-email-form">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 form-group">
@@ -80,7 +81,7 @@
                             <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
                         </div>
                         <div class="my-3">
-                            <div class="loading">Loading</div>
+                            <div class="loading">Sending..</div>
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div>
@@ -92,5 +93,10 @@
 
         </div>
 
-    </section><!-- /Contact Section -->
+    </section>
+    <!-- /Contact Section -->
+
+    @push('page-script')
+        <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+    @endpush
 </x-app-layout>

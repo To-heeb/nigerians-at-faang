@@ -33,7 +33,7 @@
             try {
               grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
               .then(token => {
-                formData.set('recaptcha-response', token);
+                formData.set('recaptchaToken', token);
                 php_email_form_submit(thisForm, action, formData);
               })
             } catch(error) {
@@ -56,7 +56,7 @@
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
     .then(response => {
-        if( response.ok || response.status == 409) {
+        if( response.ok || response.status == 409 || response.status == 422) {
             return response.text();
         } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`);

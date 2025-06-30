@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Notifications\ContactUsNotification;
@@ -26,9 +27,10 @@ class ContactUsController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email:dns,spoof',
+            'email' => 'required|email:dns,spoof|indisposable',
             'subject' => 'required|string|max:100',
             'message' => 'required|string',
+            'recaptchaToken' => ['required', new Recaptcha()],
         ]);
 
         $cacheKey = 'contact_message_' . md5($validated['email'] . $validated['subject']);

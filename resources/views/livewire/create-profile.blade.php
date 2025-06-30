@@ -51,7 +51,7 @@
                                 @this.set('recaptchaToken', token);
                                 $wire.save();
                             }
-
+                        
                         }">
                         @csrf
                         <div class="row">
