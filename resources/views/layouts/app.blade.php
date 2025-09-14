@@ -25,7 +25,7 @@
     <meta name="dcterms.Publisher" content="{{ config('app.name') }}">
     <meta name="dcterms.Type" content="text/html">
     <meta name="dcterms.Coverage" content="{{ url()->current() }}">
-    <meta name="dcterms.Title" content="{{ !empty($title) ? $title : config('laravel-seo-manager.title') }}">
+    <meta name="dcterms.Title" content="{{ !empty($title) ? $title : config('app.title') }}">
     <meta name="dcterms.Subject" content="{{ config('app.keywords') }}">
     <meta name="dcterms.Contributor" content="{{ config('app.author') }}">
     <meta name="dcterms.Description" content="{{ isset($description) ? $description : config('app.description') }}}">

@@ -61,7 +61,8 @@
 
                 <div class="col-lg-8">
                     <form action="{{ route('contact.send') }}" method="POST" role="form"
-                        data-recaptcha-site-key="{{ config('services.recaptcha.site_key') }}" class="php-email-form">
+                        data-recaptcha-site-key="{{ config('services.recaptcha.site_key') }}" class="php-email-form"
+                        data-aos="fade-up" data-aos-delay="200">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 form-group">
