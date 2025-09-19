@@ -330,7 +330,15 @@
                                 <li>Spread the word on social media</li>
                                 <li>Collaborate with us on partnerships or sponsorships</li>
                                 <li>Reach out if you'd like to volunteer or help build the platform</li>
-                                <li>Buy Us a Coffee</li>
+                                <li>Donations(All donations will be spent on maintaining and improving
+                                    {{ config('app.name') }})
+                                    <ul>
+                                        <li>For Naira <a href="{{ config('app.naira_donation_link') }}"
+                                                target="_blank">here</a> </li>
+                                        <li>For Dollar <a href="{{ config('app.dollar_donation_link') }}"
+                                                target="_blank">here</a> </li>
+                                    </ul>
+                                </li>
                             </ul>
                             You’ll be able to subscribe from the landing page soon.
                         </div>

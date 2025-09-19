@@ -10,6 +10,24 @@
 
   <!-- Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const appUrl = "{{ config('app.url') }}";
+          const links = document.querySelectorAll("a[href^='http']");
+          links.forEach(link => {
+              try {
+                  const url = new URL(link.href);
+                  if (!url.hostname.includes(new URL(appUrl).hostname)) {
+                      url.searchParams.set("ref", appUrl);
+                      link.href = url.toString();
+                  }
+              } catch (e) {
+                  // ignore invalid URLs
+              }
+          });
+      });
+  </script>
+
 
 
   <!-- BEGIN: Page JS-->

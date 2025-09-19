@@ -146,5 +146,7 @@ return [
     "contact_mail" => env('CONTACT_MAIL', 'contact@nigeriansatfaang.com'),
     "privacy_mail" => env('PRIVACY_MAIL', 'contact@nigeriansatfaang.com'),
     "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),
+    "naira_donation_link" => env("NAIRA_DONATION_LINK", ''),
+    "dollar_donation_link" => env("DOLLAR_DONATION_LINK", ''),
 
 ];
