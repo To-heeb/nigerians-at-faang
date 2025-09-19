@@ -47,9 +47,10 @@
                                 <p class="text-muted mb-3">{!! str($profile->short_bio)->markdown() !!}</p>
                             </div>
                             <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 gx-1 mb-2">
-                                <div class="col" style="">
+                                <div class="col mt-2" style="">
                                     <div>
                                         {{-- TODO(toheeb): tooltip the links --}}
+                                        <div class="text-muted">Connect via</div>
                                         <strong>
                                             @if ($profile->website_url)
                                                 <a href="{{ $profile->website_url }}" target="_blank"><i
@@ -72,22 +73,38 @@
                                                         class="bi bi-tiktok me-1"></i></a>
                                             @endif
                                         </strong>
-                                        <div class="text-muted">Links</div>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col mt-2">
                                     <div>
                                         <strong><a href="{{ route('companies.show', $profile->company) }}"
                                                 rel="noopener noreferrer">{{ $profile->company->name }}</a></strong>
                                         <div class="text-muted">Company</div>
                                     </div>
                                 </div>
-                                <div class="col">
-                                    {{-- <div>
-                                        <strong><a href="{{ $company->career_page_url }}" target="_blank">Career
-                                                Page <i class="bi bi-box-arrow-up-right"></i></a> </strong>
-                                        <div class="text-muted">View Job listings </div>
-                                    </div> --}}
+                                <div class="col mt-2">
+                                    <div>
+                                        {{-- {{ $company->career_page_url }} --}}
+                                        <div class="text-muted">Inspire Others by sharing <i
+                                                class="bi bi-box-arrow-up-right"></i></div>
+                                        <strong>
+                                            <a href="{{ share_link('twitter', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                                target="_blank"><i class="bi bi-twitter-x me-1"></i></a>
+                                            <a href="{{ share_link('linkedin', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                                target="_blank"><i class="bi bi-linkedin me-1"></i></a>
+                                            <a href="{{ share_link('facebook', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                                target="_blank"><i class="bi bi-facebook me-1"></i></a>
+                                            <a href="{{ share_link(
+                                                'whatsapp',
+                                                request()->fullUrl(),
+                                                "Check $profile->name  and other Nigeria @ " . $profile->company->name . ' .',
+                                            ) .
+                                                ' on ' .
+                                                request()->fullUrl() }} "
+                                                target="_blank"><i class="bi bi-whatsapp me-1"></i></a>
+                                        </strong>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,13 +143,58 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="share-section mt-5">
+                        <h3 class="h4 mb-3">Share On</h3>
+                        <p class="text-muted mb-4">
+                            Spread the word about {{ $profile->name }} on your favorite social
+                            platforms.
+                        </p>
+
+                        <div class="row text-center g-3">
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('twitter', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                    target="_blank" class="btn btn-outline-twitter w-100">
+                                    <i class="bi-twitter-x"></i> Twitter
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('facebook', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                    target="_blank" class="btn btn-outline-facebook w-100">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('linkedin', request()->fullUrl(), "Check out $profile->name and other Nigerians @ " . $profile->company->name . ' .') }}"
+                                    target="_blank" class="btn btn-outline-linkedin w-100">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link(
+                                    'whatsapp',
+                                    request()->fullUrl(),
+                                    "Check $profile->name  and other Nigeria @ " . $profile->company->name . ' .',
+                                ) .
+                                    ' on ' .
+                                    request()->fullUrl() }} "
+                                    target="_blank" class="btn btn-outline-whatsapp w-100">
+                                    <i class="bi bi-whatsapp"></i> Whatsapp
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Other Nigerians from {{ $profile->company->name }}</h5>
+                            <h5 class="card-title mb-0">Other Nigerians @ {{ $profile->company->name }}</h5>
                         </div>
                         <div class="card-body">
                             @forelse($otherProfiles as $otherProfile)

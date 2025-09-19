@@ -87,7 +87,7 @@ class Blog extends Model implements Sitemapable, Viewable
     #[Scope]
     protected function mostViewed(Builder $query, $limit = 10)
     {
-        return $query->orderByDesc('views_count')->take($limit);
+        return $query->orderByDesc('views')->take($limit);
     }
 
     /**

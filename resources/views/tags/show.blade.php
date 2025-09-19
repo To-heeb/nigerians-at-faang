@@ -41,6 +41,42 @@
                     <div>
                         <h3 class="h4 mb-3">Profiles</h3>
                         <div class="bg-light p-4 mb-3 rounded">
+                            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 gx-3 gy-3">
+                                @forelse ($tagProfiles as $profile)
+                                    <div class="col" style="">
+                                        <div class="card" style="">
+                                            <div class="card-body">
+                                                <p class="card-text d-flex align-items-center">
+                                                    <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+                                                        class="rounded-circle img-fluid border border-success-subtle me-3"
+                                                        width="50px" height="50px"
+                                                        alt="{{ $profile->name }}'s image">
+                                                    <span>
+                                                        <strong><a href="{{ route('profiles.show', $profile) }}">
+                                                                {{ $profile->name }} </a>
+                                                        </strong><br />
+                                                        <small>{{ $profile->job_title }}</small>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @empty
+                                    <div class="col">
+                                        <b>No related profile for "{{ $tag->name }}" tag yet</b>
+                                    </div>
+                                @endforelse
+                            </div>
+
+                            {{-- @if (!empty($tagProfiles) && $tagProfiles->isNotEmpty())
+                                <div class="row mt-3">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a class="btn btn-success btn-sm"
+                                            href="{{ route('profiles.index', ['q' => $tag->name]) }}"
+                                            role="button">View All Profiles for #{{ $tag->name }}</a>
+                                    </div>
+                                </div>
+                            @endif --}}
                         </div>
                     </div>
 
@@ -48,7 +84,38 @@
                     <div class="mt-4">
                         <h3 class="h4 mb-3 mt-2">Companies</h3>
                         <div class="bg-light p-4 mb-3 rounded">
+                            <div class="row">
+                                @forelse ($tagCompanies as $company)
+                                    {{-- <div class="card w-100 mb-3">
+                                        <div class="card-body">
+                                            <h6 class="card-title"><a
+                                                    href="{{ route('companies.show', $blog) }}">{{ $blog->title }}</a>
+                                            </h6>
+                                            <p class="card-text">{!! str($blog->body)->limit(100) !!}</p>
+                                            <a href="{{ route('companies.show', $blog) }}"
+                                                class="readmore stretched-link"><span>Read More</span><i
+                                                    class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div> --}}
+                                    <x-company-card-two :company="$company" :delay="$loop->index % 100" />
+
+                                @empty
+                                    <div class="col">
+                                        <b>No company for "{{ $tag->name }}" tag yet</b>
+                                    </div>
+                                @endforelse
+                            </div>
                         </div>
+
+                        @if (!empty($tagCompanies) && $tagCompanies->isNotEmpty())
+                            <div class="row mt-3">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <a class="btn btn-success btn-sm"
+                                        href="{{ route('blogs.index', ['q' => $tag->name]) }}" role="button">View
+                                        All Companies for #{{ $tag->name }}</a>
+                                </div>
+                            </div>
+                        @endif
                     </div>
 
                     {{-- Blog --}}
@@ -70,17 +137,17 @@
                                     </div>
                                 @empty
                                     <div class="col">
-                                        <b>No blog for {{ $company->name }} yet</b>
+                                        <b>No blog for "{{ $tag->name }}" tag yet</b>
                                     </div>
                                 @endforelse
                             </div>
 
-                            @if (!empty($companyBlogs) && $companyBlogs->isNotEmpty())
+                            @if (!empty($tagBlogs) && $tagBlogs->isNotEmpty())
                                 <div class="row mt-3">
                                     <div class="col-12 d-flex justify-content-center">
                                         <a class="btn btn-success btn-sm"
-                                            href="{{ route('blogs.index', ['q' => $company->name]) }}"
-                                            role="button">View All Blogs from {{ $company->name }}</a>
+                                            href="{{ route('blogs.index', ['q' => $tag->name]) }}" role="button">View
+                                            All Blogs for #{{ $tag->name }}</a>
                                     </div>
                                 </div>
                             @endif

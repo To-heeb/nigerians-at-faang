@@ -2643,6 +2643,13 @@ section,
     margin-bottom: 2rem;
 }
 
+.company-profile .share-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
 .company-profile .company-details {
     color: #6c757d;
     font-size: 0.9rem;
@@ -2712,6 +2719,13 @@ section,
     margin-bottom: 2rem;
 }
 
+.tag-profile .share-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
 .tag-profile .tag-details {
     color: #6c757d;
     font-size: 0.9rem;
@@ -2742,6 +2756,13 @@ section,
 .profile .company-details {
     color: #6c757d;
     font-size: 0.9rem;
+}
+
+.profile .share-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -3069,4 +3090,73 @@ a.white-link:visited {
     .error-number {
     font-size: 6rem;
     }
+}
+
+/*--------------------------------------------------------------
+# Share Button Section
+--------------------------------------------------------------*/
+
+
+.btn-outline-twitter {
+    color: #000;
+    border-color: #000;
+}
+.btn-outline-twitter:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-outline-facebook {
+    color: #1877F2;
+    border-color: #1877F2;
+}
+.btn-outline-facebook:hover {
+    background-color: #1877F2;
+    color: #fff;
+}
+
+.btn-outline-linkedin {
+    color: #0A66C2;
+    border-color: #0A66C2;
+}
+.btn-outline-linkedin:hover {
+    background-color: #0A66C2;
+    color: #fff;
+}
+
+.btn-outline-instagram {
+    position: relative;
+    color: #E4405F;
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7) border-box;
+}
+
+.btn-outline-instagram:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7) border-box;
+}
+
+.btn-outline-tiktok {
+    position: relative;
+    font-weight: 700;
+    border: 2px solid #000;
+    color: #000; /* text stays black */
+}
+
+.btn-outline-tiktok:hover {
+    background-color: #000;
+    color: #fff;
+    text-shadow:
+        2px 2px 0 #FE2C55,   /* pinkish red shadow */
+       -2px -2px 0 #25F4EE; /* cyan shadow */
+}
+
+.btn-outline-whatsapp {
+    color: #00D757;
+    border-color: #00D757;
+}
+.btn-outline-whatsapp:hover {
+    background-color: #00D757;
+    color: #fff;
 }

@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Tags\Url;
 use App\Contracts\Models\Viewable;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -62,11 +63,46 @@ class Tag extends Model implements Sitemapable, Viewable
     }
 
     /**
+     * Get all of the companies that are assigned this tag.
+     */
+    public function companies(): MorphToMany
+    {
+        return $this->morphedByMany(Company::class, 'taggable');
+    }
+
+    /**
      * Get all of the blogs that are assigned this tag.
      */
     public function blogs(): MorphToMany
     {
         return $this->morphedByMany(Blog::class, 'taggable');
+    }
+
+    /**
+     * Get related tags based on co-occurrence with this tag.
+     *
+     * This method finds other tags that appear on the same taggable
+     * models (blogs, profiles, etc.) as the current tag. The tags are
+     * ranked by how many times they co-occur with this tag, and the
+     * top results are returned.
+     *
+     * @param  int  $limit  The maximum number of related tags to return (default: 10).
+     * @return \Illuminate\Support\Collection<int, \App\Models\Tag>  A collection of related Tag models.
+     */
+    public function relatedTags(int $limit = 10)
+    {
+        return Tag::query()
+            ->select('tags.*')
+            ->join('taggables as t1', 'tags.id', '=', 't1.tag_id')
+            ->join('taggables as t2', 't1.taggable_id', '=', 't2.taggable_id')
+            ->where('t2.tag_id', $this->id) // same model(s) as this tag
+            ->where('tags.id', '!=', $this->id) // exclude itself
+            ->where('t1.taggable_type', '=', DB::raw('t2.taggable_type')) // make sure same morph type
+            ->groupBy('tags.id')
+            ->selectRaw('COUNT(*) as common_count')
+            ->orderByDesc('common_count')
+            ->limit($limit)
+            ->get();
     }
 
     /**

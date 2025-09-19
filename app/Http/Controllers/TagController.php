@@ -25,11 +25,11 @@ class TagController extends Controller
     public function show(Tag $tag)
     {
         // TODO(toheeb): Fix this
-        $relatedTags = Tag::whereNot('id', $tag->id)->limit(10)->get(); // TODO(toheeb): use company that are in the industry ->where('industry', $company->industry)[this will now be complex many to many with most closest]
-        $tagProfiles = Profile::where('company_id', $tag->id)->get();
-        $tagCompanies = Company::where('company_id', $tag->id)->mostViewed(4)->get();
-        $tagBlogs = Blog::mostViewed(2)->get();  // TODO(toheeb): use company as the it's tag is related to the blog withTags([$company->name])
+        $relatedTags = $tag->relatedTags();
+        $tagProfiles =  $tag->profiles()->mostViewed(4)->get();
+        $tagCompanies =  $tag->companies()->limit(4)->get();
+        $tagBlogs = $tag->blogs()->mostViewed(2)->get();
 
-        return view('tags.show', compact('tag', 'relatedTags'));
+        return view('tags.show', compact('tag', 'relatedTags', 'tagProfiles', 'tagCompanies', 'tagBlogs'));
     }
 }

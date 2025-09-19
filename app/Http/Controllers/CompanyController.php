@@ -24,9 +24,14 @@ class CompanyController extends Controller
     public function show(Company $company)
     {
 
-        $relatedCompanies = Company::whereNot('id', $company->id)->limit(10)->get();
+        $relatedCompanies = $company->relatedCompanies();
         $companyProfiles = Profile::where('company_id', $company->id)->mostViewed(4)->get();
-        $companyBlogs = Blog::mostViewed(2)->get();  // TODO(toheeb): use company as the it's tag is related to the blog withTags([$company->name])
+        $companyBlogs = Blog::query()
+            ->whereHas('tags', function ($q) use ($company) {
+                $q->where('slug', $company->slug);
+            })
+            ->mostViewed(3)
+            ->get();
 
         return view(
             'companies.show',

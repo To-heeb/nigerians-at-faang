@@ -58,6 +58,59 @@
                             </div>
                         </div>
                     </div> --}}
+                    <div class="share-section mt-5">
+                        <h3 class="h4 mb-3">Share On</h3>
+                        <p class="text-muted mb-4">
+                            Spread the word about {{ 'Nigerians@' . $company->name }} on your favorite social platforms.
+                        </p>
+
+                        <div class="row text-center g-3">
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('twitter', request()->fullUrl(), 'Check out Nigerians @ ' . $company->name) }}"
+                                    target="_blank" class="btn btn-outline-twitter w-100">
+                                    <i class="bi-twitter-x"></i> Twitter
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('facebook', request()->fullUrl(), 'Check out Nigerians @ ' . $company->name) }}"
+                                    target="_blank" class="btn btn-outline-facebook w-100">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('linkedin', request()->fullUrl(), 'Check out Nigerians @ ' . $company->name) }}"
+                                    target="_blank" class="btn btn-outline-linkedin w-100">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="{{ share_link('whatsapp', request()->fullUrl(), 'Check out Nigerians @ ' . $company->name) .
+                                    ' on ' .
+                                    request()->fullUrl() }} "
+                                    target="_blank" class="btn btn-outline-whatsapp w-100">
+                                    <i class="bi bi-whatsapp"></i> Whatsapp
+                                </a>
+                            </div>
+
+                            {{-- <div class="col-6 col-md-3">
+                                <a href="https://www.instagram.com/?url={{ urlencode(request()->fullUrl()) }}"
+                                    target="_blank" class="btn btn-outline-instagram w-100">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </a>
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <a href="https://www.tiktok.com/share?url={{ urlencode(request()->fullUrl()) }}"
+                                    target="_blank" class="btn btn-outline-tiktok w-100">
+                                    <i class="bi bi-tiktok"></i> <span class="tiktok-text">TikTok</span>
+                                </a>
+                            </div> --}}
+                        </div>
+                    </div>
+
 
                     <!-- About Section -->
                     <div>
