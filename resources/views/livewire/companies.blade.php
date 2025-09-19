@@ -59,13 +59,13 @@
          once: false, // Crucial for pagination
          offset: 120
      });
-     
+
      Livewire.on('refresh-aos', () => {
          setTimeout(() => {
              AOS.refreshHard(); // Force complete reinitialization
          }, 300);
      });
-     
+
      Livewire.on('scroll-to-top', () => {
          window.scrollTo({
              top: 0,

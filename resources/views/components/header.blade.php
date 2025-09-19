@@ -9,18 +9,23 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="{{ route('home') }}" class="active">Home</a></li>
+                <li><a href="{{ route('home') }}"
+                        class="{{ url()->current() === route('home') ? 'active' : '' }}">Home</a></li>
                 {{-- <li><a href="{{ route('portfolios.index') }}">Portfolio</a></li> --}}
-                <li><a href="{{ route('profiles.index') }}">Profiles</a></li>
-                <li><a href="{{ route('blogs.index') }}">Blog</a></li>
-                <li class="dropdown"><a href="{{ route('about') }}"><span>About</span> <i
-                            class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li><a href="{{ route('profiles.index') }}"
+                        class="{{ url()->current() === route('profiles.index') ? 'active' : '' }}">Profiles</a></li>
+                <li><a href="{{ route('blogs.index') }}"
+                        class="{{ url()->current() === route('blogs.index') ? 'active' : '' }}">Blog</a></li>
+                <li class="dropdown"><a href="{{ route('about') }}"
+                        class="{{ in_array(url()->current(), [route('about'), route('companies.index'), route('tags.index')]) ? 'active' : '' }}"><span>About</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="{{ route('companies.index') }}">Companies</a></li>
                         <li><a href="{{ route('tags.index') }}">Tags</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ route('contact.index') }}">Contact Us</a></li>
+                <li><a href="{{ route('contact.index') }}"
+                        class="{{ url()->current() === route('contact.index') ? 'active' : '' }}">Contact Us</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
