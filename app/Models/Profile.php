@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Tags\Url;
+use App\Contracts\Models\Viewable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\Sitemap\Contracts\Sitemapable;
@@ -14,7 +15,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Profile extends Model implements Sitemapable
+class Profile extends Model implements Sitemapable, Viewable
 {
     /** @use HasFactory<\Database\Factories\ProfileFactory> */
     use HasFactory;
@@ -28,8 +29,8 @@ class Profile extends Model implements Sitemapable
         'name',
         'slug',
         'image',
+        'views',
         'job_title',
-        'views_count',
         'company_id',
         'linkedin_url',
         'twitter_url',
@@ -208,6 +209,18 @@ class Profile extends Model implements Sitemapable
         return $query->where('is_approved', true)
             // ->where('is_featured', true)
             ->where('is_published', true);
+    }
+
+    /**
+     * Increment the views for the given IDs.
+     */
+    public static function incrementViews(array $ids): void
+    {
+        self::withoutTimestamps(function () use ($ids): void {
+            self::query()
+                ->whereIn('id', $ids)
+                ->increment('views');
+        });
     }
 
 

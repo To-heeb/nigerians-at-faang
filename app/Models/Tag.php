@@ -5,13 +5,14 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Tags\Url;
+use App\Contracts\Models\Viewable;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Tag extends Model implements Sitemapable
+class Tag extends Model implements Sitemapable, Viewable
 {
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
@@ -24,6 +25,7 @@ class Tag extends Model implements Sitemapable
     protected $fillable = [
         'name',
         'slug',
+        'views'
     ];
 
     /**
@@ -65,6 +67,18 @@ class Tag extends Model implements Sitemapable
     public function blogs(): MorphToMany
     {
         return $this->morphedByMany(Blog::class, 'taggable');
+    }
+
+    /**
+     * Increment the views for the given IDs.
+     */
+    public static function incrementViews(array $ids): void
+    {
+        self::withoutTimestamps(function () use ($ids): void {
+            self::query()
+                ->whereIn('id', $ids)
+                ->increment('views');
+        });
     }
 
 

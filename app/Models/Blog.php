@@ -5,14 +5,16 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Tags\Url;
+use App\Contracts\Models\Viewable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Spatie\Sitemap\Contracts\Sitemapable;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Blog extends Model
+class Blog extends Model implements Sitemapable, Viewable
 {
     /** @use HasFactory<\Database\Factories\BlogFactory> */
     use HasFactory;
@@ -27,8 +29,8 @@ class Blog extends Model
         'slug',
         'body',
         'image',
+        'views',
         'author',
-        'views_count',
         'profile_id',
         'is_published',
         'published_at',
@@ -131,6 +133,18 @@ class Blog extends Model
     protected function unpublished(Builder $query)
     {
         return $query->where('is_published', false);
+    }
+
+    /**
+     * Increment the views for the given IDs.
+     */
+    public static function incrementViews(array $ids): void
+    {
+        self::withoutTimestamps(function () use ($ids): void {
+            self::query()
+                ->whereIn('id', $ids)
+                ->increment('views');
+        });
     }
 
     /**

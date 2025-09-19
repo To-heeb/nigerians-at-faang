@@ -81,6 +81,25 @@ class Company extends Model implements Sitemapable
     }
 
     /**
+     * Get the top related companies based on shared industries.
+     *
+     * @param int $limit
+     * @return \Illuminate\Support\Collection
+     */
+    public function relatedCompanies(int $limit = 10)
+    {
+        return self::where('companies.id', '!=', $this->id)
+            ->select('companies.*')
+            ->selectRaw('COUNT(company_industry.industry_id) as common_industries_count')
+            ->join('company_industry', 'companies.id', '=', 'company_industry.company_id')
+            ->whereIn('company_industry.industry_id', $this->industries()->pluck('industries.id'))
+            ->groupBy('companies.id')
+            ->orderByDesc('common_industries_count')
+            ->limit($limit)
+            ->get();
+    }
+
+    /**
      * Generate a sitemap tag for the company model.
      *
      * This method returns a Url object that represents
