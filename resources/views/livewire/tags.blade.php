@@ -1,18 +1,15 @@
  <!-- Features Section -->
- <section id="features" class="features section py-5">
-     <!-- Section Title -->
-     {{-- data-aos="fade-up" --}}
+ <section id="features" class="features section">
 
      <div class="container section-title search-container">
          <h3 class="mb-2">Where Nigerians Excel in Tech</h3>
-         <p class="mb-3">Search companies to explore career paths and success stories</p>
+         <p class="mb-3">Search tags to explore</p>
          <input type="search" wire:model.live.debounce.500ms="search"
              wire:keydown.enter.prevent="if ($event.target.value.trim() === '') {return false;} else {$wire.$refresh();}"
-             class="form-control" id="company-search" placeholder="Company Name" autocomplete="off" autofocus="on"
+             class="form-control" id="tag-search" placeholder="Tag" autocomplete="off" autofocus="on"
              aria-describedby="searchHelp"
              @keyup.space="if($event.target.value.trim() === '') $event.target.value = ''" />
      </div>
-     <!-- End Section Title -->
 
      <div class="container text-center py-3" wire:loading.delay.shortest wire:target="search">
          <div class="d-flex align-items-center justify-content-center gap-2">
@@ -23,7 +20,7 @@
              <!-- Animated text -->
              <span class="fw-semibold text-muted">
                  Discovering talent at
-                 <span class="text-success" x-text="$wire.search || 'companies'"></span> ...
+                 <span class="text-success" x-text="$wire.search || 'tags'"></span> ...
              </span>
          </div>
          <!-- Optional progress bar -->
@@ -54,6 +51,7 @@
          </div>
      </div>
 
+     {{-- <div class="container" data-aos="fade-up" data-aos-delay="100"> --}}
      <div class="container" x-data x-init="AOS.init({
          duration: 600,
          once: false, // Crucial for pagination
@@ -72,21 +70,20 @@
              behavior: 'smooth'
          });
      });">
-
          <div class="row gy-4">
-             @forelse($companies as $company)
-                 <x-company-card wire:key="{{ $company->id }}" :company="$company" :delay="$loop->index % 100" />
+             @forelse($tags as $tag)
+                 <x-tag-card wire:key="{{ $tag->id }}" :tag="$tag" :delay="$loop->index % 100" />
              @empty
-                 <p class="text-muted">No companies found for "{{ $search }}".</p>
+                 <p class="text-muted">No tags found for "{{ $search }}".</p>
              @endforelse
          </div>
 
          <!-- Pagination -->
-         @if ($companies->hasPages())
+         @if ($tags->hasPages())
              <div class="container text-center mt-3" wire:loading.flex wire:target="nextPage,gotoPage,previousPage">
                  <div class="d-flex align-items-center justify-content-center gap-3 p-3 bg-light rounded-3"
                      style="max-width: 300px; margin: 0 auto;">
-                     <!-- Modern spinner with company-themed icon -->
+                     <!-- Modern spinner with tag-themed icon -->
                      <div class="position-relative" style="width: 24px; height: 24px;">
                          <div class="spinner-border text-success" style="width: 100%; height: 100%;" role="status">
                              <span class="visually-hidden">Loading...</span>
@@ -97,7 +94,7 @@
 
                      <!-- Animated text with progress -->
                      <div class="text-start">
-                         <p class="mb-0 fw-semibold text-dark">Loading more companies</p>
+                         <p class="mb-0 fw-semibold text-dark">Loading more tags</p>
                          <div class="progress" style="height: 3px; width: 180px;">
                              <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
                                  style="width: 100%"></div>
@@ -107,12 +104,11 @@
              </div>
 
              <div class="pagination-container mt-4 mb-2">
-                 {{ $companies->links('livewire.custom-pagination') }}
+                 {{ $tags->links('livewire.custom-pagination') }}
              </div>
          @endif
      </div>
  </section>
- <!-- /Features Section -->
 
  <script>
      // Extend AOS with refreshHard method

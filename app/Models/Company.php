@@ -3,12 +3,14 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use App\Models\Tag;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Company extends Model implements Sitemapable
@@ -52,6 +54,14 @@ class Company extends Model implements Sitemapable
     {
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
+    }
+
+    /**
+     * Get all of the tags for the company.
+     */
+    public function tags(): MorphToMany
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     /**

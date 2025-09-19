@@ -18,7 +18,7 @@ return new class extends Migration
             $table->longText('body');
             $table->string('image');
             $table->string('author')->nullable()->default(config('app.author'));
-            $table->unsignedInteger('views_count')->default(0)->index();
+            $table->unsignedInteger('views')->default(0)->index();
             $table->foreignId('profile_id')->nullable()->constrained()->onDelete('cascade');
             $table->boolean('is_published')->default(false);
             $table->timestamp('published_at')->nullable();

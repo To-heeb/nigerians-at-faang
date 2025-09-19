@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique()->index();
             $table->string('slug')->unique();
+            $table->unsignedInteger('views')->default(0)->index();
             $table->timestamps();
         });
     }

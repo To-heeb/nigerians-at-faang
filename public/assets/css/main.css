@@ -2649,6 +2649,76 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Tag Profile Section
+--------------------------------------------------------------*/
+.tag-profile .features-item {
+    background-color: var(--surface-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: 0.3s;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    position: relative;
+}
+
+.tag-profile .features-item i {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 0;
+}
+
+.tag-profile .features-item h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.tag-profile .features-item h3 a {
+    color: var(--heading-color);
+    transition: 0.3s;
+}
+
+.tag-profile .features-item:hover {
+    border-color: var(--accent-color);
+}
+
+.tag-profile .features-item:hover h3 a {
+    color: var(--accent-color);
+}
+
+.tag-profile .tag-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+.tag-profile .tag-logo {
+    width: 55px;
+    height: 55px;
+    /* background: linear-gradient(135deg, #ff6b6b, #ff8e8e); */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.tag-profile .insights-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tag-profile .tag-details {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+
+/*--------------------------------------------------------------
 # Profile Section
 --------------------------------------------------------------*/
 
