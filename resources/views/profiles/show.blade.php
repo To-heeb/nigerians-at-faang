@@ -21,7 +21,7 @@
                     <div class="profile-header">
                         <div class="d-flex align-items-center">
                             <div class="profile-img me-3">
-                                <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+                                <img src="{{ $profile->image ? cdn_image('storage/profile/' . $profile->image) : cdn_image('storage/profile/avatar-head-profile.webp') }}"
                                     width="100px" height="100px" alt="{{ $profile->image }}'s image"
                                     class="border border-success-subtle rounded-circle img-fluid">
                             </div>

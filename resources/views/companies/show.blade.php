@@ -22,7 +22,7 @@
                     <div class="company-header">
                         <div class="d-flex align-items-center">
                             <div class="company-logo me-3">
-                                <img src="{{ asset('storage/company/' . $company->mini_logo) }}"
+                                <img src="{{ cdn_image('storage/company/' . $company->mini_logo) }}"
                                     alt="{{ $company->name }}'s logo" width="55px" height="55px"
                                     class="border border-success-subtle">
                             </div>
@@ -173,7 +173,7 @@
                                         <div class="card" style="">
                                             <div class="card-body">
                                                 <p class="card-text d-flex align-items-center">
-                                                    <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+                                                    <img src="{{ $profile->image ? cdn_image('storage/profile/' . $profile->image) : cdn_image('storage/profile/avatar-head-profile.webp') }}"
                                                         class="rounded-circle img-fluid border border-success-subtle me-3"
                                                         width="50px" height="50px"
                                                         alt="{{ $profile->name }}'s image">

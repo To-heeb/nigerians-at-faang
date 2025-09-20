@@ -44,7 +44,7 @@
     <meta property="og:title"
         content="{{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}">
     <meta property="og:description" content="{{ isset($description) ? $description : config('app.description') }}">
-    <meta property="og:image" content="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}">
+    <meta property="og:image" content="{{ cdn_image('assets/img/logos/nigerians@faang-vertical.png') }}">
     <meta property="og:site_name" content="{{ config('app.name') }}">
     <meta property="fb:app_id" content="{{ config('services.facebook.app_id') }}" />
 
@@ -54,11 +54,11 @@
     <meta name="twitter:title"
         content="{{ isset($title) ? config('app.name') . ' - ' . $title : config('app.name') . ' - ' . config('app.title') }}">
     <meta name="twitter:description" content="{{ isset($description) ? $description : config('app.description') }}">
-    <meta name="twitter:image" content="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}">
+    <meta name="twitter:image" content="{{ cdn_image('assets/img/logos/nigerians@faang-vertical.png') }}">
 
     <link href="{{ url()->current() }}" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/cookie-consent/css/cookie-consent.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ cdn_image('vendor/cookie-consent/css/cookie-consent.css') }}">
     @include('layouts/sections/styles')
     <!-- Google tag (gtag.js) -->
     <script async

@@ -16,7 +16,7 @@
             <div class="row position-relative">
 
                 <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img
-                        src="{{ asset('assets/img/hero-carousel/hero-carousel-16.jpg') }}">
+                        src="{{ cdn_image('assets/img/hero-carousel/hero-carousel-16.jpg') }}">
                 </div>
 
                 <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
@@ -45,7 +45,7 @@
 
                         <div class="watch-video d-flex align-items-center position-relative">
                             <i class="bi bi-play-circle"></i>
-                            <a href="{{ asset('assets/img/promo-video/promo-preview-video-1.mp4') }}"
+                            <a href="{{ cdn_image('assets/img/promo-video/promo-preview-video-1.mp4') }}"
                                 class="glightbox stretched-link">Watch
                                 Video</a>
                         </div>

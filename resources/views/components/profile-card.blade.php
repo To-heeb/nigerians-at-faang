@@ -7,7 +7,7 @@
                 id="white-link">{{ $profile->company->name }}</a>
         </p>
         <div class="member-img">
-            <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+            <img src="{{ $profile->image ? cdn_image('storage/profile/' . $profile->image) : cdn_image('storage/profile/avatar-head-profile.webp') }}"
                 class="img-fluid team-member-image" alt="{{ $profile->image }}'s image">
             <div class="social">
                 @if ($profile->twitter_url)

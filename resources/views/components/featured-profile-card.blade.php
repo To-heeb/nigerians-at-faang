@@ -4,7 +4,7 @@
     <div class="card" style="">
         <div class="card-body">
             <p class="card-text d-flex align-items-center">
-                <img src="{{ $profile->image ? asset('storage/profile/' . $profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+                <img src="{{ $profile->image ? cdn_image('storage/profile/' . $profile->image) : cdn_image('storage/profile/avatar-head-profile.webp') }}"
                     class="rounded-circle img-fluid border border-success-subtle me-3" width="50px" height="50px"
                     alt="{{ $profile->name }}'s image">
                 <span>

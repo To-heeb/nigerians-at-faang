@@ -36,14 +36,11 @@ if (! function_exists('cdn_image')) {
     function cdn_image(string $path): string
     {
         // If already a full URL and app is in production, rewrite with statically
-        info("cdn_image", ['got here']);
 
         if (! app()->environment('local')) {
             // Ensure you replace `mydomainmain.com` with your actual domain
             $domain = config('app.url'); // e.g. https://mydomainmain.com
             $cleanDomain = parse_url($domain, PHP_URL_HOST);
-
-            info("cdn_image", [$domain, $cleanDomain]);
 
             return "https://cdn.statically.io/img/{$cleanDomain}/{$path}";
         }
@@ -62,7 +59,7 @@ if (! function_exists('cdn_asset')) {
      */
     function cdn_asset(string $path): string
     {
-        if (app()->environment('local')) {
+        if (!app()->environment('local')) {
             $username = config('app.asset_cdn_username');
             $repo = config('app.asset_cdn_repo');
 

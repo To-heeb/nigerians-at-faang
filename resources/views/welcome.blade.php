@@ -5,7 +5,7 @@
         <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
             <div class="carousel-item active">
-                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-8.jpg') }}" alt="">
+                <img src="{{ cdn_image('assets/img/hero-carousel/hero-carousel-8.jpg') }}" alt="">
                 <div class="container">
                     <h2>Nigerians @ FAANG</h2>
                     <p>A tribute to every Nigerian rewriting the global tech story—one line of code at a time.</p>
@@ -14,7 +14,7 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-7.jpg') }}" alt="">
+                <img src="{{ cdn_image('assets/img/hero-carousel/hero-carousel-7.jpg') }}" alt="">
                 <div class="container">
                     <h2>Spotlighting Nigerian Excellence in Big Tech</h2>
                     <p>Real stories from Nigerians who’ve made it to FAANG and beyond.</p>
@@ -23,7 +23,7 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-6.jpg') }}" alt="">
+                <img src="{{ cdn_image('assets/img/hero-carousel/hero-carousel-6.jpg') }}" alt="">
                 <div class="container">
                     <h2>Nigerians Breaking Barriers in Big Tech</h2>
                     <p>Discover career journeys, interview tips, and actionable advice from Nigerians at Google, Meta,
@@ -33,7 +33,7 @@
             </div><!-- End Carousel Item -->
 
             <div class="carousel-item">
-                <img src="{{ asset('assets/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
+                <img src="{{ cdn_image('assets/img/hero-carousel/hero-carousel-5.jpg') }}" alt="">
                 <div class="container">
                     <h2>Nigerian Brilliance in the Heart of Tech</h2>
                     <p>Meet the Nigerians shaping innovation at Google, Apple, Meta, Amazon, Netflix & beyond.</p>

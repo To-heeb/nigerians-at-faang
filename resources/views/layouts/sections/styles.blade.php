@@ -1,9 +1,9 @@
 <!-- Favicons -->
-{{-- <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon"> --}}
+{{-- <link href="{{ cdn_asset('assets/img/favicon.ico') }}" rel="icon"> --}}
 <link href="{{ cdn_asset('assets/img/favicon/android-chrome-512x512.png') }}" rel="icon">
 <link href="{{ cdn_asset('assets/img/favicon/apple-touch-icon.png') }}" rel="apple-touch-icon">
-{{-- <link href="{{ asset('assets/img/favicon/favicon-img.jpeg') }}" rel="icon"> --}}
-{{-- <link href="{{ asset('assets/img/favicon/favicon-img.jpeg') }}" rel="apple-touch-icon"> --}}
+{{-- <link href="{{ cdn_asset('assets/img/favicon/favicon-img.jpeg') }}" rel="icon"> --}}
+{{-- <link href="{{ cdn_asset('assets/img/favicon/favicon-img.jpeg') }}" rel="apple-touch-icon"> --}}
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">

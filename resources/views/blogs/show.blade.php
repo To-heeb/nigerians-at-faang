@@ -28,7 +28,7 @@
                         <article class="article">
 
                             <div class="post-img">
-                                <img src="{{ $blog->image ? asset('storage/blog/' . $blog->image) : asset('assets/img/blog/blog-1.jpg') }}"
+                                <img src="{{ $blog->image ? cdn_image('storage/blog/' . $blog->image) : cdn_image('assets/img/blog/blog-1.jpg') }}"
                                     alt="" class="img-fluid">
                             </div>
 
@@ -86,7 +86,7 @@
                         <div id="comment-1" class="comment">
                             <div class="d-flex">
                                 <div class="comment-img">
-                                    <img src="{{ asset('assets/img/blog/comments-1.jpg') }}" alt="">
+                                    <img src="{{ cdn_image('assets/img/blog/comments-1.jpg') }}" alt="">
                                 </div>
                                 <div>
                                     <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i
@@ -256,7 +256,7 @@
                         <div class="d-flex flex-column align-items-center">
                             @if ($blog->profile_id)
                                 {{-- {{ $blog->profile_id ? $blog->profile->name : $blog->author }} --}}
-                                <img src="{{ $blog->profile->image ? asset('storage/profile/' . $blog->profile->image) : asset('storage/profile/avatar-head-profile.webp') }}"
+                                <img src="{{ $blog->profile->image ? cdn_image('storage/profile/' . $blog->profile->image) : cdn_image('storage/profile/avatar-head-profile.webp') }}"
                                     class="rounded-circle flex-shrink-0" alt="">
                                 <h4>{{ $blog->profile->name }}</h4>
                                 <div class="social-links">
@@ -278,7 +278,7 @@
                                     @endif
                                 </div>
                             @else
-                                <img src="{{ asset('storage/profile/avatar-head-profile.webp') }}"
+                                <img src="{{ cdn_image('storage/profile/avatar-head-profile.webp') }}"
                                     class="rounded-circle flex-shrink-0" alt="">
                                 <h4>{{ $blog->author }}</h4>
                             @endif

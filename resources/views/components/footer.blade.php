@@ -7,7 +7,7 @@
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="{{ route('home') }}" class="logo d-flex align-items-center">
                     <span class="sitename">
-                        <img src="{{ asset('assets/img/logos/nigerians@faang-vertical.png') }}" alt=""
+                        <img src="{{ cdn_image('assets/img/logos/nigerians@faang-vertical.png') }}" alt=""
                             class="rounded-1">
                         {{ config('app.name') }}
                     </span>

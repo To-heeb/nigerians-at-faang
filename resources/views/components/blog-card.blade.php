@@ -3,7 +3,7 @@
 <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="{{ $delay }}">
     <article class="position-relative h-100">
         <div class="post-img position-relative overflow-hidden">
-            <img src="{{ $blog->image ? asset('storage/blog/' . $blog->image) : asset('storage/blog/blog-default.jpg') }}"
+            <img src="{{ $blog->image ? cdn_image('storage/blog/' . $blog->image) : cdn_image('storage/blog/blog-default.jpg') }}"
                 class="img-fluid" alt="" />
             <span class="post-date">{{ date('F j', strtotime($blog->published_at)) }}</span>
         </div>
