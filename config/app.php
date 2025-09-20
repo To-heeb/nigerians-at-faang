@@ -148,5 +148,7 @@ return [
     "support_number" => env('SUPPORT_NUMBER', '+2349052293405'),
     "naira_donation_link" => env("NAIRA_DONATION_LINK", ''),
     "dollar_donation_link" => env("DOLLAR_DONATION_LINK", ''),
+    'asset_cdn_username' => env('ASSET_CDN_USERNAME'),
+    'asset_cdn_repo' => env('ASSET_CDN_REPO'),
 
 ];

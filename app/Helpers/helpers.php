@@ -52,3 +52,25 @@ if (! function_exists('cdn_image')) {
         return asset($path);
     }
 }
+
+if (! function_exists('cdn_asset')) {
+    /**
+     * Get asset URL, using jsDelivr in non-development environments.
+     *
+     * @param string $path Relative path to asset
+     * @return string
+     */
+    function cdn_asset(string $path): string
+    {
+        if (app()->environment('local')) {
+            $username = config('app.asset_cdn_username');
+            $repo = config('app.asset_cdn_repo');
+
+            // Build jsDelivr path
+            return "https://cdn.jsdelivr.net/gh/{$username}/{$repo}/public/{$path}";
+        }
+
+        // Use normal Laravel asset() in local
+        return asset($path);
+    }
+}

@@ -1,7 +1,7 @@
 <!-- Favicons -->
 {{-- <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon"> --}}
-<link href="{{ asset('assets/img/favicon/android-chrome-512x512.png') }}" rel="icon">
-<link href="{{ asset('assets/img/favicon/apple-touch-icon.png') }}" rel="apple-touch-icon">
+<link href="{{ cdn_asset('assets/img/favicon/android-chrome-512x512.png') }}" rel="icon">
+<link href="{{ cdn_asset('assets/img/favicon/apple-touch-icon.png') }}" rel="apple-touch-icon">
 {{-- <link href="{{ asset('assets/img/favicon/favicon-img.jpeg') }}" rel="icon"> --}}
 {{-- <link href="{{ asset('assets/img/favicon/favicon-img.jpeg') }}" rel="apple-touch-icon"> --}}
 
@@ -13,14 +13,14 @@
     rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
 <!-- Main CSS File -->
-<link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+<link href="{{ cdn_asset('assets/css/main.css') }}" rel="stylesheet">
 
 
 <!-- Page Styles -->
