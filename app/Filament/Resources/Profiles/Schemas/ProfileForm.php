@@ -12,6 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\DateTimePicker;
+use App\Filament\Resources\Tags\Schemas\TagForm;
 
 class ProfileForm
 {
@@ -67,6 +68,15 @@ class ProfileForm
                             ->email()
                             ->columnSpanFull()
                             ->prefixIcon(Heroicon::OutlinedEnvelope),
+                        Select::make('tags')
+                            ->label('Attach Tags')
+                            ->relationship(titleAttribute: 'name')
+                            ->multiple()
+                            ->preload()
+                            ->required()
+                            ->searchable()
+                            ->columnSpanFull()
+                            ->createOptionForm(TagForm::form()),
                         Toggle::make('is_approved')
                             ->required(),
                         DateTimePicker::make('approved_at')

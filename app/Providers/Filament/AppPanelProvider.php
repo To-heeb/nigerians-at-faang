@@ -15,6 +15,7 @@ use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use BezhanSalleh\GoogleAnalytics\GoogleAnalyticsPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -63,6 +64,7 @@ class AppPanelProvider extends PanelProvider
             ->plugins([
                 FilamentAwinTheme::make()
                     ->primaryColor('#1B7339'),
+                GoogleAnalyticsPlugin::make()
             ]);;
     }
 }

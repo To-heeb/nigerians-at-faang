@@ -12,28 +12,29 @@ class TagForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
-            ->components([
-                Section::make('Tag')
-                    ->description('Provide essential details for the tag.')
-                    ->icon('heroicon-o-briefcase')
-                    ->collapsible()
-                    ->columns(2)
-                    ->columnSpanFull()
-                    ->schema([
-                        TextInput::make('name')
-                            ->required()
-                            ->reactive()
-                            ->afterStateUpdated(function ($state, callable $set) {
-                                $set('slug', Str::slug($state));
-                            }),
-                        TextInput::make('slug')
-                            ->readOnly()
-                            ->dehydrated(false),
-                        // TextInput::make('views')
-                        //     ->required()
-                        //     ->numeric()
-                        //     ->default(0),
-                    ])
-            ]);
+            ->components(static::form());
+    }
+
+    public static function form(): array
+    {
+        return [
+            Section::make('Tag')
+                ->description('Provide essential details for the tag.')
+                ->icon('heroicon-o-briefcase')
+                ->collapsible()
+                ->columns(2)
+                ->columnSpanFull()
+                ->schema([
+                    TextInput::make('name')
+                        ->required()
+                        ->reactive()
+                        ->afterStateUpdated(function ($state, callable $set) {
+                            $set('slug', Str::slug($state));
+                        }),
+                    TextInput::make('slug')
+                        ->readOnly()
+                        ->dehydrated(false),
+                ])
+        ];
     }
 }

@@ -5,11 +5,13 @@ namespace App\Filament\Resources\Companies\Schemas;
 use Illuminate\Support\Str;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use App\Filament\Resources\Tags\Schemas\TagForm;
+use App\Filament\Resources\Industries\Schemas\IndustryForm;
 
 class CompanyForm
 {
@@ -66,22 +68,40 @@ class CompanyForm
                         TextInput::make('wikipedia_url')
                             ->url()
                             ->prefixIcon(Heroicon::OutlinedLink),
-                        Textarea::make('logo')
+                        Select::make('tags')
+                            ->label('Attach Tags')
+                            ->relationship(titleAttribute: 'name')
+                            ->multiple()
+                            ->preload()
                             ->required()
-                            ->columnSpanFull(),
-                        Textarea::make('mini_logo')
+                            ->searchable()
+                            ->columnSpanFull()
+                            ->createOptionForm(TagForm::form()),
+                        Select::make('industries')
+                            ->label('Attach Industries')
+                            ->relationship(titleAttribute: 'name')
+                            ->multiple()
+                            ->preload()
                             ->required()
-                            ->columnSpanFull(),
-                        // FileUpload::make('logo')
-                        //     ->image()
-                        //     ->disk('company')
+                            ->searchable()
+                            ->columnSpanFull()
+                            ->createOptionForm(IndustryForm::form()),
+                        // Textarea::make('logo')
                         //     ->required()
                         //     ->columnSpanFull(),
-                        // FileUpload::make('mini_logo')
-                        //     ->image()
-                        //     ->disk('company')
+                        // Textarea::make('mini_logo')
                         //     ->required()
                         //     ->columnSpanFull(),
+                        FileUpload::make('logo')
+                            ->image()
+                            ->disk('company')
+                            ->required()
+                            ->columnSpanFull(),
+                        FileUpload::make('mini_logo')
+                            ->image()
+                            ->disk('company')
+                            ->required()
+                            ->columnSpanFull(),
                     ])
             ]);
     }

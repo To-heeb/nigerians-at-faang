@@ -12,24 +12,29 @@ class IndustryForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
-            ->components([
-                Section::make('Industry')
-                    ->description('Provide essential details for the industry.')
-                    ->icon('heroicon-o-briefcase')
-                    ->collapsible()
-                    ->columns(2)
-                    ->columnSpanFull()
-                    ->schema([
-                        TextInput::make('name')
-                            ->required()
-                            ->reactive()
-                            ->afterStateUpdated(function ($state, callable $set) {
-                                $set('slug', Str::slug($state));
-                            }),
-                        TextInput::make('slug')
-                            ->readOnly()
-                            ->dehydrated(false),
-                    ])
-            ]);
+            ->components(static::form());
+    }
+
+    public static function form(): array
+    {
+        return [
+            Section::make('Industry')
+                ->description('Provide essential details for the industry.')
+                ->icon('heroicon-o-briefcase')
+                ->collapsible()
+                ->columns(2)
+                ->columnSpanFull()
+                ->schema([
+                    TextInput::make('name')
+                        ->required()
+                        ->reactive()
+                        ->afterStateUpdated(function ($state, callable $set) {
+                            $set('slug', Str::slug($state));
+                        }),
+                    TextInput::make('slug')
+                        ->readOnly()
+                        ->dehydrated(false),
+                ])
+        ];
     }
 }

@@ -13,6 +13,7 @@ use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\DateTimePicker;
+use App\Filament\Resources\Tags\Schemas\TagForm;
 
 class BlogForm
 {
@@ -48,6 +49,15 @@ class BlogForm
                         Select::make('profile_id')
                             ->relationship('profile', 'name')
                             ->native(false),
+                        Select::make('tags')
+                            ->label('Attach Tags')
+                            ->relationship(titleAttribute: 'name')
+                            ->multiple()
+                            ->preload()
+                            ->required()
+                            ->searchable()
+                            ->columnSpanFull()
+                            ->createOptionForm(TagForm::form()),
                         Toggle::make('is_published')
                             ->required(),
                         DateTimePicker::make('published_at')
