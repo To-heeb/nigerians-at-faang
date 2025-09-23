@@ -20,6 +20,7 @@ class ProfilesTable
             ->columns([
                 ImageColumn::make('logo')
                     ->label("")
+                    ->circular()
                     ->disk('profile')
                     ->defaultImageUrl(fn($record) => $record->image ? cdn_image('storage/profile/' . $record->image) : cdn_image('storage/profile/avatar-head-profile.webp')),
                 TextColumn::make('name')

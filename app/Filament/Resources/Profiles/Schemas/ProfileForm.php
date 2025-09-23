@@ -69,14 +69,18 @@ class ProfileForm
                             ->prefixIcon(Heroicon::OutlinedEnvelope),
                         Toggle::make('is_approved')
                             ->required(),
-                        DateTimePicker::make('approved_at'),
+                        DateTimePicker::make('approved_at')
+                            ->native(false),
                         Toggle::make('is_published')
                             ->required(),
-                        DateTimePicker::make('published_at'),
+                        DateTimePicker::make('published_at')
+                            ->native(false),
                         Toggle::make('is_featured')
                             ->required(),
-                        DateTimePicker::make('featured_at'),
-                        DateTimePicker::make('last_featured_at'),
+                        DateTimePicker::make('featured_at')
+                            ->native(false),
+                        DateTimePicker::make('last_featured_at')
+                            ->native(false),
                     ])
             ]);
     }
