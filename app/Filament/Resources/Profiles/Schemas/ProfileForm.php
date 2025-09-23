@@ -70,17 +70,22 @@ class ProfileForm
                         Toggle::make('is_approved')
                             ->required(),
                         DateTimePicker::make('approved_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                         Toggle::make('is_published')
                             ->required(),
                         DateTimePicker::make('published_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                         Toggle::make('is_featured')
                             ->required(),
                         DateTimePicker::make('featured_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                         DateTimePicker::make('last_featured_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
+
                     ])
             ]);
     }

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Blogs\Schemas;
 
 use Illuminate\Support\Str;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Textarea;
@@ -21,7 +22,7 @@ class BlogForm
             ->components([
                 Section::make('Blog')
                     ->description('Provide essential details for the blog.')
-                    ->icon('heroicon-o-user-group')
+                    ->icon('heroicon-o-newspaper')
                     ->collapsible()
                     ->columns(2)
                     ->columnSpanFull()
@@ -39,6 +40,7 @@ class BlogForm
                             ->columnSpanFull(),
                         FileUpload::make('image')
                             ->image()
+                            ->disk('blog')
                             ->required()
                             ->columnSpanFull(),
                         TextInput::make('author')
@@ -49,13 +51,16 @@ class BlogForm
                         Toggle::make('is_published')
                             ->required(),
                         DateTimePicker::make('published_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                         Toggle::make('is_featured')
                             ->required(),
                         DateTimePicker::make('featured_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                         DateTimePicker::make('last_featured_at')
-                            ->native(false),
+                            ->native(false)
+                            ->prefixIcon(Heroicon::OutlinedCalendar),
                     ])
             ]);
     }

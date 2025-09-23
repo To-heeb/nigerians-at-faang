@@ -49,8 +49,8 @@ return [
 
         'company' => [
             'driver' => 'local',
-            'root' => storage_path('app/company'),
-            'url' => env('APP_URL') . '/storage',
+            'root' => storage_path('app/public/company'),
+            'url' => env('APP_URL') . '/storage/company',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
@@ -58,7 +58,7 @@ return [
 
         'profile' => [
             'driver' => 'local',
-            'root' => storage_path('app/profile'),
+            'root' => storage_path('app/public/profile'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
@@ -67,8 +67,8 @@ return [
 
         'blog' => [
             'driver' => 'local',
-            'root' => storage_path('app/profile'),
-            'url' => env('APP_URL') . '/blog',
+            'root' => storage_path('app/public/blog'),
+            'url' => env('APP_URL') . '/storage/blog',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
