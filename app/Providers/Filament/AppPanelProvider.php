@@ -30,9 +30,8 @@ class AppPanelProvider extends PanelProvider
             ->path('app')
             ->login()
             ->favicon(asset('assets/img/logos/nigerians@faang-vertical.png'))
-            ->brandLogo(asset('assets/img/logos/nigerians@faang-vertical.png'))
-            // ->brandLogo(asset('assets/img/logos/nigerians@faang-vertical.png'))
-            ->brandLogoHeight('3.00rem')
+            ->brandLogo(asset('assets/img/logos/nigerians@faang-vertical-rounded.png'))
+            ->brandLogoHeight('4.00rem')
             ->colors([
                 'primary' => Color::hex('#1B7339'),
             ])
