@@ -42,6 +42,7 @@ class Tag extends Model implements Sitemapable, Viewable
      */
     public function setNameAttribute($value)
     {
+        $value = Str::lower($value);
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
     }

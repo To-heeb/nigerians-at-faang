@@ -4,8 +4,8 @@
     <div class="features-item" wire:ignore.self>
         @if ($company->mini_logo)
             {{--  --}}
-            <img src="{{ cdn_image('storage/company/' . $company->mini_logo) }}" alt="{{ $company->name }}'s logo"
-                width="32px" height="32px" style="padding-right: 10px;">
+            <img src="{{ $company->mini_logo ? cdn_image('storage/company/' . $company->mini_logo) : 'https://img.icons8.com/dotty/80/company.png' }}"
+                alt="{{ $company->name }}'s logo" width="32px" height="32px" style="padding-right: 10px;">
         @else
             <i class="bi bi-x-diamond" style="color: #ffbb2c"></i>
         @endif
