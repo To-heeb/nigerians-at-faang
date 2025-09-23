@@ -757,6 +757,19 @@ class CompanySeeder extends Seeder
                 "wikipedia_url" => "https://en.wikipedia.org/wiki/GitHub",
                 "career_page_url" => "https://www.github.careers/careers-home"
             ],
+            [
+                'name' => "Okta",
+                "website" => "https://www.okta.com/",
+                "about" => "Okta, Inc. (formerly SaaSure Inc.) is an American identity and access management company based in San Francisco. It provides cloud software that helps companies manage and secure user authentication into applications, and for developers to build identity controls into applications, websites, web services, and devices.",
+                "founded_at" => 2009, //industry => "Software Development, DevOps, Developer Tools, Open Source Platforms",
+                "headquarters" => "San Francisco, California, United States",
+                "information_website" => "https://www.okta.com/company/",
+                "linkedin_url" => "https://www.linkedin.com/company/okta-inc-/",
+                "twitter_url" => "https://x.com/okta",
+                "youtube_url" => "https://www.youtube.com/OktaInc",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Okta,_Inc.",
+                "career_page_url" => "https://www.okta.com/company/careers/"
+            ],
         ];
 
         $companies = array_map(fn($company) => [
