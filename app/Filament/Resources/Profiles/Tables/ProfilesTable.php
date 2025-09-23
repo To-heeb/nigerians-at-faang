@@ -10,6 +10,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Support\Enums\IconPosition;
+use Filament\Tables\Columns\ImageColumn;
 
 class ProfilesTable
 {
@@ -17,6 +18,10 @@ class ProfilesTable
     {
         return $table
             ->columns([
+                ImageColumn::make('logo')
+                    ->label("")
+                    ->disk('profile')
+                    ->defaultImageUrl(fn($record) => $record->image ? cdn_image('storage/profile/' . $record->image) : cdn_image('storage/profile/avatar-head-profile.webp')),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('slug')

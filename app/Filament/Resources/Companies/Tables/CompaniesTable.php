@@ -19,7 +19,6 @@ class CompaniesTable
             ->columns([
                 ImageColumn::make('logo')
                     ->label("")
-                    // ->circular()
                     ->disk('company')
                     ->defaultImageUrl(fn($record) => $record->mini_logo ? cdn_image('storage/company/' . $record->mini_logo) : "https://img.icons8.com/dotty/80/company.png"),
                 TextColumn::make('name')
