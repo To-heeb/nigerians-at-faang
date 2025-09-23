@@ -35,29 +35,36 @@ class CompanyInfolist
                         TextEntry::make('headquarters')
                             ->icon('heroicon-o-map-pin'),
                         TextEntry::make('website')
+                            ->formatStateUsing(fn($state) => $state ? 'Website' : '-')
                             ->url(fn($record) => $record->website, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('information_website')
+                            ->formatStateUsing(fn($state) => $state ? 'Information Page' : '-')
                             ->url(fn($record) => $record->information_website, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('career_page_url')
                             ->placeholder('-')
+                            ->formatStateUsing(fn($state) => $state ? 'Career Page' : '-')
                             ->url(fn($record) => $record->career_page_url, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('linkedin_url')
                             ->placeholder('-')
+                            ->formatStateUsing(fn($state) => $state ? 'LinkedIn' : '-')
                             ->url(fn($record) => $record->linkedin_url, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('twitter_url')
                             ->placeholder('-')
+                            ->formatStateUsing(fn($state) => $state ? 'X' : '-')
                             ->url(fn($record) => $record->twitter_url, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('youtube_url')
                             ->placeholder('-')
+                            ->formatStateUsing(fn($state) => $state ? 'YouTube' : '-')
                             ->url(fn($record) => $record->youtube_url, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('wikipedia_url')
                             ->placeholder('-')
+                            ->formatStateUsing(fn($state) => $state ? 'Wikipedia' : '-')
                             ->url(fn($record) => $record->wikipedia_url, true)
                             ->icon('heroicon-o-arrow-top-right-on-square'),
                         TextEntry::make('logo')
