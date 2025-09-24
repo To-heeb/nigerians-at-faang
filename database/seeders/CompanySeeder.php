@@ -774,7 +774,7 @@ class CompanySeeder extends Seeder
                 'name' => "Grammarly", //59
                 "website" => "https://grammarly.com/",
                 "about" => "Grammarly is an American English language writing assistant software tool. It reviews the spelling, grammar, and tone of a piece of writing as well as identifying possible instances of plagiarism. It can also suggest style and tonal recommendations to users and produce writing from prompts with its generative AI capabilities.",
-                "founded_at" => 2009, //industry => "Artificial Intelligence, Grammar, Writing Tools",
+                "founded_at" => 2009, //industry => "Artificial Intelligence, Grammar,  ",
                 "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://www.grammarly.com/about",
                 "linkedin_url" => "https://www.linkedin.com/company/grammarly",
