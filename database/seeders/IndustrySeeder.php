@@ -339,6 +339,15 @@ class IndustrySeeder extends Seeder
             [
                 'name' => 'Network Security & Infrastructure'
             ],
+            [
+                'name' => 'Identity & Authentication'
+            ],
+            [
+                'name' => 'Security'
+            ],
+            [
+                'name' => 'Writing Tools'
+            ],
         ];
 
         $industries = array_map(fn($industry) => [

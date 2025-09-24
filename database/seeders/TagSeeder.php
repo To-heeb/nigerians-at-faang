@@ -24,6 +24,9 @@ class TagSeeder extends Seeder
                 'name' => "engineer"
             ],
             [
+                'name' => "engineering"
+            ],
+            [
                 'name' => "product management"
             ],
         ];
