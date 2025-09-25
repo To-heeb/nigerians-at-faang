@@ -56,7 +56,7 @@
                             <div class="meta-bottom">
                                 <i class="bi bi-eye"></i>
                                 <ul class="cats">
-                                    <li><a href="#">{{ $blog->views_count }}</a></li>
+                                    <li><a href="#">{{ $blog->views }}</a></li>
                                 </ul>
 
                                 <i class="bi bi-tags"></i>

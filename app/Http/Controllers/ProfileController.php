@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
+use App\Jobs\IncrementViews;
 use App\Http\Requests\StoreProfileRequest;
 use App\Http\Requests\UpdateProfileRequest;
-use App\Models\Profile;
 
 class ProfileController extends Controller
 {
@@ -25,18 +26,12 @@ class ProfileController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreProfileRequest $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Profile $profile)
     {
+        IncrementViews::dispatchUsingSession($profile);
+
         $otherProfiles = Profile::whereNot('id', $profile->id)
             ->where('company_id', $profile->company_id)
             ->limit(5) //TODO(toheeb): look forward to update too  10 if that looks better

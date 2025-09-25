@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Blog;
 use App\Models\Company;
 use App\Models\Profile;
+use App\Jobs\IncrementViews;
 use App\Http\Requests\StoreTagRequest;
 use App\Http\Requests\UpdateTagRequest;
 
@@ -24,7 +25,8 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        // TODO(toheeb): Fix this
+        IncrementViews::dispatchUsingSession($tag);
+
         $relatedTags = $tag->relatedTags();
         $tagProfiles =  $tag->profiles()->mostViewed(4)->get();
         $tagCompanies =  $tag->companies()->limit(4)->get();

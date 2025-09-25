@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Jobs\IncrementViews;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
-use App\Models\Blog;
 
 class BlogController extends Controller
 {
@@ -25,18 +26,12 @@ class BlogController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreBlogRequest $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      */
     public function show(Blog $blog)
     {
+        IncrementViews::dispatchUsingSession($blog);
+
         $blog->load(['tags', 'profile']);
         $recentBlogs = Blog::published()->latestWithProfile(5)->get();
 
