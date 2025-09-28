@@ -57,14 +57,21 @@
                 <p>Subscribe to our newsletter and receive the latest update about profile and blog added!</p>
                 <form action="{{ route('subscribers.store') }}"
                     data-recaptcha-site-key="{{ config('services.recaptcha.site_key') }}" method="post"
-                    class="php-email-form" id="newsletter">
+                    class="php-email-form" id="newsletter-email-form">
                     @csrf
                     <div class="newsletter-form"><input type="email" name="email"><input type="submit"
-                            value="Join 🚀"></div>
+                            value="Join 🚀" id="submit-btn"></div>
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+                    <div class="sent-message" id="sent-message"></div>
                 </form>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="resendToggle">
+                    <label class="form-check-label" for="resendToggle">
+                        Resend Verification
+                    </label>
+                </div>
             </div>
 
         </div>

@@ -35,6 +35,25 @@
               }
           });
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.getElementById("resendToggle");
+          const form = document.getElementById("newsletter-email-form");
+          const submitBtn = document.getElementById("submit-btn");
+          const sentMessage = document.getElementById("sent-message");
+
+          toggle.addEventListener("change", () => {
+              if (toggle.checked) {
+                  form.action = "{{ route('subscribers.resend') }}";
+                  submitBtn.value = "Resend 🚀";
+                  //   sentMessage.textContent = "Verification email has been resent. Thank you!";
+              } else {
+                  form.action = "{{ route('subscribers.store') }}";
+                  submitBtn.value = "Join 🚀";
+                  //   sentMessage.textContent = "Your subscription request has been sent. Thank you!";
+              }
+          });
+      });
   </script>
 
 

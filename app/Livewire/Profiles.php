@@ -11,7 +11,7 @@ class Profiles extends Component
     use WithPagination;
 
     public $page = 1;
-    public $perPage = 12;
+    public $perPage = 20;
     public string $search = '';
     protected $paginationTheme = 'custom-pagination';
 

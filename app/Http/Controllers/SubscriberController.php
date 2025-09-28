@@ -53,6 +53,39 @@ class SubscriberController extends Controller
         ], Response::HTTP_OK);
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function resend(Request $request)
+    {
+        $validated = $request->validate(['email' => 'required|email:dns,spoof|exists:mailing_list_subscribers,email|indisposable']);
+
+        $email = strtolower($validated['email']);
+
+        $subscriber = MailingListSubscriber::where('email', strtolower($email))->first();
+
+        if (! $subscriber) {
+            return response()->json([
+                'status' => false,
+                'message' => 'No subscription found for this email.'
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        if ($subscriber->is_verified && is_null($subscriber->unsubscribed_at)) {
+            return response()->json([
+                'status' => false,
+                'message' => 'This email is already verified and active.'
+            ], Response::HTTP_CONFLICT);
+        }
+
+        $subscriber->notify(new VerifySubscriberNotification($subscriber));
+
+        return response()->json([
+            'status' => true,
+            'message' => 'A new verification link has been sent to your email.'
+        ], Response::HTTP_OK);
+    }
+
     public function verify($token)
     {
         $subscriber = MailingListSubscriber::where('verification_token', $token)->firstOrFail();

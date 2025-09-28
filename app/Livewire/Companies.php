@@ -13,7 +13,7 @@ class Companies extends Component
     // , WithoutUrlPagination;
 
     public $page = 1;
-    public $perPage = 12;
+    public $perPage = 16;
     public string $search = '';
     protected $paginationTheme = 'custom-pagination';
 
