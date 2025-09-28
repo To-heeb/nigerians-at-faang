@@ -55,7 +55,10 @@
             <div class="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Our Newsletter</h4>
                 <p>Subscribe to our newsletter and receive the latest update about profile and blog added!</p>
-                <form action="forms/newsletter.php" method="post" class="php-email-form" id="newsletter">
+                <form action="{{ route('subscribers.store') }}"
+                    data-recaptcha-site-key="{{ config('services.recaptcha.site_key') }}" method="post"
+                    class="php-email-form" id="newsletter">
+                    @csrf
                     <div class="newsletter-form"><input type="email" name="email"><input type="submit"
                             value="Join 🚀"></div>
                     <div class="loading">Loading</div>
@@ -76,3 +79,7 @@
     </div>
 
 </footer>
+
+@push('page-script')
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+@endpush

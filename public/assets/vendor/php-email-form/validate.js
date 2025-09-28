@@ -66,7 +66,9 @@
         const responseBody = JSON.parse(data)
       thisForm.querySelector('.loading').classList.remove('d-block');
       if (responseBody.status) {
+        console.log(responseBody)
         thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.querySelector('.sent-message').innerHTML = responseBody.message;
         thisForm.reset();
       } else {
         throw new Error(data ? responseBody.message : 'Form submission failed and no error message returned from: ' + action);

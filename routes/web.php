@@ -9,6 +9,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\PrivacyPolicyController;
 
 
@@ -29,4 +30,7 @@ Route::group([
     Route::resource('/profiles',  ProfileController::class)->only(['index', 'show', 'create', 'store']);
     Route::resource('/companies',  CompanyController::class)->only('index', 'show');
     Route::get('/privacy-policy', PrivacyPolicyController::class)->name('privacy-policy');
+    Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
+    Route::get('/unsubscribe/{email}', [SubscriberController::class, 'unsubscribe'])->name('subscribers.unsubscribe');
+    Route::get('/verify-subscriber/{token}', [SubscriberController::class, 'verify'])->middleware('signed')->name('subscribers.verify');
 });

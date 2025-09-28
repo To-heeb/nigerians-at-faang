@@ -21,14 +21,15 @@ class CompanySeeder extends Seeder
                 'name' => "Meta", //1
                 "website" => "https://www.meta.com/",
                 "about" => "Meta Platforms, Inc. is an American multinational technology company headquartered in Menlo Park, California. Meta owns and operates several prominent social media platforms and communication services, including Facebook, Instagram, Threads, Messenger and WhatsApp. The company also operates an advertising network for its own sites and third parties.",
-                "founded_at" => 2004, //industry => "Digital Advertising, Social Media, Virtual/Augmented Reality (VR/AR), Artificial Intelligence, Machine Learning"
+                "founded_at" => 2004,
                 "headquarters" => "	Menlo Park, California, United States",
                 "information_website" => "https://www.meta.com/about/company-info/",
                 "linkedin_url" => "https://www.linkedin.com/company/meta",
                 "twitter_url" => "https://x.com/meta",
                 "youtube_url" => "https://www.youtube.com/meta",
                 "wikipedia_url" => "https://en.wikipedia.org/wiki/Meta_Platforms",
-                "career_page_url" => "https://www.metacareers.com/"
+                "career_page_url" => "https://www.metacareers.com/",
+                // "industries" => "Digital Advertising, Social Media, Virtual/Augmented Reality (VR/AR), Artificial Intelligence, Machine Learning"
             ],
             [
                 'name' => "Samsung", //2
@@ -951,7 +952,8 @@ class CompanySeeder extends Seeder
                 "twitter_url" => "https://x.com/tiktok",
                 "youtube_url" => "https://www.youtube.com/tiktok/",
                 "wikipedia_url" => "https://en.wikipedia.org/wiki/TikTok",
-                "career_page_url" => "https://lifeattiktok.com/search?recruitment_id_list"
+                "career_page_url" => "https://lifeattiktok.com/search?recruitment_id_list",
+                // "industries" => "Digital Advertising, Social Media, Artificial Intelligence, Machine Learning"
             ],
         ];
 

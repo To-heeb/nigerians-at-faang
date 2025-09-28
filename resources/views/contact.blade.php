@@ -12,9 +12,10 @@
     <section id="contact" class="contact section">
 
         <div class="mb-5">
-            <iframe style="width: 100%; height: 400px;  border:0;"
+            <iframe style="width: 100%; height: 400px; border:0;"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7283162.742301771!2d3.580319185630186!3d9.172530594773312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sde!4v1746490423855!5m2!1sen!2sde"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div><!-- End Google Maps -->
 
         <div class="container" data-aos="fade">

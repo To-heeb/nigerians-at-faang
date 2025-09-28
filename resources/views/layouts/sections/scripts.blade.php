@@ -14,13 +14,22 @@
       document.addEventListener("DOMContentLoaded", function() {
           const appUrl = "{{ config('app.url') }}";
           const links = document.querySelectorAll("a[href^='http']");
+          const appHostname = new URL(appUrl).hostname;
+
+          // List of domains to exempt (no ref param added)
+          const exemptDomains = [
+              "localhost.test",
+              "korapay.com",
+              "github.com"
+          ];
+
           links.forEach(link => {
               try {
                   const url = new URL(link.href);
-                  if (!url.hostname.includes(new URL(appUrl).hostname)) {
-                      url.searchParams.set("ref", appUrl);
-                      link.href = url.toString();
-                  }
+                  if (url.hostname.includes(appHostname)) return;
+                  if (exemptDomains.some(domain => url.hostname.includes(domain))) return;
+                  url.searchParams.set("ref", appUrl);
+                  link.href = url.toString();
               } catch (e) {
                   // ignore invalid URLs
               }
