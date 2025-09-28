@@ -34,14 +34,15 @@ class CreateBlog extends Component
 
         $validated = $this->validate();
         $title = "New Blog By" . $validated['submitted_by'] . " just added " . rand(1000, 30000000);
+        $image = "blog-image-" . rand(1, 13) . "jpg";
 
         Blog::create([
-            'title'     =>  $title,
-            'slug'      =>  Str::slug($title),
-            'image'     =>  "avatar-head-profile.webp",
-            'body'      =>  $validated['blog_post'],
-            'author'    =>  $validated['name'],
-            'submitted_by'    =>  $validated['submitted_by'],
+            'title'             =>      $title,
+            'slug'              =>      Str::slug($title),
+            'image'             =>      $image,
+            'body'              =>      $validated['blog_post'],
+            'author'            =>      $validated['name'],
+            'submitted_by'      =>      $validated['submitted_by'],
         ]);
 
         session()->flash('success', 'Post submitted successfully!');

@@ -31,14 +31,27 @@
         </nav>
 
         <div class="header-social-links">
+            {{-- <a href="{{ config('app.tiktokUrl') }}" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
+            <a href="{{ config('app.instagramUrl') }}" target="_blank" class="instagram"><i
+                    class="bi bi-instagram"></i></a> --}}
             <a href="{{ config('app.twitterUrl') }}" target="_blank" class="twitter"><i
                     class="bi bi-twitter-x"></i></a>
-            <a href="{{ config('app.tiktokUrl') }}" target="_blank" class="tiktok"><i class="bi bi-tiktok"></i></a>
-            <a href="{{ config('app.instagramUrl') }}" target="_blank" class="instagram"><i
-                    class="bi bi-instagram"></i></a>
             <a href="{{ config('app.linkedInUrl') }}" target="_blank" class="linkedin"><i
                     class="bi bi-linkedin"></i></a>
             <a href="{{ config('app.githubUrl') }}" target="_blank" class="github"><i class="bi bi-github"></i></a>
+            {{-- <a href="{{ config('app.naira_donation_link') }}" class="ml-1 btn btn-sm btn-outline-success">donate</a> --}}
+            <button class="btn btn-outline-success btn-sm dropdown-toggle ml-2" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Donate
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="{{ config('app.naira_donation_link') }}" target="_blank" class="dropdown-item">In
+                        Naira</a>
+                </li>
+                <li><a href="{{ config('app.dollar_donation_link') }}" target="_blank" class="dropdown-item">In
+                        Dollar</a>
+                </li>
+            </ul>
         </div>
 
     </div>

@@ -45,6 +45,10 @@
                         <div class="bg-light p-4 mb-3 rounded">
                             <div class="row mb-2">
                                 <p class="text-muted mb-3">{!! str($profile->short_bio)->markdown() !!}</p>
+                                <p>
+                                    <a href="{{ route('blogs.create') }}" class="btn btn-sm btn-outline-success">I want
+                                        to tell my story</a>
+                                </p>
                             </div>
                             <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 gx-1 mb-2">
                                 <div class="col mt-2" style="">
