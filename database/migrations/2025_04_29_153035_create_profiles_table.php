@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->index();
             $table->string('slug')->unique();
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->string('job_title');
             $table->unsignedInteger('views')->default(0)->index();
             $table->foreignId('company_id')->constrained();

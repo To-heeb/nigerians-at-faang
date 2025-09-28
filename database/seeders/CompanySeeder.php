@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Company;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CompanySeeder extends Seeder
@@ -708,7 +709,7 @@ class CompanySeeder extends Seeder
             [
                 'name' => "Zillow", //54
                 "website" => "https://www.zillow.com/",
-                "about" => "Zillow Group, Inc., or simply Zillow, is an American tech real-estate marketplace company that was founded in 2006[4] by co-executive chairmen Rich Barton[5] and Lloyd Frink, former Microsoft executives and founders of Microsoft spin-off Expedia; Spencer Rascoff, a co-founder of Hotwire.com; David Beitel, Zillow's current chief technology officer; and Kristin Acker, Zillow's current technology leadership advisor.",
+                "about" => "Zillow Group, Inc., or simply Zillow, is an American tech real-estate marketplace company that was founded in 2006 by co-executive chairmen Rich Barton and Lloyd Frink, former Microsoft executives and founders of Microsoft spin-off Expedia; Spencer Rascoff, a co-founder of Hotwire.com; David Beitel, Zillow's current chief technology officer; and Kristin Acker, Zillow's current technology leadership advisor.",
                 "founded_at" => 2006, //industry => "Real Estate Technology(PropTech), Online Marketplace, Mortgage & Financial Services"
                 "headquarters" => "Seattle, Washington, United States",
                 "information_website" => "https://www.zillow.com/z/corp/about/",
@@ -783,6 +784,175 @@ class CompanySeeder extends Seeder
                 "wikipedia_url" => "https://en.wikipedia.org/wiki/Grammarly",
                 "career_page_url" => "https://www.grammarly.com/careers"
             ],
+            [
+                'name' => "Yahoo", //60
+                "website" => "https://www.yahooinc.com/",
+                "about" => "Yahoo is an American web portal that provides the search engine Yahoo Search and related services including My Yahoo, Yahoo Mail, Yahoo News, Yahoo Finance, Yahoo Sports, y!entertainment, yahoo!life, and its advertising platform, Yahoo Native.",
+                "founded_at" => 1994, //industry => "Internet, Mail,  ",
+                "headquarters" => "San Francisco, California, United States",
+                "information_website" => "https://www.yahooinc.com/our-brands",
+                "linkedin_url" => "https://www.linkedin.com/company/yahoo",
+                "twitter_url" => "https://twitter.com/Yahoo",
+                "youtube_url" => "https://www.youtube.com/yahoo",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Yahoo",
+                "career_page_url" => "https://www.yahooinc.com/careers/"
+            ],
+            [
+                'name' => "Quora", //61
+                "website" => "https://www.quora.com/",
+                "about" => "Quora is an American social question-and-answer website and online knowledge market headquartered in Mountain View, California. It was founded on June 25, 2009, and made available to the public on June 21, 2010.",
+                "founded_at" => 2009, //industry => "Social Media",
+                "headquarters" => "Mountain view, California, United States",
+                "information_website" => "https://www.quora.com/about",
+                "linkedin_url" => "https://www.linkedin.com/company/quora",
+                "twitter_url" => "https://x.com/Quora",
+                "youtube_url" => "https://www.youtube.com/user/Quora",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Quora",
+                "career_page_url" => "https://www.quora.com/careers"
+            ],
+            [
+                'name' => "Cloudflare", //62
+                "website" => "https://www.cloudflare.com/",
+                "about" => "Cloudflare, Inc., is an American company that provides content delivery network services, cybersecurity, DDoS mitigation, wide area network services, reverse proxies, Domain Name Service, ICANN-accredited domain registration, and other services.",
+                "founded_at" => 2009, //industry => "Security",
+                "headquarters" => "San Francisco, California, United States",
+                "information_website" => "https://www.cloudflare.com/about-overview/",
+                "linkedin_url" => "https://www.linkedin.com/company/cloudflare",
+                "twitter_url" => "https://x.com/Cloudflare",
+                "youtube_url" => "https://www.youtube.com/cloudflare",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Cloudflare",
+                "career_page_url" => "https://www.cloudflare.com/en-gb/careers/"
+            ],
+            [
+                'name' => "Netlify", //63
+                "website" => "https://www.netlify.com/",
+                "about" => "Netlify is a remote-first cloud computing company that offers a development platform that includes build, deploy, and serverless backend services for web applications and dynamic websites.",
+                "founded_at" => 2014, //industry => "Security",
+                "headquarters" => "Delaware, United States",
+                "information_website" => "https://www.netlify.com/about/",
+                "linkedin_url" => "https://www.linkedin.com/company/netlify",
+                "twitter_url" => "https://twitter.com/netlify",
+                "youtube_url" => "https://www.youtube.com/@NetlifyApp",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Netlify",
+                "career_page_url" => "https://www.netlify.com/careers/"
+            ],
+            [
+                'name' => "Huawei", //64
+                "website" => "https://www.huawei.com/en/",
+                "about" => "Huawei Corporation is a Chinese multinational corporation and technology company headquartered in Longgang, Shenzhen, Guangdong. Its main product lines include telecommunications equipment, consumer electronics, electric vehicle autonomous driving systems, and rooftop solar power products.",
+                "founded_at" => 1987, //industry => "Cloud Computing",
+                "headquarters" => "Shenzhen, China",
+                "information_website" => "https://www.huawei.com/en/corporate-information",
+                "linkedin_url" => "https://www.linkedin.com/company/huawei",
+                "twitter_url" => "https://x.com/Huawei",
+                "youtube_url" => "https://www.youtube.com/Huawei",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Huawei",
+                "career_page_url" => "https://career.huawei.com/"
+            ],
+            [
+                'name' => "Delivery hero", //65
+                "website" => "https://www.deliveryhero.com/",
+                "about" => "Delivery Hero SE is a German multinational online food ordering and food delivery company based in Berlin, Germany.",
+                "founded_at" => 2011, //industry => "Food Delivery",
+                "headquarters" => "Germany",
+                "information_website" => "https://www.deliveryhero.com/about/",
+                "linkedin_url" => "https://www.linkedin.com/company/delivery-hero-se",
+                "twitter_url" => "https://twitter.com/deliveryherocom",
+                "youtube_url" => "https://www.youtube.com/channel/UCt4ez606IDQRFN-hFuy9GIQ",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Delivery_Hero",
+                "career_page_url" => "https://careers.deliveryhero.com/"
+            ],
+            [
+                'name' => "Spotify", //66
+                "website" => "https://www.deliveryhero.com/",
+                "about" => "Spotify is a Swedish audio streaming and media service provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon",
+                "founded_at" => 2006, //industry => "Food Delivery",
+                "headquarters" => "Sweden",
+                "information_website" => "https://www.spotify.com/ng/about-us/contact/",
+                "linkedin_url" => "https://www.linkedin.com/company/spotify",
+                "twitter_url" => "https://x.com/Spotify",
+                "youtube_url" => "https://www.youtube.com/channel/UCt4ez606IDQRFN-hFuy9GIQ",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Spotify",
+                "career_page_url" => "https://www.lifeatspotify.com/jobs"
+            ],
+            [
+                'name' => "Nokia", //67
+                "website" => "https://www.nokia.com/",
+                "about" => "Nokia Corporation is a Finnish multinational telecommunications, information technology, and consumer electronics corporation.",
+                "founded_at" => 1865, //industry => "Infrastructure",
+                "headquarters" => "Espoo, Finland",
+                "information_website" => "https://www.nokia.com/newsroom/",
+                "linkedin_url" => "https://www.linkedin.com/company/nokia",
+                "twitter_url" => "https://twitter.com/nokia",
+                "youtube_url" => "https://www.youtube.com/user/nokia",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Nokia",
+                "career_page_url" => "https://www.nokia.com/careers/"
+            ],
+            [
+                'name' => "Vmware", //68
+                "website" => "https://www.vmware.com/",
+                "about" => "VMware LLC is an American cloud computing and virtualization technology company headquartered in Palo Alto, California, USA. On November 22, 2023, Broadcom acquired VMware in a cash-and-stock transaction valued at $69 billion.",
+                "founded_at" => 1998, //industry => "Infrastructure",
+                "headquarters" => "Palo Alto, California",
+                "information_website" => "https://news.broadcom.com/",
+                "linkedin_url" => "https://www.linkedin.com/company/vmware/mycompany/",
+                "twitter_url" => "https://x.com/vmware",
+                "youtube_url" => "https://www.youtube.com/user/vmwaretv",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/VMware",
+                "career_page_url" => "https://www.broadcom.com/jobs"
+            ],
+            [
+                'name' => "Equinix", //69
+                "website" => "https://www.equinix.com/",
+                "about" => "Equinix Inc. is an American multinational company headquartered in Redwood City, California. It specializes in internet connectivity and data center colocation centers, commonly known as carrier hotels. The company converted to a real estate investment trust in January 2015.",
+                "founded_at" => 1998, //industry => "Infrastructure",
+                "headquarters" => "	Redwood City, California, United States",
+                "information_website" => "https://www.equinix.com/about",
+                "linkedin_url" => "https://www.linkedin.com/company/equinix",
+                "twitter_url" => "https://twitter.com/Equinix",
+                "youtube_url" => "https://www.youtube.com/user/equinixvideos",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Equinix",
+                "career_page_url" => "https://careers.equinix.com/"
+            ],
+            [
+                'name' => "Palantir", //70
+                "website" => "https://www.palantir.com/",
+                "about" => "PPalantir develops software platforms, such as Gotham and Foundry, that help organizations, particularly governments and large businesses, integrate, analyze, and make decisions from vast datasets. The company's products are used in sectors like defense, finance, and healthcare to identify patterns, detect threats, and optimize operations by providing tools for human-driven, machine-assisted analysis of complex information.",
+                "founded_at" => 2003, //industry => "Infrastructure",
+                "headquarters" => "Denver, Colorado, United States",
+                "information_website" => "https://www.palantir.com/about/",
+                "linkedin_url" => "https://www.linkedin.com/company/palantir-technologies",
+                "twitter_url" => "https://twitter.com/PalantirTech",
+                "youtube_url" => "https://www.youtube.com/@palantirtech",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Palantir_Technologies",
+                "career_page_url" => "https://www.palantir.com/careers/"
+            ],
+            [
+                'name' => "Shopify", //71
+                "website" => "https://www.equinix.com/",
+                "about" => "Shopify Inc., stylized as shopify, is a Canadian multinational e-commerce company headquartered in Ottawa that operates a platform for retail point-of-sale systems.",
+                "founded_at" => 2006, //industry => "Infrastructure",
+                "headquarters" => "	Ottawa, Ontario, Canada",
+                "information_website" => "https://www.shopify.com/about",
+                "linkedin_url" => "https://www.linkedin.com/company/shopify/",
+                "twitter_url" => "https://x.com/Shopify",
+                "youtube_url" => "https://www.youtube.com/user/shopify",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/Shopify",
+                "career_page_url" => "https://www.shopify.com/careers"
+            ],
+            [
+                'name' => "Tiktok", //72
+                "website" => "https://www.tiktok.com/en/",
+                "about" => "TikTok, known in mainland China and Hong Kong as Douyin (Chinese: 抖音; pinyin: Dǒuyīn; lit. 'Shaking Sound'), is a social media and short-form online video platform owned by Chinese Internet company ByteDance. It hosts user-submitted videos, which range in duration from three seconds to 60 minutes.",
+                "founded_at" => 1998, //industry => "Infrastructure",
+                "headquarters" => "Shanghai, China",
+                "information_website" => "https://www.tiktok.com/about?lang=en",
+                "linkedin_url" => "https://www.linkedin.com/company/tiktok/",
+                "twitter_url" => "https://x.com/tiktok",
+                "youtube_url" => "https://www.youtube.com/tiktok/",
+                "wikipedia_url" => "https://en.wikipedia.org/wiki/TikTok",
+                "career_page_url" => "https://lifeattiktok.com/search?recruitment_id_list"
+            ],
         ];
 
         $companies = array_map(fn($company) => [
@@ -814,5 +984,17 @@ class CompanySeeder extends Seeder
         ], $companies);
 
         Tag::insert($tags);
+
+        $taggables = [];
+        foreach ($companies as $index => $company) {
+            $currentIndex =  $index + 1;
+            $taggables[] = [
+                'taggable_id'   => $currentIndex,
+                'taggable_type' => Company::class,
+                'tag_id'        => $currentIndex,
+            ];
+        }
+
+        DB::table('taggables')->insertOrIgnore($taggables);
     }
 }

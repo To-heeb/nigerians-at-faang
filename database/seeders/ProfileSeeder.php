@@ -17,18 +17,20 @@ class ProfileSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get(database_path('seeders/data/profiles.json'));
+        $json = File::get(database_path('seeders/data/profiles-1.json'));
         $profiles = json_decode($json, true);
 
         // 🔹 Step 1: Prepare bulk profile insert
         $now = now();
         $bulkProfiles = [];
 
+        // dd([$json, $profiles, json_decode($json, true)]);
+
         foreach ($profiles as $data) {
             $bulkProfiles[] = [
                 'name'          =>  $data['name'],
                 'slug'          =>  Str::slug($data['name']),
-                'image'         =>  Str::slug($data['name']) . $data['image'],
+                'image'         =>  is_null($data['image']) ? $data['image'] : Str::slug($data['name']) . $data['image'],
                 'job_title'     =>  $data['job_title'],
                 'company_id'    =>  $data['company_id'],
                 'twitter_url'   =>  $data['twitter_url'],
@@ -68,14 +70,15 @@ class ProfileSeeder extends Seeder
                 }
 
                 $bulkPivot[] = [
-                    'profile_id' => $profile->id,
-                    'tag_id'     => $tagMap[$tagName]->id,
+                    'taggable_id'   =>  $profile->id,
+                    'taggable_type' =>  Profile::class,
+                    'tag_id'        =>  $tagMap[$tagName]->id,
                 ];
             }
         }
 
         // 🔹 Step 5: Bulk insert pivot (avoid duplicates)
-        DB::table('profile_tag')->insertOrIgnore($bulkPivot);
+        DB::table('taggables')->insertOrIgnore($bulkPivot);
     }
 
 
@@ -115,6 +118,11 @@ class ProfileSeeder extends Seeder
         }
         if (Str::contains($bio, 'leadership')) {
             $tags[] = 'leadership';
+        }
+
+        if (!empty($data['tags'])) {
+            $extraTags = array_map('trim', explode(',', $data['tags']));
+            $tags = array_merge($tags, $extraTags);
         }
 
         return array_unique($tags); // prevent duplicates

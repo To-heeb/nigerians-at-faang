@@ -17,15 +17,15 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CompanySeeder::class,
-            ProfileSeeder::class,
             TagSeeder::class,
+            ProfileSeeder::class,
             IndustrySeeder::class,
             BlogSeeder::class
         ]);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Oyekola Toheeb',
+            'email' => 'toheeb.olawale.to23@gmail.com',
         ]);
     }
 }

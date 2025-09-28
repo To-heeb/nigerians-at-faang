@@ -48,7 +48,7 @@ class Tag extends Model implements Sitemapable, Viewable
     }
 
     /**
-     * Get the parent taggable model (profile or blog).
+     * Get the parent taggable model (profile , blog and company).
      */
     public function taggable(): MorphTo
     {
