@@ -32,11 +32,25 @@ class Blog extends Model implements Sitemapable, Viewable
         'views',
         'author',
         'profile_id',
+        'submitted_by',
         'is_published',
         'published_at',
         'is_featured',
         'featured_at',
         'last_featured_at',
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected $casts = [
+        'is_published'      =>  'boolean',
+        'published_at'      =>  'datetime',
+        'is_featured'       =>  'boolean',
+        'featured_at'       =>  'datetime',
+        'last_featured_at'  =>  'datetime'
     ];
 
     /**
@@ -46,15 +60,6 @@ class Blog extends Model implements Sitemapable, Viewable
     {
         return 'slug';
     }
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected $casts = [
-        'published_at' => 'datetime'
-    ];
 
     /**
      * Automatically convert the title to slug before saving.

@@ -54,8 +54,11 @@ class Profile extends Model implements Sitemapable, Viewable
      * @return array<string, string>
      */
     protected $casts = [
-        'published_at' => 'datetime',
-        'featured_at' => 'datetime'
+        'is_published'      =>  'boolean',
+        'published_at'      =>  'datetime',
+        'is_featured'       =>  'boolean',
+        'featured_at'       =>  'datetime',
+        'last_featured_at'  =>  'datetime'
     ];
 
     /**

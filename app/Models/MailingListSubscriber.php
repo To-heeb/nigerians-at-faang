@@ -27,10 +27,15 @@ class MailingListSubscriber extends Model
         'unsubscribed_at',
     ];
 
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
     protected $casts = [
-        'is_verified' => 'boolean',
-        'subscribed_at' => 'datetime',
-        'unsubscribed_at' => 'datetime',
+        'is_verified'       =>  'boolean',
+        'subscribed_at'     =>  'datetime',
+        'unsubscribed_at'   =>  'datetime',
     ];
 
     public function routeNotificationForMail($notification)
