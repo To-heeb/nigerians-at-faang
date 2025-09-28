@@ -23,7 +23,7 @@ class CompanySeeder extends Seeder
                 "website" => "https://www.meta.com/",
                 "about" => "Meta Platforms, Inc. is an American multinational technology company headquartered in Menlo Park, California. Meta owns and operates several prominent social media platforms and communication services, including Facebook, Instagram, Threads, Messenger and WhatsApp. The company also operates an advertising network for its own sites and third parties.",
                 "founded_at" => 2004,
-                "headquarters" => "	Menlo Park, California, United States",
+                "headquarters" => "Menlo Park, California, United States",
                 "information_website" => "https://www.meta.com/about/company-info/",
                 "linkedin_url" => "https://www.linkedin.com/company/meta",
                 "twitter_url" => "https://x.com/meta",
@@ -92,7 +92,7 @@ class CompanySeeder extends Seeder
                 'name' => "Sony", //6
                 "website" => "https://www.sony.com/",
                 "about" => "Sony Group Corporation is a Japanese multinational conglomerate headquartered at Sony City in Minato, Tokyo, Japan. The Sony Group encompasses various businesses, including Sony Corporation (electronics), Sony Semiconductor Solutions (imaging and sensing), Sony Entertainment.",
-                "headquarters" => "	Sony City, Minato, Tokyo, Japan",
+                "headquarters" => "Sony City, Minato, Tokyo, Japan",
                 "information_website" => "https://www.sony.com/en/SonyInfo/design/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/sony",
                 "twitter_url" => "https://x.com/sony",
@@ -106,7 +106,7 @@ class CompanySeeder extends Seeder
                 'name' => "PayPal", //7
                 "website" => "https://www.paypal.com/",
                 "about" => "PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in the majority of countries that support online money transfers; it serves as an electronic alternative to traditional paper methods such as checks and money orders. The company operates as a payment processor for online vendors, auction sites and many other commercial and company users, for which it charges an international addition bank charges fee.",
-                "headquarters" => "	San Jose, California, United States",
+                "headquarters" => "San Jose, California, United States",
                 "information_website" => "https://about.pypl.com/about-us/default.aspx",
                 "linkedin_url" => "https://www.linkedin.com/company/paypal",
                 "twitter_url" => "https://x.com/PayPal",
@@ -120,7 +120,7 @@ class CompanySeeder extends Seeder
                 'name' => "Netflix", //8
                 "website" => "https://www.netflix.com/",
                 "about" => "Netflix is an American subscription video on-demand over-the-top streaming service. The service primarily distributes original and acquired films and television shows from various genres, and it is available internationally in multiple languages.",
-                "headquarters" => "	Los Gatos, California, United States",
+                "headquarters" => "Los Gatos, California, United States",
                 "information_website" => "https://about.netflix.com/en",
                 "linkedin_url" => "https://www.linkedin.com/company/netflix",
                 "twitter_url" => "https://x.com/netflix",
@@ -358,7 +358,7 @@ class CompanySeeder extends Seeder
                 'name' => "Capital One", //25
                 "website" => "https://www.capitalone.com/",
                 "about" => "Capital One Financial Corporation is an American bank holding company founded on July 21, 1994, and specializing in credit cards, auto loans, banking, and savings accounts, headquartered in Tysons, Virginia, with operations primarily in the United States.",
-                "headquarters" => "	Capital One Tower, Tysons, Virginia, United States",
+                "headquarters" => "Capital One Tower, Tysons, Virginia, United States",
                 "information_website" => "https://www.capitalone.com/about/",
                 "linkedin_url" => "https://www.linkedin.com/company/capital-one",
                 "twitter_url" => "https://x.com/capitalone",
@@ -414,7 +414,7 @@ class CompanySeeder extends Seeder
                 'name' => "Dell", //29
                 "website" => "https://www.dell.com/",
                 "about" => "Dell Technologies Inc. is an American multinational technology company headquartered in Round Rock, Texas. It was formed as a result of the September 2016 merger of Dell and EMC Corporation.",
-                "headquarters" => "	Round Rock, Texas, United States",
+                "headquarters" => "Round Rock, Texas, United States",
                 "information_website" => "https://www.dell.com/en-us/lp/dt/who-we-are",
                 "linkedin_url" => "https://www.linkedin.com/company/delltechnologies",
                 "twitter_url" => "https://x.com/delltech",
@@ -526,7 +526,7 @@ class CompanySeeder extends Seeder
                 'name' => "DoorDash", //37
                 "website" => "https://www.doordash.com/",
                 "about" => "DoorDash, Inc. is an American company operating online food ordering and food delivery. It trades under the symbol DASH. With a 56% market share, DoorDash is the largest food delivery platform in the United States",
-                "headquarters" => "	San Francisco, California, United States",
+                "headquarters" => "San Francisco, California, United States",
                 "information_website" => "https://about.doordash.com/en-us",
                 "linkedin_url" => "https://www.linkedin.com/company/doordash",
                 "twitter_url" => "https://x.com/DoorDash",
@@ -694,7 +694,7 @@ class CompanySeeder extends Seeder
                 'name' => "Citi", //49
                 "website" => "https://www.citi.com/",
                 "about" => "Citibank, N.A. ('N. A.' stands for 'National Association'; stylized as citibank) is the primary U.S. banking subsidiary of Citigroup, a financial services multinational corporation.",
-                "headquarters" => "	New York City, United States",
+                "headquarters" => "New York City, United States",
                 "information_website" => "https://www.citigroup.com/global/about-us",
                 "linkedin_url" => "http://www.linkedin.com/company/citi",
                 "twitter_url" => "https://twitter.com/Citi",
@@ -750,7 +750,7 @@ class CompanySeeder extends Seeder
                 'name' => "Walmart", //53
                 "website" => "https://www.walmart.com/",
                 "about" => "Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets (also called supercenters), discount department stores, and grocery stores in the United States and 23 other countries.",
-                "headquarters" => "	Bentonville, Arkansas, United States",
+                "headquarters" => "Bentonville, Arkansas, United States",
                 "information_website" => "https://corporate.walmart.com/",
                 "linkedin_url" => "https://www.linkedin.com/company/walmart",
                 "twitter_url" => "https://x.com/walmartinc",
@@ -974,7 +974,7 @@ class CompanySeeder extends Seeder
                 'name' => "Equinix", //69
                 "website" => "https://www.equinix.com/",
                 "about" => "Equinix Inc. is an American multinational company headquartered in Redwood City, California. It specializes in internet connectivity and data center colocation centers, commonly known as carrier hotels. The company converted to a real estate investment trust in January 2015.",
-                "headquarters" => "	Redwood City, California, United States",
+                "headquarters" => "Redwood City, California, United States",
                 "information_website" => "https://www.equinix.com/about",
                 "linkedin_url" => "https://www.linkedin.com/company/equinix",
                 "twitter_url" => "https://twitter.com/Equinix",
@@ -1002,7 +1002,7 @@ class CompanySeeder extends Seeder
                 'name' => "Shopify", //71
                 "website" => "https://www.equinix.com/",
                 "about" => "Shopify Inc., stylized as shopify, is a Canadian multinational e-commerce company headquartered in Ottawa that operates a platform for retail point-of-sale systems.",
-                "headquarters" => "	Ottawa, Ontario, Canada",
+                "headquarters" => "Ottawa, Ontario, Canada",
                 "information_website" => "https://www.shopify.com/about",
                 "linkedin_url" => "https://www.linkedin.com/company/shopify/",
                 "twitter_url" => "https://x.com/Shopify",

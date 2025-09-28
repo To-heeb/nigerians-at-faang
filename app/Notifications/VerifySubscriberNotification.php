@@ -47,11 +47,12 @@ class VerifySubscriberNotification extends Notification
         );
 
         return (new MailMessage)
-            ->subject('Verify your subscription')
-            ->greeting('Hello!')
-            ->line('Please click the button below to verify your email and confirm your subscription.')
-            ->action('Verify Email', $verifyUrl)
-            ->line('This link will expire in 2 hours. If you did not request this, you can ignore this email.');
+            ->subject('Verify Your Subscription')
+            ->greeting('Dear Subscriber,')
+            ->line('Thank you for your subscription request. To complete the process and activate your subscription, please verify your email address by clicking the button below.')
+            ->action('Verify Email Address', $verifyUrl)
+            ->line('Please note that this verification link will expire in 2 hours for security purposes.')
+            ->line('If you did not initiate this subscription request, no further action is required and you may disregard this message.');
     }
 
     /**

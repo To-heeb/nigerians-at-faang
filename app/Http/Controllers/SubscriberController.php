@@ -53,9 +53,6 @@ class SubscriberController extends Controller
         ], Response::HTTP_OK);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function resend(Request $request)
     {
         $validated = $request->validate(['email' => 'required|email:dns,spoof|exists:mailing_list_subscribers,email|indisposable']);
@@ -113,5 +110,18 @@ class SubscriberController extends Controller
         $subscriber->notify(new UnsubscribeSubscriberNotification());
 
         return view('mailing-list-subscribers.unsubscribed');
+    }
+
+    public function resubscribe($email)
+    {
+        $subscriber = MailingListSubscriber::where('email', $email)->firstOrFail();
+
+        $subscriber->update([
+            'is_verified' => true,
+            'subscribed_at' => now(),
+            'unsubscribed_at' => null,
+        ]);
+
+        return view('mailing-list-subscribers.resubscribed');
     }
 }

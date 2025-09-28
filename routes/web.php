@@ -32,6 +32,7 @@ Route::group([
     Route::get('/privacy-policy', PrivacyPolicyController::class)->name('privacy-policy');
     Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
     Route::post('/subscribe/resend', [SubscriberController::class, 'resend'])->name('subscribers.resend');
-    Route::get('/unsubscribe/{email}', [SubscriberController::class, 'unsubscribe'])->name('subscribers.unsubscribe');
     Route::get('/verify-subscriber/{token}', [SubscriberController::class, 'verify'])->middleware('signed')->name('subscribers.verify');
+    Route::get('/unsubscribe/{email}', [SubscriberController::class, 'unsubscribe'])->middleware('signed')->name('subscribers.unsubscribe');
+    Route::get('/resubscribe/{email}', [SubscriberController::class, 'resubscribe'])->middleware('signed')->name('subscribers.resubscribe');
 });

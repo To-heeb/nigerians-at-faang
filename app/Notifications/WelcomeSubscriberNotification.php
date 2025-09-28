@@ -3,9 +3,11 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
 class WelcomeSubscriberNotification extends Notification
 {
@@ -36,11 +38,16 @@ class WelcomeSubscriberNotification extends Notification
     {
         return (new MailMessage)
             ->subject('Welcome to Our Mailing List 🎉')
-            ->greeting('Hi ' . $notifiable->email . '!')
-            ->line('Thanks for verifying your email. You are now subscribed and will receive updates from us.')
+            ->greeting('Thank you for subscribing!')
+            ->line('Your email address has been successfully verified and you are now subscribed to our mailing list.')
+            ->line('We are pleased to welcome you to our community and look forward to keeping you informed with our latest updates.')
             ->line('We’re excited to have you on board 🚀')
-            ->salutation('Cheers, The Team');
+            ->line(new HtmlString(
+                '<p class="unsubscribe">If you no longer wish to receive these emails,
+            <a href="' . $notifiable->getUnsubscribeUrl() . '" class="unsubscribe-link">Unsubscribe</a>.</p>'
+            ));
     }
+
 
     /**
      * Get the array representation of the notification.

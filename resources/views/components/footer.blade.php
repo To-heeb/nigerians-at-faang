@@ -66,7 +66,7 @@
                     <div class="sent-message" id="sent-message"></div>
                 </form>
 
-                <div class="form-check form-switch mb-3">
+                <div class="form-check form-switch mb-3" id="newsletter">
                     <input class="form-check-input" type="checkbox" role="switch" id="resendToggle">
                     <label class="form-check-label" for="resendToggle">
                         Resend Verification

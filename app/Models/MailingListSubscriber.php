@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -35,6 +36,22 @@ class MailingListSubscriber extends Model
     public function routeNotificationForMail($notification)
     {
         return $this->email;
+    }
+
+    public function getUnsubscribeUrl()
+    {
+        // Example: Generate a signed URL for your unsubscribe route
+        $unsubscribe = URL::signedRoute('subscribers.unsubscribe', ['email' => $this->email]);
+
+        return $unsubscribe;
+    }
+
+    public function getResubscribeUrl()
+    {
+        // Example: Generate a signed URL for your resubscribe route
+        $unsubscribe = URL::signedRoute('subscribers.resubscribe', ['email' => $this->email]);
+
+        return $unsubscribe;
     }
 
     /*

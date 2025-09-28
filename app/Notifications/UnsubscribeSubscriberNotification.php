@@ -35,10 +35,12 @@ class UnsubscribeSubscriberNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('You have been unsubscribed')
+            ->subject('We’re sad to see you go 🥹')
             ->greeting('Hello ' . $notifiable->email)
-            ->line('We’re sorry to see you go. You’ve been unsubscribed from our mailing list.')
-            ->line('If this was a mistake, you can re-subscribe anytime.');
+            ->line('We’re truly sorry to see you unsubscribe. Your presence has meant a lot to us, and we’ll miss having you as part of our community.')
+            ->line('If this was a mistake, or if you change your mind, you’re always welcome back.')
+            ->action('Re-subscribe Now', $notifiable->getResubscribeUrl())
+            ->line('Thank you for being with us, and we wish you the very best.');
     }
 
     /**
