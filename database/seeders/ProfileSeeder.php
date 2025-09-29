@@ -79,6 +79,33 @@ class ProfileSeeder extends Seeder
 
         // 🔹 Step 5: Bulk insert pivot (avoid duplicates)
         DB::table('taggables')->insertOrIgnore($bulkPivot);
+
+
+        // Insert company_profile
+        $bulkCompanyProfile = [];
+
+        // preload companies into a map (name → id)
+        $companyMap = DB::table('companies')->pluck('id', 'slug')->toArray();
+
+        foreach ($profiles as $data) {
+            $profile = $profileMap[$data['name']] ?? null;
+            if (!$profile || empty($data['tags'])) continue;
+
+            $relatedCompanies = array_map('trim', explode(',', $data['tags']));
+
+            foreach ($relatedCompanies as $companyName) {
+                $companyId = $companyMap[Str::slug($companyName)] ?? null;
+
+                if ($companyId) {
+                    $bulkCompanyProfile[] = [
+                        'company_id' => $companyId,
+                        'profile_id' => $profile->id,
+                    ];
+                }
+            }
+        }
+
+        DB::table('company_profile')->insertOrIgnore($bulkCompanyProfile);
     }
 
 

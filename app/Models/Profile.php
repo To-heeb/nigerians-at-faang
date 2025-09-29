@@ -103,6 +103,39 @@ class Profile extends Model implements Sitemapable, Viewable
     }
 
     /**
+     * Get all companies (past and current) associated with this profile.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function companies()
+    {
+        return $this->belongsToMany(Company::class, 'company_profile')
+            ->withPivot('is_current')
+            ->withTimestamps();
+    }
+
+    /**
+     * Get the current company (where pivot is_current = true).
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function currentCompany()
+    {
+        return $this->companies()->wherePivot('is_current', true);
+    }
+
+    /**
+     * Get the past companies (where pivot is_current = false).
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function pastCompanies()
+    {
+        return $this->companies()->wherePivot('is_current', false);
+    }
+
+
+    /**
      * Scope a query to order by views_count
      */
     #[Scope]

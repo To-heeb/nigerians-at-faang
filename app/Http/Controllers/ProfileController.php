@@ -37,6 +37,8 @@ class ProfileController extends Controller
             ->limit(5) //TODO(toheeb): look forward to update too  10 if that looks better
             ->get();
         $profile->load(['company', 'blogs']);
-        return view('profiles.show', compact('profile', 'otherProfiles'));
+        $profileCompanies = $profile->pastCompanies()->get();
+
+        return view('profiles.show', compact('profile', 'otherProfiles', 'profileCompanies'));
     }
 }
