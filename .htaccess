@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# If the request is not for an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect everything to the public folder
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Optional: Redirect root to public/index.php
+DirectoryIndex public/index.php
