@@ -14,7 +14,7 @@
 
             <div class="content my-5">
                 <h1>📄 Terms of Use</h1>
-                <p><strong>Effective Date:</strong> May 5, 2025</p>
+                <p><strong>Effective Date:</strong> October 1, 2025</p>
 
                 <p>Welcome to <strong>Nigerians @ FAANG</strong>! These Terms of Use govern your access to and use of
                     our platform, which highlights the stories and achievements of Nigerians working in global tech
@@ -92,7 +92,7 @@
                     <br>
                     📧 Email: <a href="mailto:{{ config('app.contact_mail') }}">{{ config('app.contact_mail') }}</a>
                     <br>
-                    🌐 Website: <a href="https://nigeriansatfaang.com">https://nigeriansatfaang.com</a>
+                    🌐 Website: <a href="https://nigeriansatfaang.com.ng">https://nigeriansatfaang.com.ng</a>
                 </p>
             </div>
         </div>

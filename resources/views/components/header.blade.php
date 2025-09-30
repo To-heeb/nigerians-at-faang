@@ -48,9 +48,9 @@
                 <li><a href="{{ config('app.naira_donation_link') }}" target="_blank" class="dropdown-item">In
                         Naira</a>
                 </li>
-                <li><a href="{{ config('app.dollar_donation_link') }}" target="_blank" class="dropdown-item">In
+                {{-- <li><a href="{{ config('app.dollar_donation_link') }}" target="_blank" class="dropdown-item">In
                         Dollar</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
 

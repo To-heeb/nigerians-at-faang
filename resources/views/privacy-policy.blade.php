@@ -15,7 +15,7 @@
             <div class="content my-5">
                 <h1>🛡️ Privacy Policy</h1>
 
-                <p><strong>Effective Date:</strong> May 5, 2025</p>
+                <p><strong>Effective Date:</strong> October 1, 2025</p>
                 <p>
                     At <strong>Nigerians @ FAANG</strong>, we respect your privacy and are committed to protecting your
                     personal data.
@@ -98,7 +98,7 @@
                     <br>
                     📧 Email: <a href="mailto:{{ config('app.privacy_mail') }}">{{ config('app.privacy_mail') }}</a>
                     <br>
-                    🌐 Website: <a href="https://nigeriansatfaang.com">https://nigeriansatfaang.com</a>
+                    🌐 Website: <a href="https://nigeriansatfaang.com.ng">https://nigeriansatfaang.com.ng</a>
                 </p>
             </div>
         </div>

@@ -335,8 +335,8 @@
                                     <ul>
                                         <li>For Naira <a href="{{ config('app.naira_donation_link') }}"
                                                 target="_blank">here</a> </li>
-                                        <li>For Dollar <a href="{{ config('app.dollar_donation_link') }}"
-                                                target="_blank">here</a> </li>
+                                        {{-- <li>For Dollar <a href="{{ config('app.dollar_donation_link') }}"
+                                                target="_blank">here</a> </li> --}}
                                     </ul>
                                 </li>
                             </ul>

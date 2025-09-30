@@ -30,12 +30,12 @@ We aim to highlight inspiring stories, provide a directory of top Nigerian talen
 
 ## 📦 Tech Stack
 
--   **Backend**: Laravel 12, PHP 8.2
--   **Frontend**: Blade / Bootstrap5 CSS
+-   **Backend**: Laravel 12, PHP 8.2, Filament 4
+-   **Frontend**: Blade, Bootstrap5 CSS, Livewire
 -   **Database**: MySQL
--   **Authentication**: Laravel Breeze or Fortify
+-   **Authentication**: Laravel Breeze
 -   **Comments**: Eloquent relationships
--   **Deployment**: Laravel Forge / GitHub Actions / Docker (optional)
+-   **Deployment**: Shared hosting / GitHub Actions
 
 ---
 
@@ -65,7 +65,7 @@ php artisan serve
 
 ## 🔐 License
 
-This project is licensed under the **MIT License**.  
+This project is licensed under the **LGPL-2.1 License**.  
 All brand logos (e.g., FAANG) are property of their respective owners and used for editorial/reference purposes only.
 
 ---
@@ -78,8 +78,14 @@ All brand logos (e.g., FAANG) are property of their respective owners and used f
 
 ---
 
+## Other Nice Product
+
+-   [Made In Nigeria](https://www.madeinnigeria.dev/) **By [@acekyd](https://github.com/acekyd/)**
+
+---
+
 ## 📫 Contact
 
 Want to recommend someone or get involved?  
-📧 Email: `team@nigeriansatfaang.com`  
-🌐 Website: [nigeriansatfaang.com](https://nigeriansatfaang.com)
+📧 Email: `contact@nigeriansatfaang.com`  
+🌐 Website: [nigeriansatfaang.com.ng](https://nigeriansatfaang.com.ng)
