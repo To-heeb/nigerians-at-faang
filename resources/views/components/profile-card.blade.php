@@ -1,6 +1,6 @@
 @props(['profile', 'delay'])
 
-<div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="{{ $delay }}">
+<div class="col-lg-3 col-md-4 col-sm-6 align-items-stretch" data-aos="fade-up" data-aos-delay="{{ $delay }}">
     <div class="team-member featured">
         {{-- <p class="popular">{{ $profile->company->name }}</p> --}}
         <p class="popular"><a href="{{ route('companies.show', $profile->company) }}" class="white-link"

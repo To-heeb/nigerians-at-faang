@@ -39,11 +39,19 @@
             <a href="{{ config('app.linkedInUrl') }}" target="_blank" class="linkedin"><i
                     class="bi bi-linkedin"></i></a>
             <a href="{{ config('app.githubUrl') }}" target="_blank" class="github"><i class="bi bi-github"></i></a>
-            <a href="{{ config('app.naira_donation_link') }}" class="ml-1 btn btn-sm btn-outline-success">
-                <span style="cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='white'"
-                    onmouseout="this.style.color=''"><i class="bi bi-cup-hot"></i> Buy Me A
-                    Coffee</span>
+            <a href="{{ config('app.naira_donation_link') }}" class="d-inline d-lg-none coffee"
+                title="Buy Me A Coffee"> <i class="bi bi-cup-hot"></i>
             </a>
+            <!-- Full text version (lg and above) -->
+            <a href="{{ config('app.naira_donation_link') }}"
+                class="btn btn-sm btn-outline-success d-none d-lg-inline">
+                <span style="cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='white'"
+                    onmouseout="this.style.color=''">
+                    <i class="bi bi-cup-hot"></i> Buy Me A Coffee
+                </span>
+            </a>
+
+            <!-- Icon-only version (below lg) -->
             {{-- <button class="btn btn-outline-success btn-sm dropdown-toggle ml-2" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Buy Me A Coffee
