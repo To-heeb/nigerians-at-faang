@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -35,7 +36,9 @@ return new class extends Migration
             $table->timestamp('last_featured_at')->nullable();
             $table->timestamps();
 
-            $table->fullText(['name', 'job_title', 'short_bio']);
+            if (DB::getDriverName() !== 'sqlite') {
+                $table->fullText(['name', 'job_title', 'short_bio']);
+            }
         });
     }
 
