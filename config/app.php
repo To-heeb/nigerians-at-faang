@@ -134,9 +134,9 @@ return [
 
     "address" => "Nigeria",
     "title" => "FAANG Dreams, Naija Roots",
-    "facebookUrl" => "https://www.facebook.com/p/nigerians-at-faan/",
+    "facebookUrl" => "https://www.facebook.com/p/nigerians-at-faang/",
     "tiktokUrl" => "https://www.tiktok.com/@nigerians-at-faang",
-    "twitterUrl" => "https://x.com/nigerians-at-faang/",
+    "twitterUrl" => "https://x.com/NaijaAtFAANG",
     "description" => "Nigerians @ FAANG is a platform celebrating the journeys, stories, and achievements of Nigerians working at top global tech companies like Facebook, Apple, Amazon, Netflix, Google, and more. Discover profiles, get inspired, and connect with excellence.",
     "keywords" => "Nigerians at FAANG, Nigerian tech talent, Nigerians in Big Tech, Nigerians at Facebook, Nigerians at Google, Nigerians at Apple, African tech diaspora, success stories, tech inspiration Nigeria, Nigerian engineers, FAANG directory, Nigerian developers, African tech success, Nigerians at big tech, Nigerians in FAANG",
     "author" => "Oyekola Toheeb",

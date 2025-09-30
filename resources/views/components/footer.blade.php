@@ -25,8 +25,9 @@
                                 href="https://wa.link/a7w9dk">https://wa.link/a7w9dk</a></span></p> --}}
                     <div class="social-links d-flex mt-4">
                         <a href="{{ config('app.twitterUrl') }}"><i class="bi bi-twitter-x"></i></a>
-                        <a href="{{ config('app.tiktokUrl') }}"><i class="bi bi-tiktok"></i></a>
-                        <a href="{{ config('app.instagramUrl') }}"><i class="bi bi-instagram"></i></a>
+                        <a href="{{ config('app.githubUrl') }}"><i class="bi bi-github"></i></a>
+                        {{-- <a href="{{ config('app.tiktokUrl') }}"><i class="bi bi-tiktok"></i></a> --}}
+                        {{-- <a href="{{ config('app.instagramUrl') }}"><i class="bi bi-instagram"></i></a> --}}
                         <a href="{{ config('app.linkedInUrl') }}"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
