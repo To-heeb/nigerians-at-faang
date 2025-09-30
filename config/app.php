@@ -150,5 +150,8 @@ return [
     "dollar_donation_link" => env("DOLLAR_DONATION_LINK", ''),
     'asset_cdn_username' => env('ASSET_CDN_USERNAME'),
     'asset_cdn_repo' => env('ASSET_CDN_REPO'),
+    'runner_name' => env('RUNNER_NAME', "Jim Jam"),
+    'runner_mail' => env('RUNNER_MAIL', "jim@jam.com"),
+    'runner_pass' => env('RUNNER_PASS', "jim-jam"),
 
 ];

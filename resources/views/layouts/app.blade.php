@@ -58,7 +58,7 @@
 
     <link href="{{ url()->current() }}" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ cdn_image('vendor/cookie-consent/css/cookie-consent.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ cdn_asset('vendor/cookie-consent/css/cookie-consent.css') }}">
     @include('layouts/sections/styles')
     <!-- Google tag (gtag.js) -->
     <script async
