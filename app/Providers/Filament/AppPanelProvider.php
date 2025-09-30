@@ -28,7 +28,7 @@ class AppPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('app')
-            ->path('app')
+            ->path('portal')
             ->login()
             ->favicon(asset('assets/img/logos/nigerians@faang-vertical.png'))
             ->brandLogo(asset('assets/img/logos/nigerians@faang-vertical-rounded.png'))

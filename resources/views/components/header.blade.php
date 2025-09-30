@@ -39,20 +39,24 @@
             <a href="{{ config('app.linkedInUrl') }}" target="_blank" class="linkedin"><i
                     class="bi bi-linkedin"></i></a>
             <a href="{{ config('app.githubUrl') }}" target="_blank" class="github"><i class="bi bi-github"></i></a>
-            {{-- <a href="{{ config('app.naira_donation_link') }}" class="ml-1 btn btn-sm btn-outline-success">donate</a> --}}
-            <button class="btn btn-outline-success btn-sm dropdown-toggle ml-2" type="button" data-bs-toggle="dropdown"
+            <a href="{{ config('app.naira_donation_link') }}" class="ml-1 btn btn-sm btn-outline-success">
+                <span style="cursor: pointer; transition: color 0.3s ease;" onmouseover="this.style.color='white'"
+                    onmouseout="this.style.color=''"><i class="bi bi-cup-hot"></i> Buy Me A
+                    Coffee</span>
+            </a>
+            {{-- <button class="btn btn-outline-success btn-sm dropdown-toggle ml-2" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Donate
+                Buy Me A Coffee
             </button>
             <ul class="dropdown-menu">
                 <li><a href="{{ config('app.naira_donation_link') }}" target="_blank" class="dropdown-item">In
                         Naira</a>
                 </li>
-                {{-- <li><a href="{{ config('app.dollar_donation_link') }}" target="_blank" class="dropdown-item">In
+                <li><a href="{{ config('app.dollar_donation_link') }}" target="_blank" class="dropdown-item">In
                         Dollar</a>
-                </li> --}}
+                </li>
             </ul>
-        </div>
+        </div> --}}
 
-    </div>
+        </div>
 </header>
