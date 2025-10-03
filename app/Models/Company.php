@@ -88,12 +88,22 @@ class Company extends Model implements Sitemapable
      */
     public function relatedCompanies(int $limit = 10)
     {
+        // return self::where('companies.id', '!=', $this->id)
+        //     ->select('companies.id', 'companies.name', 'company.mini_logo') // choose columns
+        //     ->selectRaw('COUNT(company_industry.industry_id) as common_industries_count')
+        //     ->join('company_industry', 'companies.id', '=', 'company_industry.company_id')
+        //     ->whereIn('company_industry.industry_id', $this->industries()->pluck('industries.id'))
+        //     ->groupBy('companies.id', 'companies.name', 'company.mini_logo')
+        //     ->orderByDesc('common_industries_count')
+        //     ->limit($limit)
+        //     ->get();
+
         return self::where('companies.id', '!=', $this->id)
-            ->select('companies.*')
-            ->selectRaw('COUNT(company_industry.industry_id) as common_industries_count')
-            ->join('company_industry', 'companies.id', '=', 'company_industry.company_id')
-            ->whereIn('company_industry.industry_id', $this->industries()->pluck('industries.id'))
-            ->groupBy('companies.id')
+            ->withCount([
+                'industries as common_industries_count' => function ($query) {
+                    $query->whereIn('industries.id', $this->industries()->pluck('industries.id'));
+                }
+            ])
             ->orderByDesc('common_industries_count')
             ->limit($limit)
             ->get();

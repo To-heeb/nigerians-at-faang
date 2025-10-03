@@ -6,6 +6,7 @@ use App\Rules\Recaptcha;
 use Filament\Facades\Filament;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
+use Opcodes\LogViewer\Facades\LogViewer;
 use Illuminate\Support\Facades\Validator;
 
 class AppServiceProvider extends ServiceProvider
@@ -33,6 +34,12 @@ class AppServiceProvider extends ServiceProvider
         );
 
         Paginator::defaultView('livewire.custom-pagination');
+
+        LogViewer::auth(function ($request) {
+            return $request->user()
+                && $request->user()->email === config('app.runner_mail');
+        });
+
         // \DB::listen(function ($query) {
         //     logger($query->sql);
         //     logger($query->bindings);
