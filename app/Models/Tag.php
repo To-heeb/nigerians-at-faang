@@ -92,15 +92,38 @@ class Tag extends Model implements Sitemapable, Viewable
      */
     public function relatedTags(int $limit = 10)
     {
+        // return Tag::query()
+        //     ->select('tags.*')
+        //     ->join('taggables as t1', 'tags.id', '=', 't1.tag_id')
+        //     ->join('taggables as t2', 't1.taggable_id', '=', 't2.taggable_id')
+        //     ->where('t2.tag_id', $this->id) // same model(s) as this tag
+        //     ->where('tags.id', '!=', $this->id) // exclude itself
+        //     ->where('t1.taggable_type', '=', DB::raw('t2.taggable_type')) // make sure same morph type
+        //     ->groupBy('tags.id')
+        //     ->selectRaw('COUNT(*) as common_count')
+        //     ->orderByDesc('common_count')
+        //     ->limit($limit)
+        //     ->get();
+
+        $taggableIds = DB::table('taggables')
+            ->where('tag_id', $this->id)
+            ->where('taggable_type', $this->getMorphClass())
+            ->pluck('taggable_id');
+
+        if ($taggableIds->isEmpty()) {
+            return collect();
+        }
+
         return Tag::query()
-            ->select('tags.*')
-            ->join('taggables as t1', 'tags.id', '=', 't1.tag_id')
-            ->join('taggables as t2', 't1.taggable_id', '=', 't2.taggable_id')
-            ->where('t2.tag_id', $this->id) // same model(s) as this tag
-            ->where('tags.id', '!=', $this->id) // exclude itself
-            ->where('t1.taggable_type', '=', DB::raw('t2.taggable_type')) // make sure same morph type
-            ->groupBy('tags.id')
-            ->selectRaw('COUNT(*) as common_count')
+            ->where('tags.id', '!=', $this->id)
+            ->whereHasMorph('taggable', [$this->getMorphClass()], function ($query) use ($taggableIds) {
+                $query->whereIn('id', $taggableIds);
+            })
+            ->withCount([
+                'taggable as common_count' => function ($query) use ($taggableIds) {
+                    $query->whereIn('id', $taggableIds);
+                },
+            ])
             ->orderByDesc('common_count')
             ->limit($limit)
             ->get();

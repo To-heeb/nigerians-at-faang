@@ -36,9 +36,11 @@
 
                             <div class="meta-top">
                                 <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+
+                                    {{-- //TODO(toheeb):make have a default profile to use inorder not to throw error or hide it if the profile is null --}}
+                                    {{-- <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
                                             href="{{ route('profiles.show', $blog->profile) }}">{{ $blog->profile_id ? $blog->profile->name : $blog->author }}</a>
-                                    </li>
+                                    </li> --}}
                                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
                                             href="blog-details.html"><time
                                                 datetime="{{ $blog->published_at }}">{{ date('M j, Y', strtotime($blog->published_at)) }}</time></a>
@@ -283,9 +285,10 @@
                                 <h4>{{ $blog->author }}</h4>
                             @endif
 
-                            <a class="btn btn-outline-success btn-sm mt-2"
+                            {{-- //TODO(toheeb):make have a default profile to use inorder not to throw error or hide it if the profile is null --}}
+                            {{-- <a class="btn btn-outline-success btn-sm mt-2"
                                 href="{{ route('profiles.show', $blog->profile) }}" role="button">View
-                                Profile</a>
+                                Profile</a> --}}
 
                         </div>
                     </div><!--/Blog Author Widget -->

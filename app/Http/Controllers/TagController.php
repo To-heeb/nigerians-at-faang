@@ -27,10 +27,10 @@ class TagController extends Controller
     {
         IncrementViews::dispatchUsingSession($tag);
 
-        $relatedTags = $tag->relatedTags();
-        $tagProfiles =  $tag->profiles()->mostViewed(4)->get();
-        $tagCompanies =  $tag->companies()->limit(4)->get();
-        $tagBlogs = $tag->blogs()->mostViewed(2)->get();
+        $relatedTags    =   $tag->relatedTags();
+        $tagProfiles    =   $tag->profiles()->mostViewed(4)->get();
+        $tagCompanies   =   $tag->companies()->limit(4)->get();
+        $tagBlogs       =   $tag->blogs()->mostViewed(2)->get();
 
         return view('tags.show', compact('tag', 'relatedTags', 'tagProfiles', 'tagCompanies', 'tagBlogs'));
     }
