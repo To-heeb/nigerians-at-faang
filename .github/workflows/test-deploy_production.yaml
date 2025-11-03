@@ -150,7 +150,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-avz --delete --exclude 'storage/app/' --exclude 'storage/logs/' --exclude 'storage'  --exclude 'database/seeders/data/'"
+          ARGS: "-avz --delete --no-o --no-g --exclude 'storage/*'  --exclude 'database/seeders/data/'"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
@@ -158,3 +158,33 @@ jobs:
           SCRIPT_BEFORE: |
             cat ${{ secrets.SSH_PRIVATE_KEY }} >> ~/.ssh/deploy_key
             chmod 600 ~/.ssh/deploy_key
+          SCRIPT_AFTER: |
+            php artisan down
+
+            php artisan cache:clear
+
+            php artisan optimize:clear
+            php artisan filament:optimize-clear
+
+            php artisan config:clear
+            php artisan config:cache
+
+            php artisan view:clear
+            php artisan view:cache
+
+            php artisan event:clear
+            php artisan event:cache
+
+            php artisan route:clear
+            php artisan route:cache
+
+            php artisan queue:restart
+
+            php artisan migrate --force
+
+            # php artisan pulse:restart
+
+            php artisan optimize
+            php artisan filament:optimize
+
+            php artisan up

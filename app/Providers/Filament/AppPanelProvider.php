@@ -65,6 +65,6 @@ class AppPanelProvider extends PanelProvider
                 FilamentAwinTheme::make()
                     ->primaryColor('#1B7339'),
                 GoogleAnalyticsPlugin::make()
-            ]);;
+            ]);
     }
 }

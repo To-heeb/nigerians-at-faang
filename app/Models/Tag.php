@@ -105,6 +105,7 @@ class Tag extends Model implements Sitemapable, Viewable
         //     ->limit($limit)
         //     ->get();
 
+        // TODO(toheeb): fix this to show appropriate related tags
         $taggableIds = DB::table('taggables')
             ->where('tag_id', $this->id)
             ->where('taggable_type', $this->getMorphClass())

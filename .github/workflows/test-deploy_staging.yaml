@@ -158,3 +158,27 @@ jobs:
           SCRIPT_BEFORE: |
             cat ${{ secrets.SSH_PRIVATE_KEY }} >> ~/.ssh/deploy_key
             chmod 600 ~/.ssh/deploy_key
+          SCRIPT_AFTER: |
+            php artisan down
+
+            php artisan cache:clear
+
+            php artisan config:clear
+            php artisan config:cache
+
+            php artisan view:clear
+            php artisan view:cache
+
+            php artisan event:clear
+            php artisan event:cache
+
+            php artisan route:clear
+            php artisan route:cache
+
+            php artisan queue:restart
+
+            php artisan migrate --force
+
+            php artisan pulse:restart
+
+            php artisan up
