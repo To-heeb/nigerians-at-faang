@@ -150,7 +150,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-avz --delete --no-o --no-g --exclude 'storage/*'  --exclude 'database/seeders/data/'"
+          ARGS: "-avz --delete --no-o --no-g --exclude 'storage/*'  --exclude 'database/seeders/data/'  --exclude 'public/storage'"
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}

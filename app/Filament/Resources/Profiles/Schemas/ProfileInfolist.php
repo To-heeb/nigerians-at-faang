@@ -26,7 +26,7 @@ class ProfileInfolist
                             ->hidden(),
                         ImageEntry::make('image')
                             ->circular()
-                            ->disk('profile')
+                            // ->disk('profile')
                             ->defaultImageUrl(fn($record) => $record->image ? cdn_image('storage/profile/' . $record->image) : cdn_image('storage/profile/avatar-head-profile.webp')),
                         TextEntry::make('job_title'),
                         TextEntry::make('views')
