@@ -42,7 +42,8 @@ if (! function_exists('cdn_image')) {
             $domain = config('app.url'); // e.g. https://mydomainmain.com
             $cleanDomain = parse_url($domain, PHP_URL_HOST);
 
-            return "https://cdn.statically.io/img/{$cleanDomain}/{$path}";
+            // return "https://cdn.statically.io/img/{$cleanDomain}/{$path}";
+            return "https://cdn.staticdelivr.com/img/images?url={$domain}/{$path}";
         }
 
         // In local/development, just return the normal path
