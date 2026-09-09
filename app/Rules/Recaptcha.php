@@ -22,7 +22,7 @@ class Recaptcha implements ValidationRule
             'ip' => request()->ip(),
         ]);
         if (!$response->json('success') && $response->json('score') >= 0.7) {
-            $fail('The ' . $attribute . ' is invalid.');
+            $fail('The ' . $attribute . ' is invalid.', null);
         }
     }
 }
